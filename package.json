@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "cypress": "npx cypress run",
+    "cypress:headed": "npx cypress run --headed",
+    "cypress:open": "npx cypress open",
+    "cypress:percy": "npx percy exec -- cypress run",
+    "cypress:percy:headed": "npx percy exec -- cypress run --headed",
+    "cypress:percy:file": "npx percy exec -- cypress run --spec",
+    "cypress:percy:headed:file": "npx percy exec -- cypress run --headed --spec"
+  },
+  "devDependencies": {
+    "@percy/cli": "^1.31.4",
+    "@percy/cypress": "^3.1.6",
+    "cypress": "^15.4.0",
+    "dotenv": "^17.2.3"
+  }
+}
