@@ -1,5 +1,6 @@
 import sidebarObject from "../../objects/SidebarObjects/sidebarObject";
 import usersPage from "../UsersPage/usersPage";
+import projectPage from "../ProjectPage/projectPage";
 
 class Sidebar {
     verifySidebarVisibility() {
@@ -25,6 +26,16 @@ class Sidebar {
     clickOnUsersTab() {
         cy.getByDataTestId(sidebarObject.getUsersTab()).click();
         return usersPage;
+    }
+
+    clickOnProjectsMenu() {
+        cy.getByDataTestId(sidebarObject.getProjectsMenu()).click();
+        return this;
+    }
+
+    clickOnProjectsTab() {
+        cy.getByDataTestId(sidebarObject.getProjectsTab()).click();
+        return projectPage;
     }
 }
 

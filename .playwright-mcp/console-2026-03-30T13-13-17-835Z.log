@@ -1,0 +1,17 @@
+[    1529ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://10.255.185.131:5173/ui/src/components/ui/data-table/data-table.tsx?t=1774876397060:0
+[    6168ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    6170ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[    9026ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://10.255.185.131:5173/ui/src/components/ui/data-table/data-table.tsx?t=1774876408895:0
+[    9027ms] [ERROR] [vite] Failed to reload /src/components/ui/data-table/data-table.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://10.255.185.131:5173/ui/@vite/client:881
+[    9570ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9571ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   14236ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   14237ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   15609ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   15609ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   17722ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   17723ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   24131ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   24132ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   24146ms] [ERROR] [ERROR] API Query Error [auth,session]: {error: ApiError: Unable to connect to the authentication server. Please check your internet connection.
+  …, errorStatus: 500, errorCode: UNKNOWN_ERROR, deduped: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118

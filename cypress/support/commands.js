@@ -34,3 +34,14 @@ Cypress.Commands.add("login", (username, password) => {
         .enterPassword(password)
         .clickLoginButton();
 });
+
+Cypress.Commands.add("logout", () => {
+    cy.get('body').then(($body) => {
+        if ($body.find('[data-testid="dropdown-menu-trigger"]').length > 0) {
+            cy.getByDataTestId('dropdown-menu-trigger').click();
+            cy.getByDataTestId('logout').click();
+        } else {
+            cy.log('User menu trigger not found, possibly already logged out');
+        }
+    });
+});

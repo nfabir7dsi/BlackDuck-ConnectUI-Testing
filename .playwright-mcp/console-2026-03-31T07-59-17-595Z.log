@@ -1,0 +1,41 @@
+[     600ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[    1160ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    1207ms] [INFO] [INFO] Session validation successful {userId: 2, username: admin, roles: undefined} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    1231ms] [INFO] [INFO] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 01:59:18 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: 94601c6a8307ccbf7b2394ceb2608c40                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    1231ms] [LOG] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 01:59:18 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: 94601c6a8307ccbf7b2394ceb2608c40                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘ @ http://10.255.185.131:5173/ui/src/lib/logging/uiSessionManager.ts:74

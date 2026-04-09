@@ -1,0 +1,79 @@
+[    2382ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[    2981ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    5440ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    5441ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    5441ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    5443ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[    6517ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[    6721ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9128ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9128ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9128ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9129ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   10139ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   12531ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   12532ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   12532ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   12533ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   14534ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   16915ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   16916ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   16916ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   16917ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   20919ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23335ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23335ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23335ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23336ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   23345ms] [ERROR] [ERROR] API Query Error [auth,session]: {error: ApiError: Unable to connect to the authentication server. Please check your internet connection.
+  …, errorStatus: 500, errorCode: UNKNOWN_ERROR, deduped: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23345ms] [INFO] [INFO] Fetching login configurations  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23414ms] [INFO] [INFO] Login configurations fetched successfully  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   23565ms] [INFO] [INFO] Login page loaded with redirect path {redirectPath: /, returnUrl: /, hasLocationState: false, isAuthenticated: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   90316ms] [INFO] [INFO] User login initiated  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   90563ms] [INFO] [INFO] User login successful {username: admin} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   90564ms] [INFO] [INFO] Login successful, navigating to redirect path {from: /} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   90575ms] [INFO] [INFO] Session validation successful, redirecting to: {redirectPath: /} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   90633ms] [INFO] [INFO] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 01:59:12 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: a36e755e612169d9ab4ac4ab6a847d6a                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   90634ms] [LOG] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 01:59:12 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: a36e755e612169d9ab4ac4ab6a847d6a                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘ @ http://10.255.185.131:5173/ui/src/lib/logging/uiSessionManager.ts:74

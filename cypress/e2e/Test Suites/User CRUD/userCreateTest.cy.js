@@ -3,22 +3,16 @@ import sidebar from "../../../support/pages/Sidebar/sidebar";
 import usersPage from "../../../support/pages/UsersPage/usersPage";
 
 describe("Verify all the user creation", () => {
-    const url = 'http://10.255.184.188:5173/ui';
-    const validUsername = 'admin';
-    const validPassword = 'C0ver1ty!';
-    // const validPassword = 'string';
-
-    const username = "test10";
-    const password = "123456";
-    const confirmPassword = "123456";
-    const shortPassword = "123";
+    let data;
 
     beforeEach(() => {
-        cy.visit(url);
-        // cy.wait(5000);
-        cy.login(validUsername, validPassword);
+        cy.fixture('coverity').then((fixture) => {
+            data = fixture;
+            cy.visit(data.baseURL);
+            cy.login(data.validUser.username, data.validUser.password);
+        });
         navbar.clickSidebarToggleButton();                                          // Open Sidebar
-        
+
         sidebar.verifyBlackDuckLogo()                                               // Verify Sidebar visibility
             .verifySidebarVisibility()
             .clickOnUserManagementMenu()                                            // Navigate to Users Page
@@ -41,50 +35,50 @@ describe("Verify all the user creation", () => {
         });
         usersPage.clickCreateUserPageButton()                                       // Go to Create User Page
             .verifyCreateUserPageHeader('Create user')
-            .enterUsername(username)                                                // Create User
-            .enterPassword(password)
-            .enterConfirmPassword(confirmPassword)
+            .enterUsername(data.newUser.username)                                   // Create User
+            .enterPassword(data.newUser.password)
+            .enterConfirmPassword(data.newUser.confirmPassword)
             .clickCreateUserButton(true)
             .verifySuccessNotification()
             .verifyUsersPageHeader('Users')
             .clickCreateUserPageButton()                                            // Go to Create User Page again
             .verifyCreateUserPageHeader('Create user')
-            .enterUsername(username)                                                // Put same username
-            .enterPassword(password)
-            .enterConfirmPassword(confirmPassword)
-            .clickCreateUserButton(false)                         
-            .verifyUsernameFieldError("username already exists");                   // Verify Username field error    
+            .enterUsername(data.newUser.username)                                   // Put same username
+            .enterPassword(data.newUser.password)
+            .enterConfirmPassword(data.newUser.confirmPassword)
+            .clickCreateUserButton(false)
+            .verifyUsernameFieldError("username already exists");                   // Verify Username field error
     });
 
     it ("Verify password outside of the constraints doesn't get accepted", () => {
         usersPage.clickCreateUserPageButton()                                       // Go to Create User Page
             .verifyCreateUserPageHeader('Create user')
-            .enterUsername(username)                                                
-            .enterPassword(shortPassword)                                           // Put short Password
-            .enterConfirmPassword(shortPassword)
-            .clickCreateUserButton(false)                         
+            .enterUsername(data.newUser.username)
+            .enterPassword(data.newUser.shortPassword)                              // Put short Password
+            .enterConfirmPassword(data.newUser.shortPassword)
+            .clickCreateUserButton(false)
             .verifyPasswordFieldError("Must be a minimum of 6 characters");         // Verify Password field error
     });
 
     it ("Verify mismatched passwords gives an error", () => {
         usersPage.clickCreateUserPageButton()                                       // Go to Create User Page
             .verifyCreateUserPageHeader('Create user')
-            .enterUsername(username)                         
-            .enterPassword(password)                          
-            .enterConfirmPassword(shortPassword)                                    // Put mismatched Confirm Password
-            .clickCreateUserButton(false)                         
-            .verifyPasswordMismatchError("Passwords do not match");                 // Verify Confirm Password field error 
+            .enterUsername(data.newUser.username)
+            .enterPassword(data.newUser.password)
+            .enterConfirmPassword(data.newUser.shortPassword)                       // Put mismatched Confirm Password
+            .clickCreateUserButton(false)
+            .verifyPasswordMismatchError("Passwords do not match");                 // Verify Confirm Password field error
     });
 
     it ("Delete the created user", () => {
         usersPage.clickSearchButton()                                               // Search for created user
-            .enterSearchInput(username)
+            .enterSearchInput(data.newUser.username)
             .clickDeleteButton()                                                    // Delete the created user
             .verifyModalVisibility()
             .clickConfirmDeleteButton()
             .verifySuccessNotification()
             .clickSearchButton()                                                    // Verify user deletion
-            .enterSearchInput(username)
+            .enterSearchInput(data.newUser.username)
             .verifyUserDeletion('No results');
     });
 });

@@ -1,0 +1,8 @@
+- generic [ref=e2]:
+  - status [ref=e107]:
+    - generic [ref=e109]: Please Wait
+  - region "Notifications alt+T"
+  - generic [ref=e7]:
+    - img [ref=e9]
+    - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+      - img [ref=e58]

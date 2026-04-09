@@ -1,0 +1,50 @@
+[     893ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[    1591ms] [INFO] [INFO] Fetching login configurations  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    1720ms] [INFO] [INFO] Login page loaded with redirect path {redirectPath: /projects, returnUrl: null, hasLocationState: false, isAuthenticated: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    1774ms] [INFO] [INFO] Login configurations fetched successfully  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    8736ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[    9229ms] [INFO] [INFO] Login page loaded with redirect path {redirectPath: /projects, returnUrl: null, hasLocationState: false, isAuthenticated: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9230ms] [INFO] [INFO] Fetching login configurations  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    9438ms] [INFO] [INFO] Login configurations fetched successfully  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   28328ms] [INFO] [INFO] User login initiated  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   28541ms] [INFO] [INFO] User login successful {username: admin} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   28543ms] [INFO] [INFO] Login successful, navigating to redirect path {from: /projects} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   28558ms] [INFO] [INFO] Session validation successful, redirecting to: {redirectPath: /projects} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   28609ms] [INFO] [INFO] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 05:10:30 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: bcdb39a77566a45ec3caab1b5b2216ee                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   28609ms] [LOG] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 05:10:30 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: bcdb39a77566a45ec3caab1b5b2216ee                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘ @ http://10.255.185.131:5173/ui/src/lib/logging/uiSessionManager.ts:74

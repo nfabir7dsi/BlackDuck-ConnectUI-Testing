@@ -1,0 +1,25 @@
+- generic [ref=e2]:
+  - generic [ref=e111]:
+    - generic [ref=e113]:
+      - img "Black Duck" [ref=e114]
+      - img "Coverity" [ref=e115]
+    - generic [ref=e116]:
+      - group [ref=e117]:
+        - text: Username
+        - textbox "Username" [ref=e118]
+      - group [ref=e119]:
+        - text: Password
+        - generic [ref=e121]:
+          - textbox "Password" [ref=e122]
+          - button "Show password" [ref=e123] [cursor=pointer]:
+            - img
+      - generic [ref=e125]:
+        - checkbox "Remember me" [ref=e126] [cursor=pointer]
+        - checkbox
+        - generic [ref=e127] [cursor=pointer]: Remember me
+      - button "Sign in" [ref=e128] [cursor=pointer]
+  - region "Notifications alt+T"
+  - generic [ref=e7]:
+    - img [ref=e9]
+    - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+      - img [ref=e58]

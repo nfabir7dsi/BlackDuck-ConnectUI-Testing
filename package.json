@@ -12,6 +12,7 @@
     "@percy/cli": "^1.31.4",
     "@percy/cypress": "^3.1.6",
     "cypress": "^15.4.0",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "playwright": "^1.59.1"
   }
 }

@@ -1,0 +1,666 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e125] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e127]:
+    - generic [ref=e130]:
+      - generic [ref=e132]:
+        - img "Black Duck Logo" [ref=e133]
+        - generic [ref=e134]:
+          - heading "Black Duck Coverity" [level=1] [ref=e135]
+          - paragraph [ref=e136]: main-snapshot
+      - list "Main Navigation - Primary Menu" [ref=e140]:
+        - listitem [ref=e141]:
+          - generic [ref=e142]:
+            - button "Projects & hierarchies" [expanded] [ref=e143] [cursor=pointer]:
+              - img [ref=e144]
+              - generic [ref=e154]: Projects & hierarchies
+              - img [ref=e155]
+            - menu "Projects & hierarchies Submenu" [ref=e158]:
+              - menuitem "Projects" [active] [ref=e159] [cursor=pointer]:
+                - generic [ref=e160]: Projects
+        - listitem [ref=e161]:
+          - button "Help & support" [ref=e163] [cursor=pointer]:
+            - img [ref=e164]
+            - generic [ref=e167]: Help & support
+            - img [ref=e168]
+      - generic [ref=e170]:
+        - generic [ref=e172]:
+          - img [ref=e174]
+          - textbox "Search CIDs" [ref=e177]
+        - button "admin username@blackduck.com" [ref=e179] [cursor=pointer]:
+          - generic [ref=e180]:
+            - img [ref=e182]
+            - generic [ref=e186]:
+              - paragraph [ref=e187]: admin
+              - paragraph [ref=e188]: username@blackduck.com
+            - img [ref=e189]
+    - generic [ref=e191]:
+      - main "Main content" [ref=e192]:
+        - navigation "Breadcrumb" [ref=e194]:
+          - button "Toggle sidebar" [ref=e195] [cursor=pointer]:
+            - img [ref=e196]
+          - list [ref=e198]:
+            - listitem [ref=e199]
+            - listitem [ref=e201]:
+              - generic [ref=e202]: Projects
+        - generic [ref=e203]:
+          - heading "Projects" [level=1] [ref=e205]
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - combobox "select view" [ref=e208] [cursor=pointer]:
+                - text: View | hook
+                - img
+              - button "Save" [ref=e209] [cursor=pointer]:
+                - img
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - combobox [ref=e214] [cursor=pointer]:
+                  - text: Add filters
+                  - img
+                - generic [ref=e215]:
+                  - button "Search..." [ref=e218] [cursor=pointer]:
+                    - img
+                  - generic [ref=e219]:
+                    - button "Toggle column visibility" [ref=e223] [cursor=pointer]:
+                      - img
+                    - button "Export..." [ref=e227] [cursor=pointer]:
+                      - img
+              - table [ref=e230]:
+                - rowgroup [ref=e231]:
+                  - row "Drag to reorder column Sort by Project Resize column project. Drag to resize, double-click to reset. Drag to reorder column Sort by Description Resize column projectDescription. Drag to resize, double-click to reset. Drag to reorder column Sort by Last Commit Resize column lastSnapshotDate. Drag to resize, double-click to reset." [ref=e232]:
+                    - columnheader "Drag to reorder column Sort by Project Resize column project. Drag to resize, double-click to reset." [ref=e233]:
+                      - generic [ref=e234]:
+                        - button "Drag to reorder column" [ref=e235] [cursor=pointer]:
+                          - img [ref=e236]
+                        - button "Sort by Project" [ref=e243] [cursor=pointer]:
+                          - text: Project
+                          - img [ref=e244]
+                        - button "Resize column project. Drag to resize, double-click to reset." [ref=e247]
+                    - columnheader "Drag to reorder column Sort by Description Resize column projectDescription. Drag to resize, double-click to reset." [ref=e248]:
+                      - generic [ref=e249]:
+                        - button "Drag to reorder column" [ref=e250] [cursor=pointer]:
+                          - img [ref=e251]
+                        - button "Sort by Description" [ref=e258] [cursor=pointer]:
+                          - text: Description
+                          - img [ref=e259]
+                        - button "Resize column projectDescription. Drag to resize, double-click to reset." [ref=e262]
+                    - columnheader "Drag to reorder column Sort by Last Commit Resize column lastSnapshotDate. Drag to resize, double-click to reset." [ref=e263]:
+                      - generic [ref=e264]:
+                        - button "Drag to reorder column" [ref=e265] [cursor=pointer]:
+                          - img [ref=e266]
+                        - button "Sort by Last Commit" [ref=e273] [cursor=pointer]:
+                          - text: Last Commit
+                          - img [ref=e274]
+                        - button "Resize column lastSnapshotDate. Drag to resize, double-click to reset." [ref=e277]
+                - rowgroup [ref=e278]:
+                  - row "200 snapshots project multi snapshot testing 2024-10-20 11:27:56" [ref=e279]:
+                    - cell "200 snapshots project" [ref=e280]:
+                      - link "200 snapshots project" [ref=e282] [cursor=pointer]:
+                        - /url: /ui/projects/200 snapshots project
+                    - cell "multi snapshot testing" [ref=e283]:
+                      - generic [ref=e284]: multi snapshot testing
+                    - cell "2024-10-20 11:27:56" [ref=e285]:
+                      - generic [ref=e286]: 2024-10-20 11:27:56
+                  - row "AUTOSAR AUTOSAR testing 2025-12-11 14:22:55" [ref=e287]:
+                    - cell "AUTOSAR" [ref=e288]:
+                      - link "AUTOSAR" [ref=e290] [cursor=pointer]:
+                        - /url: /ui/projects/AUTOSAR
+                    - cell "AUTOSAR testing" [ref=e291]:
+                      - generic [ref=e292]: AUTOSAR testing
+                    - cell "2025-12-11 14:22:55" [ref=e293]:
+                      - generic [ref=e294]: 2025-12-11 14:22:55
+                  - row "CERT-C CERT-C testing 2025-12-11 14:14:30" [ref=e295]:
+                    - cell "CERT-C" [ref=e296]:
+                      - link "CERT-C" [ref=e298] [cursor=pointer]:
+                        - /url: /ui/projects/CERT-C
+                    - cell "CERT-C testing" [ref=e299]:
+                      - generic [ref=e300]: CERT-C testing
+                    - cell "2025-12-11 14:14:30" [ref=e301]:
+                      - generic [ref=e302]: 2025-12-11 14:14:30
+                  - row "CERT-CPP CERT-CPP testing 2025-12-11 14:19:04" [ref=e303]:
+                    - cell "CERT-CPP" [ref=e304]:
+                      - link "CERT-CPP" [ref=e306] [cursor=pointer]:
+                        - /url: /ui/projects/CERT-CPP
+                    - cell "CERT-CPP testing" [ref=e307]:
+                      - generic [ref=e308]: CERT-CPP testing
+                    - cell "2025-12-11 14:19:04" [ref=e309]:
+                      - generic [ref=e310]: 2025-12-11 14:19:04
+                  - row "CERT_JAVA CERT_JAVA testing 2025-12-11 14:28:19" [ref=e311]:
+                    - cell "CERT_JAVA" [ref=e312]:
+                      - link "CERT_JAVA" [ref=e314] [cursor=pointer]:
+                        - /url: /ui/projects/CERT_JAVA
+                    - cell "CERT_JAVA testing" [ref=e315]:
+                      - generic [ref=e316]: CERT_JAVA testing
+                    - cell "2025-12-11 14:28:19" [ref=e317]:
+                      - generic [ref=e318]: 2025-12-11 14:28:19
+                  - row "Defector Java QA/SCM/xref testing 2024-06-19 09:41:00" [ref=e319]:
+                    - cell "Defector" [ref=e320]:
+                      - link "Defector" [ref=e322] [cursor=pointer]:
+                        - /url: /ui/projects/Defector
+                    - cell "Java QA/SCM/xref testing" [ref=e323]:
+                      - generic [ref=e324]: Java QA/SCM/xref testing
+                    - cell "2024-06-19 09:41:00" [ref=e325]:
+                      - generic [ref=e326]: 2024-06-19 09:41:00
+                  - row "Defector-no-scm Same as Defector, but with no SCM data 2024-06-19 09:50:59" [ref=e327]:
+                    - cell "Defector-no-scm" [ref=e328]:
+                      - link "Defector-no-scm" [ref=e330] [cursor=pointer]:
+                        - /url: /ui/projects/Defector-no-scm
+                    - cell "Same as Defector, but with no SCM data" [ref=e331]:
+                      - generic [ref=e332]: Same as Defector, but with no SCM data
+                    - cell "2024-06-19 09:50:59" [ref=e333]:
+                      - generic [ref=e334]: 2024-06-19 09:50:59
+                  - row "Desktop Analysis - cpp generated Project cpp generated for Desktop team 2025-12-11 10:01:37" [ref=e335]:
+                    - cell "Desktop Analysis - cpp generated Project" [ref=e336]:
+                      - link "Desktop Analysis - cpp generated Project" [ref=e338] [cursor=pointer]:
+                        - /url: /ui/projects/Desktop Analysis - cpp generated Project
+                    - cell "cpp generated for Desktop team" [ref=e339]:
+                      - generic [ref=e340]: cpp generated for Desktop team
+                    - cell "2025-12-11 10:01:37" [ref=e341]:
+                      - generic [ref=e342]: 2025-12-11 10:01:37
+                  - row "Desktop Analysis - cppcsharpMixed Project C# CPP mixed testing 2025-12-11 10:07:23" [ref=e343]:
+                    - cell "Desktop Analysis - cppcsharpMixed Project" [ref=e344]:
+                      - link "Desktop Analysis - cppcsharpMixed Project" [ref=e346] [cursor=pointer]:
+                        - /url: /ui/projects/Desktop Analysis - cppcsharpMixed Project
+                    - cell "C# CPP mixed testing" [ref=e347]:
+                      - generic [ref=e348]: C# CPP mixed testing
+                    - cell "2025-12-11 10:07:23" [ref=e349]:
+                      - generic [ref=e350]: 2025-12-11 10:07:23
+                  - row "Desktop Analysis - csharpgenerated Project C# testing 2025-12-11 10:04:13" [ref=e351]:
+                    - cell "Desktop Analysis - csharpgenerated Project" [ref=e352]:
+                      - link "Desktop Analysis - csharpgenerated Project" [ref=e354] [cursor=pointer]:
+                        - /url: /ui/projects/Desktop Analysis - csharpgenerated Project
+                    - cell "C# testing" [ref=e355]:
+                      - generic [ref=e356]: C# testing
+                    - cell "2025-12-11 10:04:13" [ref=e357]:
+                      - generic [ref=e358]: 2025-12-11 10:04:13
+                  - row "Desktop Analysis - java cpp mixed Project java cpp mixed for Desktop team 2025-12-11 10:01:16" [ref=e359]:
+                    - cell "Desktop Analysis - java cpp mixed Project" [ref=e360]:
+                      - link "Desktop Analysis - java cpp mixed Project" [ref=e362] [cursor=pointer]:
+                        - /url: /ui/projects/Desktop Analysis - java cpp mixed Project
+                    - cell "java cpp mixed for Desktop team" [ref=e363]:
+                      - generic [ref=e364]: java cpp mixed for Desktop team
+                    - cell "2025-12-11 10:01:16" [ref=e365]:
+                      - generic [ref=e366]: 2025-12-11 10:01:16
+                  - row "Desktop Analysis - java generated Project java project for Desktop team 2025-12-11 09:59:27" [ref=e367]:
+                    - cell "Desktop Analysis - java generated Project" [ref=e368]:
+                      - link "Desktop Analysis - java generated Project" [ref=e370] [cursor=pointer]:
+                        - /url: /ui/projects/Desktop Analysis - java generated Project
+                    - cell "java project for Desktop team" [ref=e371]:
+                      - generic [ref=e372]: java project for Desktop team
+                    - cell "2025-12-11 09:59:27" [ref=e373]:
+                      - generic [ref=e374]: 2025-12-11 09:59:27
+                  - row "HIS HIS testing 2025-12-11 14:15:52" [ref=e375]:
+                    - cell "HIS" [ref=e376]:
+                      - link "HIS" [ref=e378] [cursor=pointer]:
+                        - /url: /ui/projects/HIS
+                    - cell "HIS testing" [ref=e379]:
+                      - generic [ref=e380]: HIS testing
+                    - cell "2025-12-11 14:15:52" [ref=e381]:
+                      - generic [ref=e382]: 2025-12-11 14:15:52
+                  - row "HYUNDAI-C HYUNDAI-C testing 2025-12-11 14:32:10" [ref=e383]:
+                    - cell "HYUNDAI-C" [ref=e384]:
+                      - link "HYUNDAI-C" [ref=e386] [cursor=pointer]:
+                        - /url: /ui/projects/HYUNDAI-C
+                    - cell "HYUNDAI-C testing" [ref=e387]:
+                      - generic [ref=e388]: HYUNDAI-C testing
+                    - cell "2025-12-11 14:32:10" [ref=e389]:
+                      - generic [ref=e390]: 2025-12-11 14:32:10
+                  - row "HYUNDAI-CPP HYUNDAI-CPP testing 2025-12-11 14:35:23" [ref=e391]:
+                    - cell "HYUNDAI-CPP" [ref=e392]:
+                      - link "HYUNDAI-CPP" [ref=e394] [cursor=pointer]:
+                        - /url: /ui/projects/HYUNDAI-CPP
+                    - cell "HYUNDAI-CPP testing" [ref=e395]:
+                      - generic [ref=e396]: HYUNDAI-CPP testing
+                    - cell "2025-12-11 14:35:23" [ref=e397]:
+                      - generic [ref=e398]: 2025-12-11 14:35:23
+                  - row "HYUNDAI-JAVA HYUNDAI-JAVA testing 2025-12-11 14:36:45" [ref=e399]:
+                    - cell "HYUNDAI-JAVA" [ref=e400]:
+                      - link "HYUNDAI-JAVA" [ref=e402] [cursor=pointer]:
+                        - /url: /ui/projects/HYUNDAI-JAVA
+                    - cell "HYUNDAI-JAVA testing" [ref=e403]:
+                      - generic [ref=e404]: HYUNDAI-JAVA testing
+                    - cell "2025-12-11 14:36:45" [ref=e405]:
+                      - generic [ref=e406]: 2025-12-11 14:36:45
+                  - row "ISO ISO testing 2025-12-11 14:26:53" [ref=e407]:
+                    - cell "ISO" [ref=e408]:
+                      - link "ISO" [ref=e410] [cursor=pointer]:
+                        - /url: /ui/projects/ISO
+                    - cell "ISO testing" [ref=e411]:
+                      - generic [ref=e412]: ISO testing
+                    - cell "2025-12-11 14:26:53" [ref=e413]:
+                      - generic [ref=e414]: 2025-12-11 14:26:53
+                  - row "Insecure Java SA testing 2024-05-19 09:27:15" [ref=e415]:
+                    - cell "Insecure" [ref=e416]:
+                      - link "Insecure" [ref=e418] [cursor=pointer]:
+                        - /url: /ui/projects/Insecure
+                    - cell "Java SA testing" [ref=e419]:
+                      - generic [ref=e420]: Java SA testing
+                    - cell "2024-05-19 09:27:15" [ref=e421]:
+                      - generic [ref=e422]: 2024-05-19 09:27:15
+                  - row "Node.js security project Node.js secruity defect testing 2025-12-11 17:00:59" [ref=e423]:
+                    - cell "Node.js security project" [ref=e424]:
+                      - link "Node.js security project" [ref=e426] [cursor=pointer]:
+                        - /url: /ui/projects/Node.js security project
+                    - cell "Node.js secruity defect testing" [ref=e427]:
+                      - generic [ref=e428]: Node.js secruity defect testing
+                    - cell "2025-12-11 17:00:59" [ref=e429]:
+                      - generic [ref=e430]: 2025-12-11 17:00:59
+                  - row "Philosophers Java QA testing 2024-05-19 09:16:08" [ref=e431]:
+                    - cell "Philosophers" [ref=e432]:
+                      - link "Philosophers" [ref=e434] [cursor=pointer]:
+                        - /url: /ui/projects/Philosophers
+                    - cell "Java QA testing" [ref=e435]:
+                      - generic [ref=e436]: Java QA testing
+                    - cell "2024-05-19 09:16:08" [ref=e437]:
+                      - generic [ref=e438]: 2024-05-19 09:16:08
+                  - row "SR_MultipleTechnicalImpactsTwo_cpp Multiple Real Technical Impacts; All Quality Issue Kinds; C++ Language 2025-12-11 14:37:09" [ref=e439]:
+                    - cell "SR_MultipleTechnicalImpactsTwo_cpp" [ref=e440]:
+                      - link "SR_MultipleTechnicalImpactsTwo_cpp" [ref=e442] [cursor=pointer]:
+                        - /url: /ui/projects/SR_MultipleTechnicalImpactsTwo_cpp
+                    - cell "Multiple Real Technical Impacts; All Quality Issue Kinds; C++ Language" [ref=e443]:
+                      - generic [ref=e444]: Multiple Real Technical Impacts; All Quality Issue Kinds; C++ Language
+                    - cell "2025-12-11 14:37:09" [ref=e445]:
+                      - generic [ref=e446]: 2025-12-11 14:37:09
+                  - row "SR_SingleTechnicalImpacts Single Real Technical Impacts; All Security Issue Kinds 2025-12-11 16:41:55" [ref=e447]:
+                    - cell "SR_SingleTechnicalImpacts" [ref=e448]:
+                      - link "SR_SingleTechnicalImpacts" [ref=e450] [cursor=pointer]:
+                        - /url: /ui/projects/SR_SingleTechnicalImpacts
+                    - cell "Single Real Technical Impacts; All Security Issue Kinds" [ref=e451]:
+                      - generic [ref=e452]: Single Real Technical Impacts; All Security Issue Kinds
+                    - cell "2025-12-11 16:41:55" [ref=e453]:
+                      - generic [ref=e454]: 2025-12-11 16:41:55
+                  - row "SR_TestIssues All Test Issue Kinds 2025-12-11 16:48:30" [ref=e455]:
+                    - cell "SR_TestIssues" [ref=e456]:
+                      - link "SR_TestIssues" [ref=e458] [cursor=pointer]:
+                        - /url: /ui/projects/SR_TestIssues
+                    - cell "All Test Issue Kinds" [ref=e459]:
+                      - generic [ref=e460]: All Test Issue Kinds
+                    - cell "2025-12-11 16:48:30" [ref=e461]:
+                      - generic [ref=e462]: 2025-12-11 16:48:30
+                  - row "SR_Top10AndTop25 CWEs or parents in both Top10 and Top25; All Security + Quality Kinds 2025-12-11 16:48:01" [ref=e463]:
+                    - cell "SR_Top10AndTop25" [ref=e464]:
+                      - link "SR_Top10AndTop25" [ref=e466] [cursor=pointer]:
+                        - /url: /ui/projects/SR_Top10AndTop25
+                    - cell "CWEs or parents in both Top10 and Top25; All Security + Quality Kinds" [ref=e467]:
+                      - generic [ref=e468]: CWEs or parents in both Top10 and Top25; All Security + Quality Kinds
+                    - cell "2025-12-11 16:48:01" [ref=e469]:
+                      - generic [ref=e470]: 2025-12-11 16:48:01
+                  - row "SR_Top10NotInTop25_cpp Issues with CWEs belonging to OWASP Top10 but not in Top25; All Security Issue Kinds 2025-12-11 16:48:18" [ref=e471]:
+                    - cell "SR_Top10NotInTop25_cpp" [ref=e472]:
+                      - link "SR_Top10NotInTop25_cpp" [ref=e474] [cursor=pointer]:
+                        - /url: /ui/projects/SR_Top10NotInTop25_cpp
+                    - cell "Issues with CWEs belonging to OWASP Top10 but not in Top25; All Security Issue Kinds" [ref=e475]:
+                      - generic [ref=e476]: Issues with CWEs belonging to OWASP Top10 but not in Top25; All Security Issue Kinds
+                    - cell "2025-12-11 16:48:18" [ref=e477]:
+                      - generic [ref=e478]: 2025-12-11 16:48:18
+                  - row "SR_Top25NotInTop10 Security Report Issues in the CWE/SANS Top 25 but not in the Top 10 2025-12-11 15:41:56" [ref=e479]:
+                    - cell "SR_Top25NotInTop10" [ref=e480]:
+                      - link "SR_Top25NotInTop10" [ref=e482] [cursor=pointer]:
+                        - /url: /ui/projects/SR_Top25NotInTop10
+                    - cell "Security Report Issues in the CWE/SANS Top 25 but not in the Top 10" [ref=e483]:
+                      - generic [ref=e484]: Security Report Issues in the CWE/SANS Top 25 but not in the Top 10
+                    - cell "2025-12-11 15:41:56" [ref=e485]:
+                      - generic [ref=e486]: 2025-12-11 15:41:56
+                  - row "SR_Top25NotInTop10_10000 Security Report Issues in the CWE/SANS Top 25 but not in the Top 10 2025-12-11 16:40:55" [ref=e487]:
+                    - cell "SR_Top25NotInTop10_10000" [ref=e488]:
+                      - link "SR_Top25NotInTop10_10000" [ref=e490] [cursor=pointer]:
+                        - /url: /ui/projects/SR_Top25NotInTop10_10000
+                    - cell "Security Report Issues in the CWE/SANS Top 25 but not in the Top 10" [ref=e491]:
+                      - generic [ref=e492]: Security Report Issues in the CWE/SANS Top 25 but not in the Top 10
+                    - cell "2025-12-11 16:40:55" [ref=e493]:
+                      - generic [ref=e494]: 2025-12-11 16:40:55
+                  - row "WebGoat Net CS C# security testing 2025-12-11 09:57:23" [ref=e495]:
+                    - cell "WebGoat Net CS" [ref=e496]:
+                      - link "WebGoat Net CS" [ref=e498] [cursor=pointer]:
+                        - /url: /ui/projects/WebGoat Net CS
+                    - cell "C# security testing" [ref=e499]:
+                      - generic [ref=e500]: C# security testing
+                    - cell "2025-12-11 09:57:23" [ref=e501]:
+                      - generic [ref=e502]: 2025-12-11 09:57:23
+                  - row "cJson-project Simulated defects from c.json 2025-12-11 17:04:07" [ref=e503]:
+                    - cell "cJson-project" [ref=e504]:
+                      - link "cJson-project" [ref=e506] [cursor=pointer]:
+                        - /url: /ui/projects/cJson-project
+                    - cell "Simulated defects from c.json" [ref=e507]:
+                      - generic [ref=e508]: Simulated defects from c.json
+                    - cell "2025-12-11 17:04:07" [ref=e509]:
+                      - generic [ref=e510]: 2025-12-11 17:04:07
+                  - row "csharpJson-project Simulated defects from cs.json 2025-12-11 17:04:11" [ref=e511]:
+                    - cell "csharpJson-project" [ref=e512]:
+                      - link "csharpJson-project" [ref=e514] [cursor=pointer]:
+                        - /url: /ui/projects/csharpJson-project
+                    - cell "Simulated defects from cs.json" [ref=e515]:
+                      - generic [ref=e516]: Simulated defects from cs.json
+                    - cell "2025-12-11 17:04:11" [ref=e517]:
+                      - generic [ref=e518]: 2025-12-11 17:04:11
+                  - row "eventModel Event model project (src1 contains 100 depth, src2 contains up to 50 depth) 2024-12-30 10:37:50" [ref=e519]:
+                    - cell "eventModel" [ref=e520]:
+                      - link "eventModel" [ref=e522] [cursor=pointer]:
+                        - /url: /ui/projects/eventModel
+                    - cell "Event model project (src1 contains 100 depth, src2 contains up to 50 depth)" [ref=e523]:
+                      - generic [ref=e524]: Event model project (src1 contains 100 depth, src2 contains up to 50 depth)
+                    - cell "2024-12-30 10:37:50" [ref=e525]:
+                      - generic [ref=e526]: 2024-12-30 10:37:50
+                  - row "fortran-doc-examples fortran testing -- doc-examples 2025-12-11 10:33:07" [ref=e527]:
+                    - cell "fortran-doc-examples" [ref=e528]:
+                      - link "fortran-doc-examples" [ref=e530] [cursor=pointer]:
+                        - /url: /ui/projects/fortran-doc-examples
+                    - cell "fortran testing -- doc-examples" [ref=e531]:
+                      - generic [ref=e532]: fortran testing -- doc-examples
+                    - cell "2025-12-11 10:33:07" [ref=e533]:
+                      - generic [ref=e534]: 2025-12-11 10:33:07
+                  - row "git Big C project with QA, TA, and SCM data 2025-12-11 16:52:10" [ref=e535]:
+                    - cell "git" [ref=e536]:
+                      - link "git" [ref=e538] [cursor=pointer]:
+                        - /url: /ui/projects/git
+                    - cell "Big C project with QA, TA, and SCM data" [ref=e539]:
+                      - generic [ref=e540]: Big C project with QA, TA, and SCM data
+                    - cell "2025-12-11 16:52:10" [ref=e541]:
+                      - generic [ref=e542]: 2025-12-11 16:52:10
+                  - row "javaJson-project Simulated defects from java.json 2025-12-11 17:04:16" [ref=e543]:
+                    - cell "javaJson-project" [ref=e544]:
+                      - link "javaJson-project" [ref=e546] [cursor=pointer]:
+                        - /url: /ui/projects/javaJson-project
+                    - cell "Simulated defects from java.json" [ref=e547]:
+                      - generic [ref=e548]: Simulated defects from java.json
+                    - cell "2025-12-11 17:04:16" [ref=e549]:
+                      - generic [ref=e550]: 2025-12-11 17:04:16
+                  - row "js-ace javascript testing with fixed defects 2025-12-11 11:51:08" [ref=e551]:
+                    - cell "js-ace" [ref=e552]:
+                      - link "js-ace" [ref=e554] [cursor=pointer]:
+                        - /url: /ui/projects/js-ace
+                    - cell "javascript testing with fixed defects" [ref=e555]:
+                      - generic [ref=e556]: javascript testing with fixed defects
+                    - cell "2025-12-11 11:51:08" [ref=e557]:
+                      - generic [ref=e558]: 2025-12-11 11:51:08
+                  - row "js-angular javascript testing -- Angular 2024-01-01 12:17:48" [ref=e559]:
+                    - cell "js-angular" [ref=e560]:
+                      - link "js-angular" [ref=e562] [cursor=pointer]:
+                        - /url: /ui/projects/js-angular
+                    - cell "javascript testing -- Angular" [ref=e563]:
+                      - generic [ref=e564]: javascript testing -- Angular
+                    - cell "2024-01-01 12:17:48" [ref=e565]:
+                      - generic [ref=e566]: 2024-01-01 12:17:48
+                  - row "js-security javascript js-security 2025-12-11 10:32:59" [ref=e567]:
+                    - cell "js-security" [ref=e568]:
+                      - link "js-security" [ref=e570] [cursor=pointer]:
+                        - /url: /ui/projects/js-security
+                    - cell "javascript js-security" [ref=e571]:
+                      - generic [ref=e572]: javascript js-security
+                    - cell "2025-12-11 10:32:59" [ref=e573]:
+                      - generic [ref=e574]: 2025-12-11 10:32:59
+                  - row "js-test javascript js-test 2025-12-11 10:32:17" [ref=e575]:
+                    - cell "js-test" [ref=e576]:
+                      - link "js-test" [ref=e578] [cursor=pointer]:
+                        - /url: /ui/projects/js-test
+                    - cell "javascript js-test" [ref=e579]:
+                      - generic [ref=e580]: javascript js-test
+                    - cell "2025-12-11 10:32:17" [ref=e581]:
+                      - generic [ref=e582]: 2025-12-11 10:32:17
+                  - row "misra misra testing 2025-12-11 13:53:52" [ref=e583]:
+                    - cell "misra" [ref=e584]:
+                      - link "misra" [ref=e586] [cursor=pointer]:
+                        - /url: /ui/projects/misra
+                    - cell "misra testing" [ref=e587]:
+                      - generic [ref=e588]: misra testing
+                    - cell "2025-12-11 13:53:52" [ref=e589]:
+                      - generic [ref=e590]: 2025-12-11 13:53:52
+                  - row "misrac_2004 misrac_2004 testing 2025-12-11 13:58:20" [ref=e591]:
+                    - cell "misrac_2004" [ref=e592]:
+                      - link "misrac_2004" [ref=e594] [cursor=pointer]:
+                        - /url: /ui/projects/misrac_2004
+                    - cell "misrac_2004 testing" [ref=e595]:
+                      - generic [ref=e596]: misrac_2004 testing
+                    - cell "2025-12-11 13:58:20" [ref=e597]:
+                      - generic [ref=e598]: 2025-12-11 13:58:20
+                  - row "misrac_2023 misrac_2023 testing 2025-12-11 14:06:34" [ref=e599]:
+                    - cell "misrac_2023" [ref=e600]:
+                      - link "misrac_2023" [ref=e602] [cursor=pointer]:
+                        - /url: /ui/projects/misrac_2023
+                    - cell "misrac_2023 testing" [ref=e603]:
+                      - generic [ref=e604]: misrac_2023 testing
+                    - cell "2025-12-11 14:06:34" [ref=e605]:
+                      - generic [ref=e606]: 2025-12-11 14:06:34
+                  - row "misracpp_2008 misracpp_2008 testing 2025-12-11 14:02:32" [ref=e607]:
+                    - cell "misracpp_2008" [ref=e608]:
+                      - link "misracpp_2008" [ref=e610] [cursor=pointer]:
+                        - /url: /ui/projects/misracpp_2008
+                    - cell "misracpp_2008 testing" [ref=e611]:
+                      - generic [ref=e612]: misracpp_2008 testing
+                    - cell "2025-12-11 14:02:32" [ref=e613]:
+                      - generic [ref=e614]: 2025-12-11 14:02:32
+                  - row "misracpp_2023 misracpp_2023 testing 2025-12-11 14:10:22" [ref=e615]:
+                    - cell "misracpp_2023" [ref=e616]:
+                      - link "misracpp_2023" [ref=e618] [cursor=pointer]:
+                        - /url: /ui/projects/misracpp_2023
+                    - cell "misracpp_2023 testing" [ref=e619]:
+                      - generic [ref=e620]: misracpp_2023 testing
+                    - cell "2025-12-11 14:10:22" [ref=e621]:
+                      - generic [ref=e622]: 2025-12-11 14:10:22
+                  - 'row "multibyte-cpp-shifjis multibyte-cpp-shifjis: testing 2025-12-11 16:53:24" [ref=e623]':
+                    - cell "multibyte-cpp-shifjis" [ref=e624]:
+                      - link "multibyte-cpp-shifjis" [ref=e626] [cursor=pointer]:
+                        - /url: /ui/projects/multibyte-cpp-shifjis
+                    - 'cell "multibyte-cpp-shifjis: testing" [ref=e627]':
+                      - generic [ref=e628]: "multibyte-cpp-shifjis: testing"
+                    - cell "2025-12-11 16:53:24" [ref=e629]:
+                      - generic [ref=e630]: 2025-12-11 16:53:24
+                  - 'row "multibyte-csharp-shiftjis multibyte-csharp-shiftjis: testing 2025-12-11 16:53:26" [ref=e631]':
+                    - cell "multibyte-csharp-shiftjis" [ref=e632]:
+                      - link "multibyte-csharp-shiftjis" [ref=e634] [cursor=pointer]:
+                        - /url: /ui/projects/multibyte-csharp-shiftjis
+                    - 'cell "multibyte-csharp-shiftjis: testing" [ref=e635]':
+                      - generic [ref=e636]: "multibyte-csharp-shiftjis: testing"
+                    - cell "2025-12-11 16:53:26" [ref=e637]:
+                      - generic [ref=e638]: 2025-12-11 16:53:26
+                  - 'row "multibyte-java-shiftjis multibyte-java-shiftjis: testing 2025-12-11 16:53:31" [ref=e639]':
+                    - cell "multibyte-java-shiftjis" [ref=e640]:
+                      - link "multibyte-java-shiftjis" [ref=e642] [cursor=pointer]:
+                        - /url: /ui/projects/multibyte-java-shiftjis
+                    - 'cell "multibyte-java-shiftjis: testing" [ref=e643]':
+                      - generic [ref=e644]: "multibyte-java-shiftjis: testing"
+                    - cell "2025-12-11 16:53:31" [ref=e645]:
+                      - generic [ref=e646]: 2025-12-11 16:53:31
+                  - row "nonCommitCase-1 C/C++ preview testing 2024-02-02 09:16:43" [ref=e647]:
+                    - cell "nonCommitCase-1" [ref=e648]:
+                      - link "nonCommitCase-1" [ref=e650] [cursor=pointer]:
+                        - /url: /ui/projects/nonCommitCase-1
+                    - cell "C/C++ preview testing" [ref=e651]:
+                      - generic [ref=e652]: C/C++ preview testing
+                    - cell "2024-02-02 09:16:43" [ref=e653]:
+                      - generic [ref=e654]: 2024-02-02 09:16:43
+                  - row "nonCommitCase-2-multistream Java preview testing 2024-01-01 09:18:21" [ref=e655]:
+                    - cell "nonCommitCase-2-multistream" [ref=e656]:
+                      - link "nonCommitCase-2-multistream" [ref=e658] [cursor=pointer]:
+                        - /url: /ui/projects/nonCommitCase-2-multistream
+                    - cell "Java preview testing" [ref=e659]:
+                      - generic [ref=e660]: Java preview testing
+                    - cell "2024-01-01 09:18:21" [ref=e661]:
+                      - generic [ref=e662]: 2024-01-01 09:18:21
+                  - row "nonCommitCase-3 JAVA preview testing case 3 2024-03-03 09:24:29" [ref=e663]:
+                    - cell "nonCommitCase-3" [ref=e664]:
+                      - link "nonCommitCase-3" [ref=e666] [cursor=pointer]:
+                        - /url: /ui/projects/nonCommitCase-3
+                    - cell "JAVA preview testing case 3" [ref=e667]:
+                      - generic [ref=e668]: JAVA preview testing case 3
+                    - cell "2024-03-03 09:24:29" [ref=e669]:
+                      - generic [ref=e670]: 2024-03-03 09:24:29
+                  - row "php-tcpdf php testing -- tcpdf 2025-12-11 12:19:59" [ref=e671]:
+                    - cell "php-tcpdf" [ref=e672]:
+                      - link "php-tcpdf" [ref=e674] [cursor=pointer]:
+                        - /url: /ui/projects/php-tcpdf
+                    - cell "php testing -- tcpdf" [ref=e675]:
+                      - generic [ref=e676]: php testing -- tcpdf
+                    - cell "2025-12-11 12:19:59" [ref=e677]:
+                      - generic [ref=e678]: 2025-12-11 12:19:59
+                  - row "python-sympy python testing -- sympy 2025-12-11 13:46:58" [ref=e679]:
+                    - cell "python-sympy" [ref=e680]:
+                      - link "python-sympy" [ref=e682] [cursor=pointer]:
+                        - /url: /ui/projects/python-sympy
+                    - cell "python testing -- sympy" [ref=e683]:
+                      - generic [ref=e684]: python testing -- sympy
+                    - cell "2025-12-11 13:46:58" [ref=e685]:
+                      - generic [ref=e686]: 2025-12-11 13:46:58
+                  - row "ruby-resque ruby testing resque 2025-12-11 12:20:40" [ref=e687]:
+                    - cell "ruby-resque" [ref=e688]:
+                      - link "ruby-resque" [ref=e690] [cursor=pointer]:
+                        - /url: /ui/projects/ruby-resque
+                    - cell "ruby testing resque" [ref=e691]:
+                      - generic [ref=e692]: ruby testing resque
+                    - cell "2025-12-11 12:20:40" [ref=e693]:
+                      - generic [ref=e694]: 2025-12-11 12:20:40
+                  - row "scala scala java testing 2025-12-11 10:31:23" [ref=e695]:
+                    - cell "scala" [ref=e696]:
+                      - link "scala" [ref=e698] [cursor=pointer]:
+                        - /url: /ui/projects/scala
+                    - cell "scala java testing" [ref=e699]:
+                      - generic [ref=e700]: scala java testing
+                    - cell "2025-12-11 10:31:23" [ref=e701]:
+                      - generic [ref=e702]: 2025-12-11 10:31:23
+                  - row "scalaJson-project Simulated defects from scala.json 2025-12-11 17:04:24" [ref=e703]:
+                    - cell "scalaJson-project" [ref=e704]:
+                      - link "scalaJson-project" [ref=e706] [cursor=pointer]:
+                        - /url: /ui/projects/scalaJson-project
+                    - cell "Simulated defects from scala.json" [ref=e707]:
+                      - generic [ref=e708]: Simulated defects from scala.json
+                    - cell "2025-12-11 17:04:24" [ref=e709]:
+                      - generic [ref=e710]: 2025-12-11 17:04:24
+                  - row "sigma sigma 2025-12-11 17:13:24" [ref=e711]:
+                    - cell "sigma" [ref=e712]:
+                      - link "sigma" [ref=e714] [cursor=pointer]:
+                        - /url: /ui/projects/sigma
+                    - cell "sigma" [ref=e715]:
+                      - generic [ref=e716]: sigma
+                    - cell "2025-12-11 17:13:24" [ref=e717]:
+                      - generic [ref=e718]: 2025-12-11 17:13:24
+                  - row "skeleton-case1 All but one snapshot purged. 2025-12-11 17:02:20" [ref=e719]:
+                    - cell "skeleton-case1" [ref=e720]:
+                      - link "skeleton-case1" [ref=e722] [cursor=pointer]:
+                        - /url: /ui/projects/skeleton-case1
+                    - cell "All but one snapshot purged." [ref=e723]:
+                      - generic [ref=e724]: All but one snapshot purged.
+                    - cell "2025-12-11 17:02:20" [ref=e725]:
+                      - generic [ref=e726]: 2025-12-11 17:02:20
+                  - row "skeleton-case2-1 Shared code purged in one project, but not the other. 2025-12-11 17:02:37" [ref=e727]:
+                    - cell "skeleton-case2-1" [ref=e728]:
+                      - link "skeleton-case2-1" [ref=e730] [cursor=pointer]:
+                        - /url: /ui/projects/skeleton-case2-1
+                    - cell "Shared code purged in one project, but not the other." [ref=e731]:
+                      - generic [ref=e732]: Shared code purged in one project, but not the other.
+                    - cell "2025-12-11 17:02:37" [ref=e733]:
+                      - generic [ref=e734]: 2025-12-11 17:02:37
+                  - row "skeleton-case2-2 The unpurged skeleton-case2 project. 2025-12-11 17:02:38" [ref=e735]:
+                    - cell "skeleton-case2-2" [ref=e736]:
+                      - link "skeleton-case2-2" [ref=e738] [cursor=pointer]:
+                        - /url: /ui/projects/skeleton-case2-2
+                    - cell "The unpurged skeleton-case2 project." [ref=e739]:
+                      - generic [ref=e740]: The unpurged skeleton-case2 project.
+                    - cell "2025-12-11 17:02:38" [ref=e741]:
+                      - generic [ref=e742]: 2025-12-11 17:02:38
+                  - row "skeleton-case3 Query purged defects (BZ-61289). 2025-12-11 17:02:53" [ref=e743]:
+                    - cell "skeleton-case3" [ref=e744]:
+                      - link "skeleton-case3" [ref=e746] [cursor=pointer]:
+                        - /url: /ui/projects/skeleton-case3
+                    - cell "Query purged defects (BZ-61289)." [ref=e747]:
+                      - generic [ref=e748]: Query purged defects (BZ-61289).
+                    - cell "2025-12-11 17:02:53" [ref=e749]:
+                      - generic [ref=e750]: 2025-12-11 17:02:53
+                  - row "skeleton-case4 Nothing but skeletons. 2025-12-11 17:03:08" [ref=e751]:
+                    - cell "skeleton-case4" [ref=e752]:
+                      - link "skeleton-case4" [ref=e754] [cursor=pointer]:
+                        - /url: /ui/projects/skeleton-case4
+                    - cell "Nothing but skeletons." [ref=e755]:
+                      - generic [ref=e756]: Nothing but skeletons.
+                    - cell "2025-12-11 17:03:08" [ref=e757]:
+                      - generic [ref=e758]: 2025-12-11 17:03:08
+                  - row "skeleton-case5 Concurrent commits in purged project. 2025-12-11 17:04:04" [ref=e759]:
+                    - cell "skeleton-case5" [ref=e760]:
+                      - link "skeleton-case5" [ref=e762] [cursor=pointer]:
+                        - /url: /ui/projects/skeleton-case5
+                    - cell "Concurrent commits in purged project." [ref=e763]:
+                      - generic [ref=e764]: Concurrent commits in purged project.
+                    - cell "2025-12-11 17:04:04" [ref=e765]:
+                      - generic [ref=e766]: 2025-12-11 17:04:04
+                  - row "tar project C/C++ QA testing 2024-08-19 09:06:13" [ref=e767]:
+                    - cell "tar project" [ref=e768]:
+                      - link "tar project" [ref=e770] [cursor=pointer]:
+                        - /url: /ui/projects/tar project
+                    - cell "C/C++ QA testing" [ref=e771]:
+                      - generic [ref=e772]: C/C++ QA testing
+                    - cell "2024-08-19 09:06:13" [ref=e773]:
+                      - generic [ref=e774]: 2024-08-19 09:06:13
+                  - row "testcpp C/C++ xref testing 2024-03-17 09:06:56" [ref=e775]:
+                    - cell "testcpp" [ref=e776]:
+                      - link "testcpp" [ref=e778] [cursor=pointer]:
+                        - /url: /ui/projects/testcpp
+                    - cell "C/C++ xref testing" [ref=e779]:
+                      - generic [ref=e780]: C/C++ xref testing
+                    - cell "2024-03-17 09:06:56" [ref=e781]:
+                      - generic [ref=e782]: 2024-03-17 09:06:56
+                  - row "testcpp-multistream Advanced triage testing 2024-06-17 09:08:20" [ref=e783]:
+                    - cell "testcpp-multistream" [ref=e784]:
+                      - link "testcpp-multistream" [ref=e786] [cursor=pointer]:
+                        - /url: /ui/projects/testcpp-multistream
+                    - cell "Advanced triage testing" [ref=e787]:
+                      - generic [ref=e788]: Advanced triage testing
+                    - cell "2024-06-17 09:08:20" [ref=e789]:
+                      - generic [ref=e790]: 2024-06-17 09:08:20
+                  - row "testcpp_misra testcpp_misra testing 2025-12-11 13:54:40" [ref=e791]:
+                    - cell "testcpp_misra" [ref=e792]:
+                      - link "testcpp_misra" [ref=e794] [cursor=pointer]:
+                        - /url: /ui/projects/testcpp_misra
+                    - cell "testcpp_misra testing" [ref=e795]:
+                      - generic [ref=e796]: testcpp_misra testing
+                    - cell "2025-12-11 13:54:40" [ref=e797]:
+                      - generic [ref=e798]: 2025-12-11 13:54:40
+                  - row "tlcases Unified domain testing 2025-12-11 09:30:31" [ref=e799]:
+                    - cell "tlcases" [ref=e800]:
+                      - link "tlcases" [ref=e802] [cursor=pointer]:
+                        - /url: /ui/projects/tlcases
+                    - cell "Unified domain testing" [ref=e803]:
+                      - generic [ref=e804]: Unified domain testing
+                    - cell "2025-12-11 09:30:31" [ref=e805]:
+                      - generic [ref=e806]: 2025-12-11 09:30:31
+                  - row "vbnetJson-project Simulated defects from vbnet.json 2025-12-11 17:04:26" [ref=e807]:
+                    - cell "vbnetJson-project" [ref=e808]:
+                      - link "vbnetJson-project" [ref=e810] [cursor=pointer]:
+                        - /url: /ui/projects/vbnetJson-project
+                    - cell "Simulated defects from vbnet.json" [ref=e811]:
+                      - generic [ref=e812]: Simulated defects from vbnet.json
+                    - cell "2025-12-11 17:04:26" [ref=e813]:
+                      - generic [ref=e814]: 2025-12-11 17:04:26
+                  - row "vsvim C# testing 2025-12-11 10:28:46" [ref=e815]:
+                    - cell "vsvim" [ref=e816]:
+                      - link "vsvim" [ref=e818] [cursor=pointer]:
+                        - /url: /ui/projects/vsvim
+                    - cell "C# testing" [ref=e819]:
+                      - generic [ref=e820]: C# testing
+                    - cell "2025-12-11 10:28:46" [ref=e821]:
+                      - generic [ref=e822]: 2025-12-11 10:28:46
+                  - row "xml-fortran fortran testing -- xml-fortran 2025-12-11 10:33:18" [ref=e823]:
+                    - cell "xml-fortran" [ref=e824]:
+                      - link "xml-fortran" [ref=e826] [cursor=pointer]:
+                        - /url: /ui/projects/xml-fortran
+                    - cell "fortran testing -- xml-fortran" [ref=e827]:
+                      - generic [ref=e828]: fortran testing -- xml-fortran
+                    - cell "2025-12-11 10:33:18" [ref=e829]:
+                      - generic [ref=e830]: 2025-12-11 10:33:18
+              - generic [ref=e831]:
+                - generic [ref=e832]: Display 1-69 of 69
+                - generic [ref=e834]:
+                  - text: Show
+                  - combobox "select page size" [ref=e836] [cursor=pointer]:
+                    - generic: "3000"
+                    - img [ref=e837]
+                  - text: per page
+            - status [ref=e839]
+      - contentinfo "Site footer" [ref=e840]:
+        - generic [ref=e842]:
+          - text: © 2026
+          - link "Black Duck Software, Inc" [ref=e843] [cursor=pointer]:
+            - /url: https://www.blackduck.com
+  - region "Notifications alt+T"
+  - generic [ref=e26]:
+    - img [ref=e28]
+    - button "Open Tanstack query devtools" [ref=e76] [cursor=pointer]:
+      - img [ref=e77]

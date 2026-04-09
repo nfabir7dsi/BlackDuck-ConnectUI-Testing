@@ -1,0 +1,7 @@
+- generic [ref=e2]:
+  - status [ref=e4]:
+    - generic [ref=e6]: Please Wait
+  - generic [ref=e7]:
+    - img [ref=e9]
+    - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+      - img [ref=e58]

@@ -1,0 +1,268 @@
+[     805ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[    1473ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    3873ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    3873ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    3874ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    3874ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[    4883ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    7287ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    7287ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    7288ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[    7289ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[    9294ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   11686ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   11687ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   11687ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   11687ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   15689ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18055ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18055ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18056ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18057ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/login/login.htm:0
+[   18073ms] [ERROR] [ERROR] API Query Error [auth,session]: {error: ApiError: Unable to connect to the authentication server. Please check your internet connection.
+  …, errorStatus: 500, errorCode: UNKNOWN_ERROR, deduped: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18074ms] [INFO] [INFO] Fetching login configurations  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18147ms] [INFO] [INFO] Login configurations fetched successfully  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   18195ms] [INFO] [INFO] Login page loaded with redirect path {redirectPath: /, returnUrl: /, hasLocationState: false, isAuthenticated: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   32093ms] [INFO] [INFO] User login initiated  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   32319ms] [INFO] [INFO] User login successful {username: admin} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   32320ms] [INFO] [INFO] Login successful, navigating to redirect path {from: /} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   32333ms] [INFO] [INFO] Session validation successful, redirecting to: {redirectPath: /} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   32381ms] [INFO] [INFO] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 05:37:37 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: b00bcc14fcaa31b5270c2f61d0e5690c                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[   32381ms] [LOG] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 05:37:37 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: b00bcc14fcaa31b5270c2f61d0e5690c                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘ @ http://10.255.185.131:5173/ui/src/lib/logging/uiSessionManager.ts:74
+[  632336ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[  632452ms] [INFO] [INFO] Session validation successful {userId: 2, username: admin, roles: undefined} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[  632483ms] [INFO] [INFO] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 05:47:37 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: d0ed0c6f3a467faa3b74c96694497949                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[  632483ms] [LOG] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 05:47:37 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: d0ed0c6f3a467faa3b74c96694497949                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘ @ http://10.255.185.131:5173/ui/src/lib/logging/uiSessionManager.ts:74
+[ 1232462ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 1232534ms] [INFO] [INFO] Session validation successful {userId: 2, username: admin, roles: undefined} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 1832536ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 1832631ms] [INFO] [INFO] Session validation successful {userId: 2, username: admin, roles: undefined} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 2432639ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 2432739ms] [INFO] [INFO] Session validation successful {userId: 2, username: admin, roles: undefined} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 2601769ms] [LOG] [vite] server connection lost. Polling for restart... @ http://10.255.185.131:5173/ui/@vite/client:963
+[ 2622809ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2644852ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2666905ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2688958ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2711011ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2733074ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2755123ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2777184ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2799263ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2821328ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2843430ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2865483ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2887531ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2909600ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2931673ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2953777ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2975958ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 2998035ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3020111ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3032755ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3042201ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3053795ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3053796ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3053797ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3053798ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/auth/confirm-authentication-status:0
+[ 3054076ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/logs/ui:0
+[ 3054080ms] ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:13:12)
+    at Object.fromUnknownError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:66:17)
+    at handleApiError (http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:108:23)
+    at http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:173:27
+    at async Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2197:14)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+    at Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2201:41)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+[ 3054802ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3058811ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3058812ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3058812ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3058813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/auth/confirm-authentication-status:0
+[ 3060819ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3064269ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3075843ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/logs/ui:0
+[ 3075846ms] ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:13:12)
+    at Object.fromUnknownError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:66:17)
+    at handleApiError (http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:108:23)
+    at http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:173:27
+    at async Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2197:14)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+    at Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2201:41)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+[ 3079859ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3079860ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3079860ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3079861ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/auth/confirm-authentication-status:0
+[ 3081869ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/logs/ui:0
+[ 3081872ms] ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:13:12)
+    at Object.fromUnknownError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:66:17)
+    at handleApiError (http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:108:23)
+    at http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:173:27
+    at async Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2197:14)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+    at Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2201:41)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+[ 3083873ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3084852ms] [INFO] [INFO] Session validation error {error: ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/co…} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3084852ms] [INFO] [INFO] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3084853ms] [ERROR] [ERROR] [Auth] Authentication error handling: validateSession {context: validateSession, isLoginAttempt: false, isRefreshAttempt: false} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3084855ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/auth/confirm-authentication-status:0
+[ 3086410ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3104918ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/api/logs/ui:0
+[ 3104921ms] ApiError: Network Error
+    at Object.createApiError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:13:12)
+    at Object.fromUnknownError (http://10.255.185.131:5173/ui/src/features/common/api/errors/ErrorFactory.ts:66:17)
+    at handleApiError (http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:108:23)
+    at http://10.255.185.131:5173/ui/src/features/common/api/apiClient.ts:173:27
+    at async Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2197:14)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+    at Axios.request (http://10.255.185.131:5173/ui/.vite-cache/deps/axios.js?v=3f6d97b0:2201:41)
+    at async sendLogs (http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:68:5)
+[ 3108476ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3130540ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3152607ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3174685ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3196802ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3219005ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3241083ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3263142ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3285226ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3307330ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3329467ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3351545ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3373613ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3395682ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3417770ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3439900ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3462018ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3484101ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3506169ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3528250ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3550351ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3572536ms] [ERROR] WebSocket connection to 'ws://10.255.185.131:5173/ui/' failed: Error in connection establishment: net::ERR_CONNECTION_TIMED_OUT @ http://10.255.185.131:5173/ui/@vite/client:1034
+[ 3579410ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://10.255.185.131:5173/ui/.vite-cache/deps/chunk-JGD6IGJ4.js?v=3f6d97b0:21608
+[ 3580344ms] [INFO] [INFO] Validating user session  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3580397ms] [INFO] [INFO] Session validation successful {userId: 2, username: admin, roles: undefined} @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3580639ms] [INFO] [INFO] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 06:36:45 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: 011f468c3ba70b2cda2c559bbbc5459d                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘  @ http://10.255.185.131:5173/ui/src/lib/logging/logger.ts:118
+[ 3580639ms] [LOG] 
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│       ▗▄                  ▝   ▗           ▗▄                      ▗       │
+│      ▗▘ ▘ ▄▖ ▗ ▗  ▄▖  ▖▄ ▗▄  ▗▟▄ ▗ ▗     ▗▘ ▘ ▄▖ ▗▗▖ ▗▗▖  ▄▖  ▄▖ ▗▟▄      │
+│      ▐   ▐▘▜ ▝▖▞ ▐▘▐  ▛ ▘ ▐   ▐  ▝▖▞     ▐   ▐▘▜ ▐▘▐ ▐▘▐ ▐▘▐ ▐▘▝  ▐       │
+│      ▐   ▐ ▐  ▙▌ ▐▀▀  ▌   ▐   ▐   ▙▌     ▐   ▐ ▐ ▐ ▐ ▐ ▐ ▐▀▀ ▐    ▐       │
+│       ▚▄▘▝▙▛  ▐  ▝▙▞  ▌  ▗▟▄  ▝▄  ▜       ▚▄▘▝▙▛ ▐ ▐ ▐ ▐ ▝▙▞ ▝▙▞  ▝▄      │
+│                                   ▞                                       │
+│                                  ▝▘                                       │
+│                                                                           │
+│ Date/Time: 03/31/2026, 06:36:45 PM GMT+6                                  │
+│ Locale: en_US                                                             │
+│ Version: 2026.3.0-snapshot                                                │
+│ Commit: 40392406                                                          │
+│ Commit Date: Thu Mar 26 18:39:04 2026 +0000                               │
+│ Session ID: 011f468c3ba70b2cda2c559bbbc5459d                              │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘ @ http://10.255.185.131:5173/ui/src/lib/logging/uiSessionManager.ts:74

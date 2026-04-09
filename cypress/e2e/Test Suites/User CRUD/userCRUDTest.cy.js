@@ -3,25 +3,16 @@ import navbar from "../../../support/pages/Navbar/navbar";
 import usersPage from "../../../support/pages/UsersPage/usersPage";
 
 describe("Verify CRUD functionality for user", () => {
-    const url = 'http://10.255.184.188:5173/ui';
-    const validUsername = 'admin';
-    const validPassword = 'C0ver1ty!';
-
-    // Test data for creating a user
-    const username = 'test10';
-    const firstName = 'Test';
-    const lastName = 'User';
-    const email = 'test@user.com';
-    const password = '123456';
-    const confirmPassword = '123456';
-
-    const updatedFirstName = 'Testing';
+    let data;
 
     beforeEach(() => {
-        cy.visit(url);
-        cy.wait(2000);
-        cy.percySnapshot('Login Page');
-        cy.login(validUsername, validPassword);
+        cy.fixture('coverity').then((fixture) => {
+            data = fixture;
+            cy.visit(data.baseURL);
+            cy.wait(10000);
+            // cy.percySnapshot('Login Page');
+            cy.login(data.validUser.username, data.validUser.password);
+        });
         navbar.clickSidebarToggleButton();                  // Open Sidebar
         cy.wait(2000);
         cy.percySnapshot('Projects Page with Sidebar Open');
@@ -34,27 +25,18 @@ describe("Verify CRUD functionality for user", () => {
 
         cy.wait(2000);
         cy.percySnapshot('Users Page');
-          
-        // cy.session("adminLogin", () => {
-        //     cy.visit(url);
-        //     cy.login(validUsername, validPassword);
-        // });
-
-        // cy.then(() => {
-        //     cy.visit(url + '/projects');
-        // });
     });
 
     it("Verify creating a user", () => {
-        
+
         usersPage.clickCreateUserPageButton()                // Go to Create User Page
             .verifyCreateUserPageHeader('Create user')
-            .enterUsername(username)                         // Create User
-            .enterFirstName(firstName)
-            .enterLastName(lastName)
-            .enterEmail(email)
-            .enterPassword(password)
-            .enterConfirmPassword(confirmPassword)
+            .enterUsername(data.newUser.username)            // Create User
+            .enterFirstName(data.newUser.firstName)
+            .enterLastName(data.newUser.lastName)
+            .enterEmail(data.newUser.email)
+            .enterPassword(data.newUser.password)
+            .enterConfirmPassword(data.newUser.confirmPassword)
             .clickCreateUserButton(true)
             .verifySuccessNotification();
     });
@@ -62,38 +44,38 @@ describe("Verify CRUD functionality for user", () => {
     it("Verify reading user details", () => {
 
         usersPage.clickSearchButton()                        // Search for created user
-            .enterSearchInput(username)
-            .verifyCreatedUsername(username)                 // Read User details from table
+            .enterSearchInput(data.newUser.username)
+            .verifyCreatedUsername(data.newUser.username)    // Read User details from table
             .verifyCreatedUserDomain('Local')
-            .verifyCreatedUserFirstName(firstName)
-            .verifyCreatedUserLastName(lastName)
+            .verifyCreatedUserFirstName(data.newUser.firstName)
+            .verifyCreatedUserLastName(data.newUser.lastName)
             .verifyCreatedUserGroups('Users');
     });
 
     it("Verify updating user details", () => {
-        
+
         usersPage.clickSearchButton()                        // Search for created user
-            .enterSearchInput(username)
+            .enterSearchInput(data.newUser.username)
             .clickOnCreatedUser()                            // Go to Edit User Page and update details
-            .verifyEditUserPageHeader(username)
-            .verifyFirstNameInput(firstName)
-            .editFirstName(updatedFirstName)
+            .verifyEditUserPageHeader(data.newUser.username)
+            .verifyFirstNameInput(data.newUser.firstName)
+            .editFirstName(data.newUser.updatedFirstName)
             .clickUpdateUserButton()
             .verifySuccessNotification()
             .clickSearchButton()                             // Verify updated details
-            .enterSearchInput(username)
-            .verifyCreatedUserFirstName(updatedFirstName);                
+            .enterSearchInput(data.newUser.username)
+            .verifyCreatedUserFirstName(data.newUser.updatedFirstName);
     });
 
     it("Verfiy deleting the user", () => {
         usersPage.clickSearchButton()                        // Search for created user
-            .enterSearchInput(username)
+            .enterSearchInput(data.newUser.username)
             .clickDeleteButton()                             // Delete the created user
             .verifyModalVisibility()
             .clickConfirmDeleteButton()
             .verifySuccessNotification()
             .clickSearchButton()                             // Verify user deletion
-            .enterSearchInput(username)
+            .enterSearchInput(data.newUser.username)
             .verifyUserDeletion('No results');
     });
 

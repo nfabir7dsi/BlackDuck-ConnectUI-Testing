@@ -1,0 +1,130 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e106] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e108]:
+    - generic [ref=e111]:
+      - generic [ref=e113]:
+        - img "Black Duck Logo" [ref=e114]
+        - generic [ref=e115]:
+          - heading "Black Duck Coverity" [level=1] [ref=e116]
+          - paragraph [ref=e117]: main-snapshot
+      - list "Main Navigation - Primary Menu" [ref=e121]:
+        - listitem [ref=e122]:
+          - generic [ref=e123]:
+            - button "Projects & hierarchies" [expanded] [ref=e124] [cursor=pointer]:
+              - img [ref=e125]
+              - generic [ref=e135]: Projects & hierarchies
+              - img [ref=e136]
+            - menu "Projects & hierarchies Submenu" [ref=e139]:
+              - menuitem "Projects" [ref=e140] [cursor=pointer]:
+                - generic [ref=e141]: Projects
+        - listitem [ref=e142]:
+          - button "Help & support" [ref=e144] [cursor=pointer]:
+            - img [ref=e145]
+            - generic [ref=e148]: Help & support
+            - img [ref=e149]
+      - generic [ref=e151]:
+        - generic [ref=e153]:
+          - img [ref=e155]
+          - textbox "Search CIDs" [ref=e158]
+        - button "admin username@blackduck.com" [ref=e160] [cursor=pointer]:
+          - generic [ref=e161]:
+            - img [ref=e163]
+            - generic [ref=e167]:
+              - paragraph [ref=e168]: admin
+              - paragraph [ref=e169]: username@blackduck.com
+            - img [ref=e170]
+    - generic [ref=e172]:
+      - main "Main content" [ref=e173]:
+        - navigation "Breadcrumb" [ref=e175]:
+          - button "Toggle sidebar" [ref=e176] [cursor=pointer]:
+            - img [ref=e177]
+          - list [ref=e179]:
+            - listitem [ref=e180]
+            - listitem [ref=e182]:
+              - generic [ref=e183]: Projects
+        - generic [ref=e184]:
+          - heading "Projects" [level=1] [ref=e186]
+          - generic [ref=e187]:
+            - generic [ref=e188]:
+              - combobox "select view" [ref=e189] [cursor=pointer]:
+                - text: View | hook
+                - img
+              - button "Save" [ref=e190] [cursor=pointer]:
+                - img
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - generic [ref=e194]:
+                  - generic [ref=e195]:
+                    - button "Project = AUTOSAR" [ref=e196] [cursor=pointer]:
+                      - text: Project = AUTOSAR
+                      - img
+                    - button "Remove Project filter" [ref=e197] [cursor=pointer]:
+                      - img
+                  - combobox [ref=e198] [cursor=pointer]:
+                    - text: Add filters
+                    - img
+                  - button "Clear filters" [ref=e199] [cursor=pointer]
+                - generic [ref=e200]:
+                  - button "Search..." [ref=e203] [cursor=pointer]:
+                    - img
+                  - generic [ref=e204]:
+                    - button "Toggle column visibility" [ref=e208] [cursor=pointer]:
+                      - img
+                    - button "Export..." [ref=e212] [cursor=pointer]:
+                      - img
+              - table [ref=e215]:
+                - rowgroup [ref=e216]:
+                  - row "Drag to reorder column Sort by Project Resize column project. Drag to resize, double-click to reset. Drag to reorder column Sort by Description Resize column projectDescription. Drag to resize, double-click to reset. Drag to reorder column Sort by Last Commit Resize column lastSnapshotDate. Drag to resize, double-click to reset." [ref=e217]:
+                    - columnheader "Drag to reorder column Sort by Project Resize column project. Drag to resize, double-click to reset." [ref=e218]:
+                      - generic [ref=e219]:
+                        - button "Drag to reorder column" [ref=e220] [cursor=pointer]:
+                          - img [ref=e221]
+                        - button "Sort by Project" [ref=e228] [cursor=pointer]:
+                          - text: Project
+                          - img [ref=e229]
+                        - button "Resize column project. Drag to resize, double-click to reset." [ref=e232]
+                    - columnheader "Drag to reorder column Sort by Description Resize column projectDescription. Drag to resize, double-click to reset." [ref=e233]:
+                      - generic [ref=e234]:
+                        - button "Drag to reorder column" [ref=e235] [cursor=pointer]:
+                          - img [ref=e236]
+                        - button "Sort by Description" [ref=e243] [cursor=pointer]:
+                          - text: Description
+                          - img [ref=e244]
+                        - button "Resize column projectDescription. Drag to resize, double-click to reset." [ref=e247]
+                    - columnheader "Drag to reorder column Sort by Last Commit Resize column lastSnapshotDate. Drag to resize, double-click to reset." [ref=e248]:
+                      - generic [ref=e249]:
+                        - button "Drag to reorder column" [ref=e250] [cursor=pointer]:
+                          - img [ref=e251]
+                        - button "Sort by Last Commit" [ref=e258] [cursor=pointer]:
+                          - text: Last Commit
+                          - img [ref=e259]
+                        - button "Resize column lastSnapshotDate. Drag to resize, double-click to reset." [ref=e262]
+                - rowgroup [ref=e263]:
+                  - row "AUTOSAR AUTOSAR testing 2025-12-11 14:22:55" [ref=e264]:
+                    - cell "AUTOSAR" [ref=e265]:
+                      - link "AUTOSAR" [ref=e267] [cursor=pointer]:
+                        - /url: /ui/projects/AUTOSAR
+                    - cell "AUTOSAR testing" [ref=e268]:
+                      - generic [ref=e269]: AUTOSAR testing
+                    - cell "2025-12-11 14:22:55" [ref=e270]:
+                      - generic [ref=e271]: 2025-12-11 14:22:55
+              - generic [ref=e272]:
+                - generic [ref=e273]: Display 1-1 of 1
+                - generic [ref=e275]:
+                  - text: Show
+                  - combobox "select page size" [ref=e277] [cursor=pointer]:
+                    - generic: "3000"
+                    - img [ref=e278]
+                  - text: per page
+            - status [ref=e280]
+      - contentinfo "Site footer" [ref=e281]:
+        - generic [ref=e283]:
+          - text: © 2026
+          - link "Black Duck Software, Inc" [ref=e284] [cursor=pointer]:
+            - /url: https://www.blackduck.com
+  - region "Notifications alt+T"
+  - generic [ref=e7]:
+    - img [ref=e9]
+    - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+      - img [ref=e58]
