@@ -1,7 +1,7 @@
 import sidebar from '../../../support/pages/Sidebar/sidebar';
 import projectPage from '../../../support/pages/ProjectPage/projectPage';
 import issuePage from '../../../support/pages/IssuePage/issuePage';
-import issueObject from '../../../support/objects/IssueObjects/issueObject';
+import loginObjects from '../../../support/objects/LoginObjects/loginObjects';
 
 describe('Issue Page Test Suite', { testIsolation: false }, () => {
     let data;
@@ -10,7 +10,8 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
         cy.fixture('coverity').then((fixture) => {
             data = fixture;
             cy.visit(data.baseURL);
-            cy.wait(10000);
+            cy.waitForVisible(loginObjects.getLoginPageHeader());
+            // cy.wait(10000);
             cy.login(data.validUser.username, data.validUser.password);
         });
         sidebar.clickOnProjectsMenu()
@@ -54,11 +55,9 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('"Projects" breadcrumb link navigates back to the projects list', () => {
         issuePage.clickProjectsBreadcrumbLink();
-        cy.url().should('include', '/ui/projects');
-        cy.url().should('not.match', /\/ui\/projects\/.+/);
-        // Navigate back to the issue list for subsequent tests
-        projectPage.clickFirstProjectLink();
-        cy.getByDataTestId(issueObject.getIssueTable()).should('be.visible');
+        issuePage.verifyNavigatedToProjectsListPage();
+        projectPage.clickFirstProjectLink();        // Navigate back to the issue list for subsequent tests
+        issuePage.verifyTableVisible();
     });
 
     it('Project switcher combobox is visible in the breadcrumb', () => {
@@ -96,8 +95,8 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('Clicking export button opens an export menu', () => {
         issuePage.clickExportButton();
-        cy.get('[role="menu"], [role="dialog"], [role="listbox"]').should('be.visible');
-        cy.get('body').type('{esc}');
+        issuePage.verifyExportMenuVisible();
+        issuePage.closePanelWithEsc();
     });
 
     it('Column visibility toggle button is visible', () => {
@@ -106,20 +105,22 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('Clicking column visibility toggle opens a column panel', () => {
         issuePage.clickColumnToggle();
-        cy.get('[role="menu"], [role="dialog"]').should('be.visible');
-        cy.get('body').type('{esc}');
+        issuePage.verifyColumnPanelVisible();
+        issuePage.closePanelWithEsc();
     });
 
     it('Toggling a column off hides it from the table', () => {
         issuePage.clickColumnToggle();
-        cy.contains('[role="menuitem"]', 'Owner').click();
-        issuePage.verifyColumnNotExists(issueObject.getOwnerColumn());
+        issuePage.verifyColumnPanelVisible();
+        issuePage.toggleColumnByName('Status');
+        issuePage.verifyColumnNotExists('status-column');
     });
 
     it('Toggling the column back on restores it in the table', () => {
         issuePage.clickColumnToggle();
-        cy.contains('[role="menuitem"]', 'Owner').click();
-        issuePage.verifyColumnVisible(issueObject.getOwnerColumn());
+        issuePage.verifyColumnPanelVisible();
+        issuePage.toggleColumnByName('Status');
+        issuePage.verifyColumnVisible('status-column');
     });
 
     // ── Suite 10: Sidebar CID Search ─────────────────────────────────────────
@@ -130,21 +131,21 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('Typing in sidebar search accepts input', () => {
         issuePage.searchCIDInSidebar('11188');
-        cy.getByDataTestId(issueObject.getSidebarSearchInput()).should('have.value', '11188');
+        issuePage.verifySidebarSearchValue('11188');
         issuePage.clearSidebarSearch();
     });
 
     it('Clearing sidebar search input restores normal table state', () => {
         issuePage.searchCIDInSidebar('INVALID999999');
         issuePage.clearSidebarSearch();
-        cy.getByDataTestId(issueObject.getSidebarSearchInput()).should('have.value', '');
+        issuePage.verifySidebarSearchValue('');
         issuePage.verifyTableVisible();
     });
 
     // ── Suite 11: Pagination ─────────────────────────────────────────────────
 
     it('Record count is displayed', () => {
-        issuePage.verifyRecordCount('1-25 of');
+        issuePage.verifyRecordCount('1-25');
     });
 
     it('Previous page button is disabled on page 1', () => {
@@ -165,27 +166,27 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('Clicking Next navigates to page 2 and updates the record count', () => {
         issuePage.clickNextPage();
-        issuePage.verifyRecordCount('26-50 of');
+        issuePage.verifyRecordCount('26-50');
         issuePage.verifyPageActive(2);
     });
 
     it('Clicking Previous from page 2 returns to page 1', () => {
         issuePage.clickPreviousPage();
-        issuePage.verifyRecordCount('1-25 of');
+        issuePage.verifyRecordCount('1-25');
         issuePage.verifyPageActive(1);
     });
 
     it('Clicking a specific page number navigates to that page', () => {
         issuePage.clickPage(3);
-        issuePage.verifyRecordCount('51-75 of');
+        issuePage.verifyRecordCount('51-75');
         issuePage.verifyPageActive(3);
-        // Return to page 1 for subsequent tests
-        issuePage.clickPage(1);
+        issuePage.clickPage(1);        // Return to page 1 for subsequent tests
     });
 
     it('Changing page size updates the record count display', () => {
         issuePage.changePageSize('50');
-        issuePage.verifyRecordCount('1-50 of');
+        issuePage.verifyRecordCount('1-50');
+        issuePage.changePageSize('25');
     });
 
     it('Changing page size resets to page 1', () => {

@@ -56,6 +56,11 @@ class IssueObject {
     // Sidebar search
     sidebarSearchInput = 'search-input-sidebar';
 
+    // Menus and panels (CSS role selectors)
+    exportMenu = '[role="menu"], [role="dialog"], [role="listbox"]';
+    columnPanel = '[role="menu"], [role="dialog"]';
+    columnMenuItemCheckbox = '[role="menuitemcheckbox"]';
+
     getBreadcrumbNav() { return this.breadcrumbNav; }
     getBreadcrumbProjectsLink() { return this.breadcrumbProjectsLink; }
     getProjectSwitcher() { return this.projectSwitcher; }
@@ -95,6 +100,9 @@ class IssueObject {
     getEllipsisEnd() { return this.ellipsisEnd; }
     getPageSizeSelect() { return this.pageSizeSelect; }
     getSidebarSearchInput() { return this.sidebarSearchInput; }
+    getExportMenu() { return this.exportMenu; }
+    getColumnPanel() { return this.columnPanel; }
+    getColumnMenuItemCheckbox() { return this.columnMenuItemCheckbox; }
 
     getPageButton(n) { return `page-button-${n}`; }
     getRowCell(rowIndex, colName) { return `row-${rowIndex}-${colName}-column`; }

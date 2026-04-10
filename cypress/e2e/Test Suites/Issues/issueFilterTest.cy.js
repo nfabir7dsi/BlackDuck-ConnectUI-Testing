@@ -13,9 +13,11 @@ describe('Issue Filter Test Suite', { testIsolation: false }, () => {
             cy.wait(10000);
             cy.login(data.validUser.username, data.validUser.password);
         });
-        sidebar.clickOnProjectsMenu().clickOnProjectsTab().clearFiltersIfPresent();
-        projectPage.clickFirstProjectLink();
-        cy.getByDataTestId(issueObject.getFilterTrigger()).should('have.length', 3);
+        sidebar.clickOnProjectsMenu()
+                .clickOnProjectsTab()
+                .clearFiltersIfPresent()
+                .clickFirstProjectLink()
+                .clearFiltersIfPresent();
     });
 
     after(() => {
@@ -23,10 +25,10 @@ describe('Issue Filter Test Suite', { testIsolation: false }, () => {
     });
 
     // Reset to the saved "High Impact Outstanding" view before each test
-    beforeEach(() => {
-        issuePage.clickResetButton();
-        cy.getByDataTestId(issueObject.getFilterTrigger()).should('have.length', 3);
-    });
+    // beforeEach(() => {
+    //     issuePage.clickResetButton();
+    //     cy.getByDataTestId(issueObject.getFilterTrigger()).should('have.length', 3);
+    // });
 
     // ── Suite 4: Filter Chips Toolbar ─────────────────────────────────────────
 

@@ -6,6 +6,8 @@ class LoginObjects {
     errormessage = 'error-message';
     label = 'label';
 
+    loginPageHeader = '[data-testid="blackduck-coverity-title"]';
+
     getUsernameInput() {
         return this.usernameInput;
     }
@@ -24,6 +26,10 @@ class LoginObjects {
 
     getLabel() {
         return this.label;
+    }
+
+    getLoginPageHeader() {
+        return this.loginPageHeader;
     }
 }
 

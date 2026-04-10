@@ -35,6 +35,15 @@ Cypress.Commands.add("login", (username, password) => {
         .clickLoginButton();
 });
 
+// Waits until the element matching `locator` becomes visible, then proceeds immediately.
+// Cypress retries every ~50ms so there is no unnecessary waiting — it unblocks
+// as soon as the element appears. The default timeout is intentionally large (60 s)
+// to handle slow first-load scenarios; pass { timeout: ms } to override.
+Cypress.Commands.add('waitForVisible', (locator, options = {}) => {
+    const timeout = options.timeout ?? 60000;
+    return cy.get(locator, { timeout }).should('be.visible');
+});
+
 Cypress.Commands.add("logout", () => {
     cy.get('body').then(($body) => {
         if ($body.find('[data-testid="dropdown-menu-trigger"]').length > 0) {

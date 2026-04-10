@@ -110,6 +110,11 @@ class IssuePage {
         return this;
     }
 
+    verifyExportMenuVisible() {
+        cy.get(issueObject.getExportMenu()).should('be.visible');
+        return this;
+    }
+
     verifyColumnToggleVisible() {
         cy.getByDataTestId(issueObject.getColumnToggle()).should('be.visible');
         return this;
@@ -117,6 +122,22 @@ class IssuePage {
 
     clickColumnToggle() {
         cy.getByDataTestId(issueObject.getColumnToggle()).click();
+        return this;
+    }
+
+    verifyColumnPanelVisible() {
+        cy.get(issueObject.getColumnPanel()).should('be.visible');
+        return this;
+    }
+
+    closePanelWithEsc() {
+        cy.get('body').type('{esc}');
+        cy.wait(500);
+        return this;
+    }
+
+    toggleColumnByName(columnName) {
+        cy.get(issueObject.getColumnMenuItemCheckbox()).contains(columnName).click();
         return this;
     }
 
@@ -309,7 +330,7 @@ class IssuePage {
 
     verifyPageActive(n) {
         cy.getByDataTestId(issueObject.getPageButton(n))
-            .should('have.attr', 'aria-current', 'page');
+            .should('have.class', 'border-input');
         return this;
     }
 
@@ -347,6 +368,17 @@ class IssuePage {
     clearSidebarSearch() {
         cy.getByDataTestId(issueObject.getSidebarSearchInput()).clear();
         cy.wait(300);
+        return this;
+    }
+
+    verifySidebarSearchValue(value) {
+        cy.getByDataTestId(issueObject.getSidebarSearchInput()).should('have.value', value);
+        return this;
+    }
+
+    verifyNavigatedToProjectsListPage() {
+        cy.url().should('include', '/ui/projects');
+        cy.url().should('not.match', /\/ui\/projects\/.+/);
         return this;
     }
 }

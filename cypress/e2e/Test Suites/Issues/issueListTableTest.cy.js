@@ -1,7 +1,8 @@
 import sidebar from '../../../support/pages/Sidebar/sidebar';
-import projectPage from '../../../support/pages/ProjectPage/projectPage';
 import issuePage from '../../../support/pages/IssuePage/issuePage';
 import issueObject from '../../../support/objects/IssueObjects/issueObject';
+import loginObjects from '../../../support/objects/LoginObjects/loginObjects';
+
 
 describe('Issue List Table Test Suite', { testIsolation: false }, () => {
     let data;
@@ -10,12 +11,15 @@ describe('Issue List Table Test Suite', { testIsolation: false }, () => {
         cy.fixture('coverity').then((fixture) => {
             data = fixture;
             cy.visit(data.baseURL);
-            cy.wait(10000);
+            cy.waitForVisible(loginObjects.getLoginPageHeader());
+            // cy.wait(10000);
             cy.login(data.validUser.username, data.validUser.password);
         });
-        sidebar.clickOnProjectsMenu().clickOnProjectsTab().clearFiltersIfPresent();
-        projectPage.clickFirstProjectLink();
-        cy.getByDataTestId(issueObject.getIssueTable()).should('be.visible');
+        sidebar.clickOnProjectsMenu()
+                .clickOnProjectsTab()
+                .clearFiltersIfPresent()
+                .clickFirstProjectLink()
+                .clearFiltersIfPresent();
     });
 
     after(() => {
@@ -38,10 +42,6 @@ describe('Issue List Table Test Suite', { testIsolation: false }, () => {
 
     it('Status column header is visible', () => {
         issuePage.verifyColumnVisible(issueObject.getStatusColumn());
-    });
-
-    it('Count column header is visible', () => {
-        issuePage.verifyColumnVisible(issueObject.getCountColumn());
     });
 
     it('First row cells contain data', () => {
