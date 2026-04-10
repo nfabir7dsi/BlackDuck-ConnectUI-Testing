@@ -10,8 +10,7 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
         cy.fixture('coverity').then((fixture) => {
             data = fixture;
             cy.visit(data.baseURL);
-            cy.waitForVisible(loginObjects.getLoginPageHeader());
-            // cy.wait(10000);
+            cy.waitTillVisible(loginObjects.getLoginPageHeader());
             cy.login(data.validUser.username, data.validUser.password);
         });
         sidebar.clickOnProjectsMenu()

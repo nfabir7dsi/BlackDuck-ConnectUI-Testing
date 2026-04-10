@@ -86,7 +86,7 @@ class IssuePage {
     }
 
     clearFiltersIfPresent() {
-        cy.wait(10000); 
+        cy.waitTillVisible(`[data-testid="${issueObject.getFiltersSection()}"]`); 
         cy.get('body').then(($body) => {
             if ($body.find(`[data-testid="${issueObject.getFiltersSection()}"]`).text().includes(issueObject.getClearFiltersText())) {
                 cy.getByDataTestId(issueObject.getFiltersSection())

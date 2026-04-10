@@ -11,7 +11,7 @@ describe('Issue List Table Test Suite', { testIsolation: false }, () => {
         cy.fixture('coverity').then((fixture) => {
             data = fixture;
             cy.visit(data.baseURL);
-            cy.waitForVisible(loginObjects.getLoginPageHeader());
+            cy.waitTillVisible(loginObjects.getLoginPageHeader());
             // cy.wait(10000);
             cy.login(data.validUser.username, data.validUser.password);
         });

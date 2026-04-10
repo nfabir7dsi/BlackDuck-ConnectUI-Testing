@@ -1,7 +1,7 @@
 import sidebar from '../../../support/pages/Sidebar/sidebar';
-import projectPage from '../../../support/pages/ProjectPage/projectPage';
 import issuePage from '../../../support/pages/IssuePage/issuePage';
 import issueObject from '../../../support/objects/IssueObjects/issueObject';
+import loginObjects from '../../../support/objects/LoginObjects/loginObjects';
 
 describe('Issue Filter Test Suite', { testIsolation: false }, () => {
     let data;
@@ -10,7 +10,7 @@ describe('Issue Filter Test Suite', { testIsolation: false }, () => {
         cy.fixture('coverity').then((fixture) => {
             data = fixture;
             cy.visit(data.baseURL);
-            cy.wait(10000);
+            cy.waitTillVisible(loginObjects.getLoginPageHeader());
             cy.login(data.validUser.username, data.validUser.password);
         });
         sidebar.clickOnProjectsMenu()

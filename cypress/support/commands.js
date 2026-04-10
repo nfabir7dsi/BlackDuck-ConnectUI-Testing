@@ -39,7 +39,7 @@ Cypress.Commands.add("login", (username, password) => {
 // Cypress retries every ~50ms so there is no unnecessary waiting — it unblocks
 // as soon as the element appears. The default timeout is intentionally large (60 s)
 // to handle slow first-load scenarios; pass { timeout: ms } to override.
-Cypress.Commands.add('waitForVisible', (locator, options = {}) => {
+Cypress.Commands.add('waitTillVisible', (locator, options = {}) => {
     const timeout = options.timeout ?? 60000;
     return cy.get(locator, { timeout }).should('be.visible');
 });

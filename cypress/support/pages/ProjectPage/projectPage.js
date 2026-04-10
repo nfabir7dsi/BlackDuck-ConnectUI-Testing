@@ -84,15 +84,15 @@ class ProjectPage {
     }
 
     clearFiltersIfPresent() {
-        cy.wait(10000); // Wait for any filters to load if present
+        cy.waitTillVisible(`[data-testid="${projectObject.getFiltersSection()}"]`);
         cy.get('body').then(($body) => {
             if ($body.find(`[data-testid="${projectObject.getFiltersSection()}"]`).text().includes(projectObject.getClearFiltersText())) {
                 cy.getByDataTestId(projectObject.getFiltersSection())
                     .contains('button', projectObject.getClearFiltersText()).click();
+                cy.wait(500);
             }
         });
         cy.log('Cleared filters if they were present');
-        cy.wait(5000);
         return this;
     }
 
