@@ -1,0 +1,78 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e134] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e136]:
+    - generic [ref=e139]:
+      - generic [ref=e141]:
+        - img "Black Duck Logo" [ref=e142]
+        - generic [ref=e228]:
+          - heading "Black Duck Coverity" [level=1] [ref=e229]
+          - paragraph [ref=e230]: main-snapshot
+      - list "Main Navigation - Primary Menu" [ref=e146]:
+        - listitem [ref=e147]:
+          - generic [ref=e148]:
+            - button "Projects & hierarchies" [expanded] [active] [ref=e149] [cursor=pointer]:
+              - img [ref=e150]
+              - generic [ref=e160]: Projects & hierarchies
+              - img [ref=e161]
+            - menu "Projects & hierarchies Submenu" [ref=e232]:
+              - menuitem "Projects" [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]: Projects
+        - listitem [ref=e163]:
+          - button "Help & support" [ref=e165] [cursor=pointer]:
+            - img [ref=e166]
+            - generic [ref=e169]: Help & support
+            - img [ref=e170]
+      - generic [ref=e172]:
+        - generic [ref=e235]:
+          - img [ref=e237]
+          - textbox "Search CIDs" [ref=e240]
+        - button "admin username@blackduck.com" [ref=e241] [cursor=pointer]:
+          - generic [ref=e242]:
+            - img [ref=e244]
+            - generic [ref=e248]:
+              - paragraph [ref=e249]: admin
+              - paragraph [ref=e250]: username@blackduck.com
+            - img [ref=e251]
+    - generic [ref=e184]:
+      - main "Main content" [ref=e185]:
+        - generic [ref=e186]:
+          - heading "Dashboard" [level=1] [ref=e187]
+          - paragraph [ref=e188]: Welcome to the Connect UI Dashboard
+          - heading "Dashboard Overview" [level=2] [ref=e189]
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - heading "Recent Projects" [level=3] [ref=e193]
+              - paragraph [ref=e195]: No recent projects found
+            - generic [ref=e196]:
+              - heading "System Status" [level=3] [ref=e198]
+              - paragraph [ref=e200]: All systems operational
+            - generic [ref=e201]:
+              - heading "Quick Actions" [level=3] [ref=e203]
+              - paragraph [ref=e205]: No actions available
+            - generic [ref=e206]:
+              - heading "Demo" [level=3] [ref=e208]
+              - generic [ref=e210]:
+                - link "Theme Preview" [ref=e211] [cursor=pointer]:
+                  - /url: /ui/dashboards/demo/theme-preview
+                - link "Translation Demo" [ref=e212] [cursor=pointer]:
+                  - /url: /ui/dashboards/demo/translation
+            - generic [ref=e213]:
+              - heading "UI Logger Demo" [level=3] [ref=e215]
+              - generic [ref=e217]:
+                - paragraph [ref=e218]: Click buttons to test different log levels. Check the console in development mode.
+                - button "Log Debug" [ref=e219] [cursor=pointer]
+                - button "Log Info" [ref=e220] [cursor=pointer]
+                - button "Log Warning" [ref=e221] [cursor=pointer]
+                - button "Log Error" [ref=e222] [cursor=pointer]
+                - button "Throw Error (Test Boundary)" [ref=e223] [cursor=pointer]
+      - contentinfo "Site footer" [ref=e224]:
+        - generic [ref=e226]:
+          - text: © 2026
+          - link "Black Duck Software, Inc" [ref=e227] [cursor=pointer]:
+            - /url: https://www.blackduck.com
+  - region "Notifications alt+T"
+  - generic [ref=e7]:
+    - img [ref=e9]
+    - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+      - img [ref=e58]

@@ -1,0 +1,308 @@
+- generic:
+  - generic:
+    - link:
+      - /url: "#main-content"
+      - text: Skip to main content
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - img
+                  - generic:
+                    - heading [level=1]: Black Duck Coverity
+                    - paragraph: main-snapshot
+              - generic:
+                - generic:
+                  - generic:
+                    - list:
+                      - listitem:
+                        - generic:
+                          - button [expanded]:
+                            - img
+                            - generic: Projects & hierarchies
+                            - img
+                          - generic:
+                            - menu:
+                              - menuitem:
+                                - generic: Projects
+                      - listitem:
+                        - generic:
+                          - button:
+                            - img
+                            - generic: Help & support
+                            - img
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                    - textbox:
+                      - /placeholder: Search CIDs
+                - generic:
+                  - button:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - paragraph: admin
+                        - paragraph: username@blackduck.com
+                      - img
+        - generic:
+          - main "Main content":
+            - generic:
+              - navigation:
+                - button:
+                  - img
+                - list:
+                  - listitem
+                  - listitem:
+                    - link:
+                      - /url: /ui/projects
+                      - text: Projects
+                  - listitem:
+                    - generic:
+                      - img
+                  - listitem:
+                    - combobox:
+                      - generic: nonCommitCase-2-multistream
+                      - img
+            - generic:
+              - generic:
+                - heading [level=1]:
+                  - generic: nonCommitCase-2-multistream
+              - generic:
+                - generic:
+                  - generic:
+                    - tablist:
+                      - tab [selected]: Issues
+                    - tabpanel "Issues":
+                      - generic:
+                        - heading [level=1]: Project Issues
+                        - generic:
+                          - generic:
+                            - generic:
+                              - combobox:
+                                - text: View | Outstanding Issues
+                                - img
+                              - button:
+                                - img
+                              - button:
+                                - img
+                              - button:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - button [expanded]:
+                                            - text: First Detected = In the range -
+                                            - img
+                                          - button:
+                                            - img
+                                        - combobox:
+                                          - text: Add filters
+                                          - img
+                                        - button: Clear filters
+                                    - generic:
+                                      - generic:
+                                        - generic:
+                                          - generic:
+                                            - button:
+                                              - img
+                                        - generic:
+                                          - generic:
+                                            - generic:
+                                              - button:
+                                                - img
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - table:
+                                          - rowgroup:
+                                            - row:
+                                              - columnheader:
+                                                - checkbox
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: CID
+                                                    - img
+                                                  - button
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: Owner
+                                                    - img
+                                                  - button
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: Component
+                                                    - img
+                                                  - button
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: CWE
+                                                    - img
+                                                  - button
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: Count
+                                                    - img
+                                                  - button
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: Status
+                                                    - img
+                                                  - button
+                                              - columnheader:
+                                                - generic:
+                                                  - button:
+                                                    - img
+                                                  - button:
+                                                    - text: Classification
+                                                    - img
+                                                  - button
+                                          - rowgroup:
+                                            - row:
+                                              - cell:
+                                                - checkbox
+                                              - cell:
+                                                - generic: "10242"
+                                              - cell:
+                                                - generic: Unassigned
+                                              - cell:
+                                                - generic: Default.Other
+                                              - cell:
+                                                - generic: "366"
+                                              - cell:
+                                                - generic: "1"
+                                              - cell:
+                                                - generic: New
+                                              - cell:
+                                                - generic: Unclassified
+                                            - row:
+                                              - cell:
+                                                - checkbox
+                                              - cell:
+                                                - generic: "10243"
+                                              - cell:
+                                                - generic: Unassigned
+                                              - cell:
+                                                - generic: Default.Other
+                                              - cell:
+                                                - generic: "366"
+                                              - cell:
+                                                - generic: "1"
+                                              - cell:
+                                                - generic: New
+                                              - cell:
+                                                - generic: Unclassified
+                                            - row:
+                                              - cell:
+                                                - checkbox
+                                              - cell:
+                                                - generic: "10244"
+                                              - cell:
+                                                - generic: Unassigned
+                                              - cell:
+                                                - generic: Default.Other
+                                              - cell
+                                              - cell:
+                                                - generic: "1"
+                                              - cell:
+                                                - generic: New
+                                              - cell:
+                                                - generic: Unclassified
+                                            - row:
+                                              - cell:
+                                                - checkbox
+                                              - cell:
+                                                - generic: "10245"
+                                              - cell:
+                                                - generic: Unassigned
+                                              - cell:
+                                                - generic: Default.Other
+                                              - cell
+                                              - cell:
+                                                - generic: "1"
+                                              - cell:
+                                                - generic: New
+                                              - cell:
+                                                - generic: Unclassified
+                                  - generic:
+                                    - generic: Display 1-4 of 4
+                                    - generic:
+                                      - text: Show
+                                      - generic:
+                                        - combobox:
+                                          - generic: "25"
+                                          - img
+                                      - text: per page
+                                - status
+          - contentinfo:
+            - generic:
+              - generic:
+                - text: © 2026
+                - link:
+                  - /url: https://www.blackduck.com
+                  - text: Black Duck Software, Inc
+    - region "Notifications alt+T"
+    - generic:
+      - generic:
+        - img
+      - button:
+        - img
+  - dialog [ref=e1315]:
+    - radiogroup [ref=e1317]:
+      - generic [ref=e1318]:
+        - radio "In the last" [ref=e1319] [cursor=pointer]
+        - generic [ref=e1320] [cursor=pointer]: In the last
+      - generic [ref=e1321]:
+        - radio "Not in the last" [ref=e1322] [cursor=pointer]
+        - generic [ref=e1323] [cursor=pointer]: Not in the last
+      - generic [ref=e1324]:
+        - radio "In the range" [checked] [active] [ref=e1325] [cursor=pointer]:
+          - img [ref=e1343]
+        - generic [ref=e1326] [cursor=pointer]: In the range
+      - generic [ref=e1345]:
+        - generic [ref=e1346]:
+          - text: From
+          - button "Pick a date" [ref=e1347] [cursor=pointer]:
+            - img
+            - text: Pick a date
+        - generic [ref=e1348]:
+          - text: To
+          - button "Pick a date" [ref=e1349] [cursor=pointer]:
+            - img
+            - text: Pick a date
+      - generic [ref=e1327]:
+        - radio "Exclude" [ref=e1328] [cursor=pointer]
+        - generic [ref=e1329] [cursor=pointer]: Exclude
+      - generic [ref=e1330]:
+        - radio "After" [ref=e1331] [cursor=pointer]
+        - generic [ref=e1332] [cursor=pointer]: After
+      - generic [ref=e1333]:
+        - radio "Before" [ref=e1334] [cursor=pointer]
+        - generic [ref=e1335] [cursor=pointer]: Before

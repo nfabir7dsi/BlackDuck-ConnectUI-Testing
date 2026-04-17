@@ -1,0 +1,57 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e134] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e136]:
+    - generic [ref=e139]:
+      - generic [ref=e141]:
+        - img "Black Duck Logo" [ref=e142]
+        - generic [ref=e228]:
+          - heading "Black Duck Coverity" [level=1] [ref=e229]
+          - paragraph [ref=e230]: main-snapshot
+      - list "Main Navigation - Primary Menu" [ref=e146]:
+        - listitem [ref=e147]:
+          - generic [ref=e148]:
+            - button "Projects & hierarchies" [expanded] [ref=e149] [cursor=pointer]:
+              - img [ref=e150]
+              - generic [ref=e160]: Projects & hierarchies
+              - img [ref=e161]
+            - menu "Projects & hierarchies Submenu" [ref=e232]:
+              - menuitem "Projects" [active] [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]: Projects
+        - listitem [ref=e163]:
+          - button "Help & support" [ref=e165] [cursor=pointer]:
+            - img [ref=e166]
+            - generic [ref=e169]: Help & support
+            - img [ref=e170]
+      - generic [ref=e172]:
+        - generic [ref=e235]:
+          - img [ref=e237]
+          - textbox "Search CIDs" [ref=e240]
+        - button "admin username@blackduck.com" [ref=e241] [cursor=pointer]:
+          - generic [ref=e242]:
+            - img [ref=e244]
+            - generic [ref=e248]:
+              - paragraph [ref=e249]: admin
+              - paragraph [ref=e250]: username@blackduck.com
+            - img [ref=e251]
+    - generic [ref=e184]:
+      - main "Main content" [ref=e185]:
+        - navigation "Breadcrumb" [ref=e254]:
+          - button "Toggle sidebar" [ref=e255] [cursor=pointer]:
+            - img [ref=e256]
+          - list [ref=e258]:
+            - listitem [ref=e259]
+            - listitem [ref=e261]:
+              - generic [ref=e262]: Projects
+        - status [ref=e264]:
+          - generic [ref=e266]: Please Wait
+      - contentinfo "Site footer" [ref=e224]:
+        - generic [ref=e226]:
+          - text: © 2026
+          - link "Black Duck Software, Inc" [ref=e227] [cursor=pointer]:
+            - /url: https://www.blackduck.com
+  - region "Notifications alt+T"
+  - generic [ref=e7]:
+    - img [ref=e9]
+    - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+      - img [ref=e58]

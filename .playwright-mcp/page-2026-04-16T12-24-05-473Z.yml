@@ -1,0 +1,447 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e134] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e136]:
+      - generic [ref=e139]:
+        - generic [ref=e141]:
+          - img "Black Duck Logo" [ref=e142]
+          - generic [ref=e228]:
+            - heading "Black Duck Coverity" [level=1] [ref=e229]
+            - paragraph [ref=e230]: main-snapshot
+        - list "Main Navigation - Primary Menu" [ref=e146]:
+          - listitem [ref=e147]:
+            - generic [ref=e148]:
+              - button "Projects & hierarchies" [expanded] [ref=e149] [cursor=pointer]:
+                - img [ref=e150]
+                - generic [ref=e160]: Projects & hierarchies
+                - img [ref=e161]
+              - menu "Projects & hierarchies Submenu" [ref=e232]:
+                - menuitem "Projects" [ref=e233] [cursor=pointer]:
+                  - generic [ref=e234]: Projects
+          - listitem [ref=e163]:
+            - button "Help & support" [ref=e165] [cursor=pointer]:
+              - img [ref=e166]
+              - generic [ref=e169]: Help & support
+              - img [ref=e170]
+        - generic [ref=e172]:
+          - generic [ref=e235]:
+            - img [ref=e237]
+            - textbox "Search CIDs" [ref=e240]
+          - button "admin username@blackduck.com" [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]:
+              - img [ref=e244]
+              - generic [ref=e248]:
+                - paragraph [ref=e249]: admin
+                - paragraph [ref=e250]: username@blackduck.com
+              - img [ref=e251]
+      - generic [ref=e184]:
+        - main "Main content" [ref=e185]:
+          - navigation "Breadcrumb" [ref=e254]:
+            - button "Toggle sidebar" [ref=e255] [cursor=pointer]:
+              - img [ref=e256]
+            - list [ref=e258]:
+              - listitem [ref=e259]
+              - listitem [ref=e261]:
+                - link "Projects" [ref=e442] [cursor=pointer]:
+                  - /url: /ui/projects
+              - listitem [ref=e443]:
+                - img [ref=e445]
+              - listitem [ref=e447]:
+                - combobox "Search projects" [ref=e448] [cursor=pointer]:
+                  - generic [ref=e449]: nonCommitCase-2-multistream
+                  - img
+          - generic [ref=e450]:
+            - heading "nonCommitCase-2-multistream" [level=1] [ref=e452]:
+              - generic [ref=e453]: nonCommitCase-2-multistream
+            - generic [ref=e456]:
+              - tablist "Project navigation tabs" [ref=e457]:
+                - tab "Issues" [selected] [ref=e458] [cursor=pointer]
+              - tabpanel "Issues" [ref=e459]:
+                - generic [ref=e460]:
+                  - heading "Project Issues" [level=1] [ref=e461]
+                  - generic [ref=e463]:
+                    - generic [ref=e464]:
+                      - combobox "select view" [ref=e465] [cursor=pointer]:
+                        - text: View | Outstanding Issues
+                        - img
+                      - button "Save" [ref=e466] [cursor=pointer]:
+                        - img
+                      - button "Reset changes" [ref=e467] [cursor=pointer]:
+                        - img
+                      - button "Notifications..." [ref=e468] [cursor=pointer]:
+                        - img
+                    - generic [ref=e470]:
+                      - generic [ref=e471]:
+                        - generic [ref=e472]:
+                          - generic [ref=e474]:
+                            - generic [ref=e782]:
+                              - button "Classification =" [ref=e783] [cursor=pointer]:
+                                - text: Classification =
+                                - img
+                              - button "Remove Classification filter" [ref=e784] [cursor=pointer]:
+                                - img
+                            - combobox [expanded] [ref=e475] [cursor=pointer]:
+                              - text: Add filters
+                              - img
+                            - button "Clear filters" [ref=e785] [cursor=pointer]
+                          - generic [ref=e477]:
+                            - button "Export..." [ref=e480] [cursor=pointer]:
+                              - img
+                            - button "Toggle column visibility" [ref=e484] [cursor=pointer]:
+                              - img
+                        - table [ref=e786]:
+                          - rowgroup [ref=e787]:
+                            - row "Row Selection Drag to reorder column Sort by CID Resize column cid. Drag to resize, double-click to reset. Drag to reorder column Sort by Owner Resize column owner. Drag to resize, double-click to reset. Drag to reorder column Sort by Component Resize column displayComponent. Drag to resize, double-click to reset. Drag to reorder column Sort by CWE Resize column cwe. Drag to resize, double-click to reset. Drag to reorder column Sort by Count Resize column occurrenceCount. Drag to resize, double-click to reset. Drag to reorder column Sort by Status Resize column status. Drag to resize, double-click to reset. Drag to reorder column Sort by Classification Resize column classification. Drag to resize, double-click to reset." [ref=e788]:
+                              - columnheader "Row Selection" [ref=e789] [cursor=pointer]:
+                                - checkbox "Select all rows" [ref=e790]
+                              - columnheader "Drag to reorder column Sort by CID Resize column cid. Drag to resize, double-click to reset." [ref=e791]:
+                                - generic [ref=e792]:
+                                  - button "Drag to reorder column" [ref=e793] [cursor=pointer]:
+                                    - img [ref=e794]
+                                  - button "Sort by CID" [ref=e801] [cursor=pointer]:
+                                    - text: CID
+                                    - img [ref=e802]
+                                  - button "Resize column cid. Drag to resize, double-click to reset." [ref=e805]
+                              - columnheader "Drag to reorder column Sort by Owner Resize column owner. Drag to resize, double-click to reset." [ref=e806]:
+                                - generic [ref=e807]:
+                                  - button "Drag to reorder column" [ref=e808] [cursor=pointer]:
+                                    - img [ref=e809]
+                                  - button "Sort by Owner" [ref=e816] [cursor=pointer]:
+                                    - text: Owner
+                                    - img [ref=e817]
+                                  - button "Resize column owner. Drag to resize, double-click to reset." [ref=e820]
+                              - columnheader "Drag to reorder column Sort by Component Resize column displayComponent. Drag to resize, double-click to reset." [ref=e821]:
+                                - generic [ref=e822]:
+                                  - button "Drag to reorder column" [ref=e823] [cursor=pointer]:
+                                    - img [ref=e824]
+                                  - button "Sort by Component" [ref=e831] [cursor=pointer]:
+                                    - text: Component
+                                    - img [ref=e832]
+                                  - button "Resize column displayComponent. Drag to resize, double-click to reset." [ref=e835]
+                              - columnheader "Drag to reorder column Sort by CWE Resize column cwe. Drag to resize, double-click to reset." [ref=e836]:
+                                - generic [ref=e837]:
+                                  - button "Drag to reorder column" [ref=e838] [cursor=pointer]:
+                                    - img [ref=e839]
+                                  - button "Sort by CWE" [ref=e846] [cursor=pointer]:
+                                    - text: CWE
+                                    - img [ref=e847]
+                                  - button "Resize column cwe. Drag to resize, double-click to reset." [ref=e850]
+                              - columnheader "Drag to reorder column Sort by Count Resize column occurrenceCount. Drag to resize, double-click to reset." [ref=e851]:
+                                - generic [ref=e852]:
+                                  - button "Drag to reorder column" [ref=e853] [cursor=pointer]:
+                                    - img [ref=e854]
+                                  - button "Sort by Count" [ref=e861] [cursor=pointer]:
+                                    - text: Count
+                                    - img [ref=e862]
+                                  - button "Resize column occurrenceCount. Drag to resize, double-click to reset." [ref=e865]
+                              - columnheader "Drag to reorder column Sort by Status Resize column status. Drag to resize, double-click to reset." [ref=e866]:
+                                - generic [ref=e867]:
+                                  - button "Drag to reorder column" [ref=e868] [cursor=pointer]:
+                                    - img [ref=e869]
+                                  - button "Sort by Status" [ref=e876] [cursor=pointer]:
+                                    - text: Status
+                                    - img [ref=e877]
+                                  - button "Resize column status. Drag to resize, double-click to reset." [ref=e880]
+                              - columnheader "Drag to reorder column Sort by Classification Resize column classification. Drag to resize, double-click to reset." [ref=e881]:
+                                - generic [ref=e882]:
+                                  - button "Drag to reorder column" [ref=e883] [cursor=pointer]:
+                                    - img [ref=e884]
+                                  - button "Sort by Classification" [ref=e891] [cursor=pointer]:
+                                    - text: Classification
+                                    - img [ref=e892]
+                                  - button "Resize column classification. Drag to resize, double-click to reset." [ref=e895]
+                          - rowgroup [ref=e896]:
+                            - row "Select row 10242 Unassigned Default.Other 366 1 New Unclassified" [ref=e897] [cursor=pointer]:
+                              - cell "Select row" [ref=e898]:
+                                - checkbox "Select row" [ref=e899]
+                              - cell "10242" [ref=e900]:
+                                - generic [ref=e901]: "10242"
+                              - cell "Unassigned" [ref=e902]:
+                                - generic [ref=e903]: Unassigned
+                              - cell "Default.Other" [ref=e904]:
+                                - generic [ref=e905]: Default.Other
+                              - cell "366" [ref=e906]:
+                                - generic [ref=e907]: "366"
+                              - cell "1" [ref=e908]:
+                                - generic [ref=e909]: "1"
+                              - cell "New" [ref=e910]:
+                                - generic [ref=e911]: New
+                              - cell "Unclassified" [ref=e912]:
+                                - generic [ref=e913]: Unclassified
+                            - row "Select row 10243 Unassigned Default.Other 366 1 New Unclassified" [ref=e914] [cursor=pointer]:
+                              - cell "Select row" [ref=e915]:
+                                - checkbox "Select row" [ref=e916]
+                              - cell "10243" [ref=e917]:
+                                - generic [ref=e918]: "10243"
+                              - cell "Unassigned" [ref=e919]:
+                                - generic [ref=e920]: Unassigned
+                              - cell "Default.Other" [ref=e921]:
+                                - generic [ref=e922]: Default.Other
+                              - cell "366" [ref=e923]:
+                                - generic [ref=e924]: "366"
+                              - cell "1" [ref=e925]:
+                                - generic [ref=e926]: "1"
+                              - cell "New" [ref=e927]:
+                                - generic [ref=e928]: New
+                              - cell "Unclassified" [ref=e929]:
+                                - generic [ref=e930]: Unclassified
+                            - row "Select row 10244 Unassigned Default.Other 1 New Unclassified" [ref=e931] [cursor=pointer]:
+                              - cell "Select row" [ref=e932]:
+                                - checkbox "Select row" [ref=e933]
+                              - cell "10244" [ref=e934]:
+                                - generic [ref=e935]: "10244"
+                              - cell "Unassigned" [ref=e936]:
+                                - generic [ref=e937]: Unassigned
+                              - cell "Default.Other" [ref=e938]:
+                                - generic [ref=e939]: Default.Other
+                              - cell [ref=e940]
+                              - cell "1" [ref=e941]:
+                                - generic [ref=e942]: "1"
+                              - cell "New" [ref=e943]:
+                                - generic [ref=e944]: New
+                              - cell "Unclassified" [ref=e945]:
+                                - generic [ref=e946]: Unclassified
+                            - row "Select row 10245 Unassigned Default.Other 1 New Unclassified" [ref=e947] [cursor=pointer]:
+                              - cell "Select row" [ref=e948]:
+                                - checkbox "Select row" [ref=e949]
+                              - cell "10245" [ref=e950]:
+                                - generic [ref=e951]: "10245"
+                              - cell "Unassigned" [ref=e952]:
+                                - generic [ref=e953]: Unassigned
+                              - cell "Default.Other" [ref=e954]:
+                                - generic [ref=e955]: Default.Other
+                              - cell [ref=e956]
+                              - cell "1" [ref=e957]:
+                                - generic [ref=e958]: "1"
+                              - cell "New" [ref=e959]:
+                                - generic [ref=e960]: New
+                              - cell "Unclassified" [ref=e961]:
+                                - generic [ref=e962]: Unclassified
+                        - generic [ref=e665]:
+                          - generic [ref=e666]: Display 1-4 of 4
+                          - generic [ref=e668]:
+                            - text: Show
+                            - combobox "select page size" [ref=e964] [cursor=pointer]:
+                              - generic: "25"
+                              - img [ref=e965]
+                            - text: per page
+                      - status [ref=e673]
+        - contentinfo "Site footer" [ref=e224]:
+          - generic [ref=e226]:
+            - text: © 2026
+            - link "Black Duck Software, Inc" [ref=e227] [cursor=pointer]:
+              - /url: https://www.blackduck.com
+    - region "Notifications alt+T"
+    - generic [ref=e7]:
+      - img [ref=e9]
+      - button "Open Tanstack query devtools" [ref=e57] [cursor=pointer]:
+        - img [ref=e58]
+  - dialog [ref=e968]:
+    - generic [ref=e969]:
+      - generic [ref=e971]:
+        - img [ref=e972]
+        - combobox [expanded] [active] [ref=e975]
+      - listbox "Suggestions" [ref=e976]:
+        - group [ref=e978]:
+          - option "Action" [selected] [ref=e979]:
+            - img
+            - text: Action
+          - option "Category" [ref=e980]:
+            - img
+            - text: Category
+          - option "Checker" [ref=e981]:
+            - img
+            - text: Checker
+          - option "CID" [ref=e982]:
+            - img
+            - text: CID
+          - option "Classification" [ref=e983]:
+            - img
+            - text: Classification
+          - option "Comparison" [ref=e984]:
+            - img
+            - text: Comparison
+          - option "Count" [ref=e985]:
+            - img
+            - text: Count
+          - option "CWE" [ref=e986]:
+            - img
+            - text: CWE
+          - option "External Reference" [ref=e987]:
+            - img
+            - text: External Reference
+          - option "File" [ref=e988]:
+            - img
+            - text: File
+          - option "First Detected" [ref=e989]:
+            - img
+            - text: First Detected
+          - option "Fix Target" [ref=e990]:
+            - img
+            - text: Fix Target
+          - option "Function" [ref=e991]:
+            - img
+            - text: Function
+          - option "Function Merge Name" [ref=e992]:
+            - img
+            - text: Function Merge Name
+          - option "Impact" [ref=e993]:
+            - img
+            - text: Impact
+          - option "Issue Kind" [ref=e994]:
+            - img
+            - text: Issue Kind
+          - option "Language" [ref=e995]:
+            - img
+            - text: Language
+          - option "Last Triaged" [ref=e996]:
+            - img
+            - text: Last Triaged
+          - option "Legacy" [ref=e997]:
+            - img
+            - text: Legacy
+          - option "Merge Extra" [ref=e998]:
+            - img
+            - text: Merge Extra
+          - option "Merge Key" [ref=e999]:
+            - img
+            - text: Merge Key
+          - option "Owner Name" [ref=e1000]:
+            - img
+            - text: Owner Name
+          - option "Score" [ref=e1001]:
+            - img
+            - text: Score
+          - option "Severity" [ref=e1002]:
+            - img
+            - text: Severity
+          - 'option "Standard: 2019 CWE Top 25" [ref=e1003]':
+            - img
+            - text: "Standard: 2019 CWE Top 25"
+          - 'option "Standard: 2021 CWE Top 25" [ref=e1004]':
+            - img
+            - text: "Standard: 2021 CWE Top 25"
+          - 'option "Standard: 2022 CWE Top 25" [ref=e1005]':
+            - img
+            - text: "Standard: 2022 CWE Top 25"
+          - 'option "Standard: 2023 CWE Top 25" [ref=e1006]':
+            - img
+            - text: "Standard: 2023 CWE Top 25"
+          - 'option "Standard: AUTOSAR C++14" [ref=e1007]':
+            - img
+            - text: "Standard: AUTOSAR C++14"
+          - 'option "Standard: CERT C" [ref=e1008]':
+            - img
+            - text: "Standard: CERT C"
+          - 'option "Standard: CERT C++" [ref=e1009]':
+            - img
+            - text: "Standard: CERT C++"
+          - 'option "Standard: CERT JAVA" [ref=e1010]':
+            - img
+            - text: "Standard: CERT JAVA"
+          - 'option "Standard: DISA-STIG Severity" [ref=e1011]':
+            - img
+            - text: "Standard: DISA-STIG Severity"
+          - 'option "Standard: DISA-STIG V4R10" [ref=e1012]':
+            - img
+            - text: "Standard: DISA-STIG V4R10"
+          - 'option "Standard: DISA-STIG V4R10 Vulnerability ID (Vul ID)" [ref=e1013]':
+            - img
+            - text: "Standard: DISA-STIG V4R10 Vulnerability ID (Vul ID)"
+          - 'option "Standard: DISA-STIG V4R3" [ref=e1014]':
+            - img
+            - text: "Standard: DISA-STIG V4R3"
+          - 'option "Standard: DISA-STIG V5" [ref=e1015]':
+            - img
+            - text: "Standard: DISA-STIG V5"
+          - 'option "Standard: DISA-STIG V5 Vulnerability ID (Vul ID)" [ref=e1016]':
+            - img
+            - text: "Standard: DISA-STIG V5 Vulnerability ID (Vul ID)"
+          - 'option "Standard: Hyundai Coding Standard 4.1 Cost of Implementation" [ref=e1017]':
+            - img
+            - text: "Standard: Hyundai Coding Standard 4.1 Cost of Implementation"
+          - 'option "Standard: Hyundai Coding Standard 4.1 Likelihood" [ref=e1018]':
+            - img
+            - text: "Standard: Hyundai Coding Standard 4.1 Likelihood"
+          - 'option "Standard: Hyundai Coding Standard 4.1 Severity" [ref=e1019]':
+            - img
+            - text: "Standard: Hyundai Coding Standard 4.1 Severity"
+          - 'option "Standard: Hyundai Coding Standard C" [ref=e1020]':
+            - img
+            - text: "Standard: Hyundai Coding Standard C"
+          - 'option "Standard: Hyundai Coding Standard C 4.1" [ref=e1021]':
+            - img
+            - text: "Standard: Hyundai Coding Standard C 4.1"
+          - 'option "Standard: Hyundai Coding Standard C++" [ref=e1022]':
+            - img
+            - text: "Standard: Hyundai Coding Standard C++"
+          - 'option "Standard: Hyundai Coding Standard C++ 4.1" [ref=e1023]':
+            - img
+            - text: "Standard: Hyundai Coding Standard C++ 4.1"
+          - 'option "Standard: Hyundai Coding Standard Cost of Implementation" [ref=e1024]':
+            - img
+            - text: "Standard: Hyundai Coding Standard Cost of Implementation"
+          - 'option "Standard: Hyundai Coding Standard Java" [ref=e1025]':
+            - img
+            - text: "Standard: Hyundai Coding Standard Java"
+          - 'option "Standard: Hyundai Coding Standard Java 4.1" [ref=e1026]':
+            - img
+            - text: "Standard: Hyundai Coding Standard Java 4.1"
+          - 'option "Standard: Hyundai Coding Standard Likelihood" [ref=e1027]':
+            - img
+            - text: "Standard: Hyundai Coding Standard Likelihood"
+          - 'option "Standard: Hyundai Coding Standard Severity" [ref=e1028]':
+            - img
+            - text: "Standard: Hyundai Coding Standard Severity"
+          - 'option "Standard: ISO TS17961 2016" [ref=e1029]':
+            - img
+            - text: "Standard: ISO TS17961 2016"
+          - 'option "Standard: MISRA C 2004" [ref=e1030]':
+            - img
+            - text: "Standard: MISRA C 2004"
+          - 'option "Standard: MISRA C 2012" [ref=e1031]':
+            - img
+            - text: "Standard: MISRA C 2012"
+          - 'option "Standard: MISRA C 2023" [ref=e1032]':
+            - img
+            - text: "Standard: MISRA C 2023"
+          - 'option "Standard: MISRA C 2025" [ref=e1033]':
+            - img
+            - text: "Standard: MISRA C 2025"
+          - 'option "Standard: MISRA C++ 2008" [ref=e1034]':
+            - img
+            - text: "Standard: MISRA C++ 2008"
+          - 'option "Standard: MISRA C++ 2023" [ref=e1035]':
+            - img
+            - text: "Standard: MISRA C++ 2023"
+          - 'option "Standard: MISRA/AUTOSAR Category" [ref=e1036]':
+            - img
+            - text: "Standard: MISRA/AUTOSAR Category"
+          - 'option "Standard: OWASP Mobile Top Ten 2016" [ref=e1037]':
+            - img
+            - text: "Standard: OWASP Mobile Top Ten 2016"
+          - 'option "Standard: OWASP Mobile Top Ten 2024" [ref=e1038]':
+            - img
+            - text: "Standard: OWASP Mobile Top Ten 2024"
+          - 'option "Standard: OWASP Web Top Ten 2017" [ref=e1039]':
+            - img
+            - text: "Standard: OWASP Web Top Ten 2017"
+          - 'option "Standard: OWASP Web Top Ten 2021" [ref=e1040]':
+            - img
+            - text: "Standard: OWASP Web Top Ten 2021"
+          - 'option "Standard: OWASP Web Top Ten 2025" [ref=e1041]':
+            - img
+            - text: "Standard: OWASP Web Top Ten 2025"
+          - 'option "Standard: PCI DSS 2018" [ref=e1042]':
+            - img
+            - text: "Standard: PCI DSS 2018"
+          - option "Status" [ref=e1043]:
+            - img
+            - text: Status
+          - option "Streams" [ref=e1044]:
+            - img
+            - text: Streams
+          - option "Type" [ref=e1045]:
+            - img
+            - text: Type

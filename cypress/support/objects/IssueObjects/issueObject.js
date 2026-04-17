@@ -21,16 +21,13 @@ class IssueObject {
 
     // Filters
     filtersSection = 'filters-section';
-    filterTrigger = 'filter-trigger';
-    filterContent = 'filter-content';
-    filterBox = '[role="listbox"]';
-    filterOption = '[role="option"]';
-    addFiltersText = 'Add filters';
+    filterTrigger = 'filter-selector-trigger';
     clearFiltersText = 'Clear filters';
 
     // Table
     issueTable = 'issue-list-table';
     tableBody = 'record-list-table-body';
+    checkbox = '[role="checkbox"]';
 
     // Column headers
     cidColumn = 'cid-column';
@@ -45,6 +42,7 @@ class IssueObject {
     fileColumn = 'displayFile-column';
     functionColumn = 'displayFunction-column';
     countColumn = 'occurrenceCount-column';
+    cweColumn = 'cwe-column';
 
     // Pagination
     recordCount = 'record-count';
@@ -75,13 +73,10 @@ class IssueObject {
     getColumnToggle() { return this.columnToggle; }
     getFiltersSection() { return this.filtersSection; }
     getFilterTrigger() { return this.filterTrigger; }
-    getFilterContent() { return this.filterContent; }
-    getFilterBox() { return this.filterBox; }
-    getFilterOption() { return this.filterOption; }
-    getAddFiltersText() { return this.addFiltersText; }
     getClearFiltersText() { return this.clearFiltersText; }
     getIssueTable() { return this.issueTable; }
     getTableBody() { return this.tableBody; }
+    getCheckbox() { return this.checkbox; }
     getCidColumn() { return this.cidColumn; }
     getStatusColumn() { return this.statusColumn; }
     getFirstDetectedColumn() { return this.firstDetectedColumn; }
@@ -95,6 +90,7 @@ class IssueObject {
     getFunctionColumn() { return this.functionColumn; }
     getCountColumn() { return this.countColumn; }
     getRecordCount() { return this.recordCount; }
+    getCweColumn() { return this.cweColumn; }
     getPreviousPageButton() { return this.previousPageButton; }
     getNextPageButton() { return this.nextPageButton; }
     getEllipsisEnd() { return this.ellipsisEnd; }
@@ -106,7 +102,6 @@ class IssueObject {
 
     getPageButton(n) { return `page-button-${n}`; }
     getRowCell(rowIndex, colName) { return `row-${rowIndex}-${colName}-column`; }
-    getRemoveFilterLabel(filterType) { return `Remove ${filterType} filter`; }
 }
 
 export default new IssueObject();

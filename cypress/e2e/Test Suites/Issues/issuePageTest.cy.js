@@ -31,7 +31,7 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('Page title displays the project name', () => {
-        issuePage.verifyPageTitle('200 snapshots project');
+        issuePage.verifyPageTitle(data.project.title);
     });
 
     it('Issues tab is active by default', () => {
@@ -120,6 +120,12 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
         issuePage.verifyColumnPanelVisible();
         issuePage.toggleColumnByName('Status');
         issuePage.verifyColumnVisible('status-column');
+    });
+
+    // ── Filter Clear ─────────────────────────────────────────
+
+    it('Clearing filters if present before table tests', () => {
+        issuePage.clearFiltersIfPresent();
     });
 
     // ── Suite 10: Sidebar CID Search ─────────────────────────────────────────

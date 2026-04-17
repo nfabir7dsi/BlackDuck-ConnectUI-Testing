@@ -13,6 +13,7 @@ class ProjectFilterObject {
     filterTrigger = 'filter-trigger';
 
     // Button text labels
+    addFilterButton = 'filter-selector-trigger';
     addFiltersText = 'Add filters';
     clearFiltersText = 'Clear filters';
 
@@ -34,6 +35,7 @@ class ProjectFilterObject {
     getFilterOption() { return this.filterOption; }
     getFilterContent() { return this.filterContent; }
     getFilterTrigger() { return this.filterTrigger; }
+    getAddFilterButton() { return this.addFilterButton; }
     getAddFiltersText() { return this.addFiltersText; }
     getClearFiltersText() { return this.clearFiltersText; }
     getProjectFilterType() { return this.projectFilterType; }

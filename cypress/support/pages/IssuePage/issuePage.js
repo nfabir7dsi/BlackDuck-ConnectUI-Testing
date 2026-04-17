@@ -86,15 +86,15 @@ class IssuePage {
     }
 
     clearFiltersIfPresent() {
-        cy.waitTillVisible(`[data-testid="${issueObject.getFiltersSection()}"]`); 
+        cy.waitTillVisible(`[data-testid="${issueObject.getFilterTrigger()}"]`);
         cy.get('body').then(($body) => {
             if ($body.find(`[data-testid="${issueObject.getFiltersSection()}"]`).text().includes(issueObject.getClearFiltersText())) {
                 cy.getByDataTestId(issueObject.getFiltersSection())
                     .contains('button', issueObject.getClearFiltersText()).click();
-                cy.wait(500);
+                cy.wait(1000);
             }
         });
-        cy.log('Cleared issue filters if they were present');
+        cy.log('Cleared issue filters if they were pr esent');
         return this;
     }
 
@@ -138,64 +138,7 @@ class IssuePage {
 
     toggleColumnByName(columnName) {
         cy.get(issueObject.getColumnMenuItemCheckbox()).contains(columnName).click();
-        return this;
-    }
-
-    // ─── Filters ──────────────────────────────────────────────────────────────
-
-    verifyFilterChipCount(count) {
-        cy.getByDataTestId(issueObject.getFilterTrigger()).should('have.length', count);
-        return this;
-    }
-
-    verifyFilterChipVisible(filterType) {
-        cy.getByDataTestId(issueObject.getFilterTrigger())
-            .contains(filterType).should('be.visible');
-        return this;
-    }
-
-    verifyAddFiltersButtonVisible() {
-        cy.getByDataTestId(issueObject.getFiltersSection())
-            .contains('button', issueObject.getAddFiltersText())
-            .should('be.visible');
-        return this;
-    }
-
-    verifyClearFiltersVisible() {
-        cy.getByDataTestId(issueObject.getFiltersSection())
-            .contains('button', issueObject.getClearFiltersText())
-            .should('be.visible');
-        return this;
-    }
-
-    verifyNoActiveFilters() {
-        cy.getByDataTestId(issueObject.getFilterTrigger()).should('not.exist');
-        return this;
-    }
-
-    removeFilter(filterType) {
-        cy.get(`[aria-label="${issueObject.getRemoveFilterLabel(filterType)}"]`).click();
         cy.wait(500);
-        return this;
-    }
-
-    clearAllFilters() {
-        cy.getByDataTestId(issueObject.getFiltersSection())
-            .contains('button', issueObject.getClearFiltersText()).click();
-        cy.wait(500);
-        return this;
-    }
-
-    clickFilterChip(filterType) {
-        cy.getByDataTestId(issueObject.getFilterTrigger())
-            .contains(filterType).click();
-        return this;
-    }
-
-    openAddFilters() {
-        cy.getByDataTestId(issueObject.getFiltersSection())
-            .contains('button', issueObject.getAddFiltersText()).click();
-        cy.get(issueObject.getFilterBox()).should('be.visible');
         return this;
     }
 
@@ -207,11 +150,22 @@ class IssuePage {
     }
 
     verifyTableHasRows() {
-        cy.getByDataTestId('row-0').should('exist');
+        cy.waitTillVisible(`[data-testid="${issueObject.getIssueTable()}"] tbody tr`);
+        return this;
+    }
+
+    scrollTableToTop() {
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').first()
+            .scrollIntoView();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .parent()
+            .scrollTo('top', { ensureScrollable: false });
         return this;
     }
 
     verifyColumnVisible(columnTestId) {
+        cy.getByDataTestId(columnTestId).scrollIntoView();
         cy.getByDataTestId(columnTestId).should('be.visible');
         return this;
     }
@@ -222,22 +176,45 @@ class IssuePage {
     }
 
     verifySelectAllCheckboxVisible() {
-        cy.get('[data-testid="select-row"][aria-label="Select all rows"]').should('be.visible');
+        cy.get('[data-testid="select-row"][aria-label="Select all rows"]').scrollIntoView().should('be.visible');
         return this;
     }
 
     verifyFirstRowHasData() {
-        cy.getByDataTestId(issueObject.getRowCell(0, 'cid')).invoke('text').should('not.be.empty');
-        cy.getByDataTestId(issueObject.getRowCell(0, 'status')).invoke('text').should('not.be.empty');
-        cy.getByDataTestId(issueObject.getRowCell(0, 'classification')).invoke('text').should('not.be.empty');
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(0).within(() => {
+                cy.get('[data-testid$="-cid-column"]').invoke('text').should('not.be.empty');
+                cy.get('[data-testid$="-status-column"]').invoke('text').should('not.be.empty');
+                cy.get('[data-testid$="-owner-column"]').invoke('text').should('not.be.empty');
+            });
         return this;
     }
 
     // ─── Sorting ──────────────────────────────────────────────────────────────
 
+    resetSorting() {
+        if(cy.url().should('include', 'sortOrder=asc')) {
+            cy.log('Currently sorted ascending, clicking CID column header two times to reset');
+            this.sortByColumn(issueObject.getCidColumn());
+            this.sortByColumn(issueObject.getCidColumn());
+            // cy.getByDataTestId(issueObject.getCidColumn()).click();
+        } else if(cy.url().should('include', 'sortOrder=desc')) {
+            cy.log('Currently sorted descending, clicking CID column header one time to reset');
+            this.sortByColumn(issueObject.getCidColumn());
+            // cy.getByDataTestId(issueObject.getCidColumn()).click().click();
+        } else {
+            cy.log('Currently not sorted, no need to reset sorting');
+        }
+        return this;
+    }
+    
     sortByColumn(columnTestId) {
+        cy.getByDataTestId(columnTestId).scrollIntoView();
         cy.getByDataTestId(columnTestId).click();
-        cy.wait(500);
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .parent()
+            .scrollTo('top', { ensureScrollable: false });
+        cy.waitTillVisible(`[data-testid="${issueObject.getIssueTable()}"] tbody tr`);
         return this;
     }
 
@@ -250,8 +227,12 @@ class IssuePage {
     // ─── Row Selection ────────────────────────────────────────────────────────
 
     clickRowCheckbox(rowIndex) {
-        cy.getByDataTestId(`row-${rowIndex}`)
-            .find('[data-testid="select-row"]').click();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .scrollIntoView();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .find(issueObject.getCheckbox()).click({ force: true });
         return this;
     }
 
@@ -261,14 +242,22 @@ class IssuePage {
     }
 
     verifyRowCheckboxChecked(rowIndex) {
-        cy.getByDataTestId(`row-${rowIndex}`)
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .scrollIntoView();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
             .find('[data-testid="select-row"]')
             .should('have.attr', 'aria-checked', 'true');
         return this;
     }
 
     verifyRowCheckboxUnchecked(rowIndex) {
-        cy.getByDataTestId(`row-${rowIndex}`)
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .scrollIntoView();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
             .find('[data-testid="select-row"]')
             .should('have.attr', 'aria-checked', 'false');
         return this;
@@ -289,7 +278,26 @@ class IssuePage {
     // ─── Row Navigation ───────────────────────────────────────────────────────
 
     clickRow(rowIndex) {
-        cy.getByDataTestId(issueObject.getRowCell(rowIndex, 'cid')).click();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .scrollIntoView();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .find('[data-testid$="-cid-column"]').click();
+        return this;
+    }
+
+    clickRowAndVerifyCidInUrl(rowIndex) {
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .scrollIntoView();
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find('tbody tr').eq(rowIndex)
+            .find('[data-testid$="-cid-column"]').as('cidCell');
+        cy.get('@cidCell').invoke('text').then((cid) => {
+            cy.get('@cidCell').click();
+            cy.url().should('include', cid.trim());
+        });
         return this;
     }
 

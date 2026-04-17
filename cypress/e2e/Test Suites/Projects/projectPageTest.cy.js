@@ -1,5 +1,6 @@
 import sidebar from "../../../support/pages/Sidebar/sidebar";
 import projectPage from "../../../support/pages/ProjectPage/projectPage";
+import loginObjects from "../../../support/objects/LoginObjects/loginObjects";
 
 describe("Projects Page Test Suite", { testIsolation: false }, () => {
     let data;
@@ -8,7 +9,7 @@ describe("Projects Page Test Suite", { testIsolation: false }, () => {
         cy.fixture('coverity').then((fixture) => {
             data = fixture;
             cy.visit(data.baseURL);
-            cy.wait(10000);
+            cy.waitTillVisible(loginObjects.getLoginPageHeader());
             cy.login(data.validUser.username, data.validUser.password);
         });
         sidebar.clickOnProjectsMenu()
@@ -36,15 +37,15 @@ describe("Projects Page Test Suite", { testIsolation: false }, () => {
     });
 
     it("Verify record count is displayed", () => {
-        projectPage.verifyRecordCount('69');
+        projectPage.verifyRecordCount(data.project.count);
     });
 
     it("Verify first project row shows correct project name", () => {
-        projectPage.verifyFirstRowProjectName('200 snapshots project');
+        projectPage.verifyFirstRowProjectName(data.project.title);
     });
 
     it("Verify first project row shows a description", () => {
-        projectPage.verifyFirstRowDescription('multi snapshot testing');
+        projectPage.verifyFirstRowDescription(data.project.description);
     });
 
     it("Verify Export button is visible", () => {

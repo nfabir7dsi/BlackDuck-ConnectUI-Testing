@@ -3,8 +3,8 @@ class ProjectObject {
     projectHeader = 'page-title';
 
     // Toolbar
-    searchButton = 'project-search-button';
-    searchInput = 'project-search-input';
+    searchButton = 'search-button';
+    searchInput = 'search-input';
     viewOptionsToggle = 'view-options-trigger';
     exportButton = 'export-menu-button';
 

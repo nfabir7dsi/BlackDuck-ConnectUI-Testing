@@ -1,3 +1,4 @@
+import projectFilterObject from "../../objects/ProjectObjects/projectFilterObject";
 import projectObject from "../../objects/ProjectObjects/projectObject";
 import issuePage from "../IssuePage/issuePage";
 
@@ -84,7 +85,7 @@ class ProjectPage {
     }
 
     clearFiltersIfPresent() {
-        cy.waitTillVisible(`[data-testid="${projectObject.getFiltersSection()}"]`);
+        cy.waitTillVisible(`[data-testid="${projectFilterObject.getAddFilterButton()}"]`);
         cy.get('body').then(($body) => {
             if ($body.find(`[data-testid="${projectObject.getFiltersSection()}"]`).text().includes(projectObject.getClearFiltersText())) {
                 cy.getByDataTestId(projectObject.getFiltersSection())
