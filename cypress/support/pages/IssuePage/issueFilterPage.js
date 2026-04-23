@@ -6,12 +6,12 @@ class IssueFilterPage {
     // ─── Chip Verification ──────────────────────────────────────────────────
 
     verifyFilterChipCount(count) {
-        cy.getByDataTestId(issueObject.getFilterTrigger()).should('have.length', count);
+        cy.getByDataTestId(issueFilterObject.getFilterTrigger()).should('have.length', count);
         return this;
     }
 
     verifyFilterChipVisible(filterType) {
-        cy.getByDataTestId(issueObject.getFilterTrigger())
+        cy.getByDataTestId(issueObject.getFiltersSection())
             .contains(filterType).should('be.visible');
         return this;
     }
@@ -23,7 +23,7 @@ class IssueFilterPage {
     }
 
     verifyChipLabelContains(filterType, value) {
-        cy.getByDataTestId(issueObject.getFilterTrigger())
+        cy.getByDataTestId(issueFilterObject.getFilterTrigger())
             .filter(`:contains("${filterType}")`)
             .should('contain.text', value);
         return this;
@@ -50,7 +50,7 @@ class IssueFilterPage {
     }
 
     verifyNoActiveFilters() {
-        cy.getByDataTestId(issueObject.getFilterTrigger()).should('not.exist');
+        cy.getByDataTestId(issueObject.getFiltersSection()).children().children().should('have.length', 1);
         return this;
     }
 
@@ -70,7 +70,7 @@ class IssueFilterPage {
     }
 
     clickFilterChip(filterType) {
-        cy.getByDataTestId(issueObject.getFilterTrigger())
+        cy.getByDataTestId(issueFilterObject.getFilterTrigger())
             .contains(filterType).click();
         return this;
     }
@@ -88,7 +88,7 @@ class IssueFilterPage {
         cy.get(issueFilterObject.getFilterBox())
             .find(issueFilterObject.getFilterOption())
             .contains(filterName).click();
-        cy.wait(300);
+        // cy.wait(500);
         return this;
     }
 
@@ -152,6 +152,13 @@ class IssueFilterPage {
         return this;
     }
 
+    verifyFilterCountGreaterThan(count) {
+        cy.getByDataTestId(issueFilterObject.getFilterSelectorGroup())
+            .find(issueFilterObject.getFilterOption())
+            .should('have.length.greaterThan', count);
+        return this;
+    }
+
     verifyOptionCountGreaterThan(count) {
         cy.getByDataTestId(issueFilterObject.getFilterContent())
             .find(issueFilterObject.getFilterOption())
@@ -162,8 +169,9 @@ class IssueFilterPage {
     // ─── Search Within Dialog ───────────────────────────────────────────────
 
     searchInDialog(text) {
+        this.clearSearchInDialog();
         cy.getByDataTestId(issueFilterObject.getFilterContent())
-            .find('input').clear().type(text);
+            .find('input').type(text);
         cy.wait(500);
         return this;
     }
@@ -191,9 +199,9 @@ class IssueFilterPage {
         return this;
     }
 
-    verifyInputPlaceholder(placeholder) {
+    verifyInputLabel(label) {
         cy.getByDataTestId(issueFilterObject.getFilterContent())
-            .find('input').should('have.attr', 'placeholder', placeholder);
+            .find('input').parent('label').should('have.text', label);
         return this;
     }
 

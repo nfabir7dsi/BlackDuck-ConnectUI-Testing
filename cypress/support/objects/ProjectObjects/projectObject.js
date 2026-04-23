@@ -3,8 +3,9 @@ class ProjectObject {
     projectHeader = 'page-title';
 
     // Toolbar
-    searchButton = 'search-button';
-    searchInput = 'search-input';
+    searchButton = 'project-search-button';
+    searchInput = 'project-search-input';
+    searchResult = 'project-search-results';
     viewOptionsToggle = 'view-options-trigger';
     exportButton = 'export-menu-button';
 
@@ -34,6 +35,7 @@ class ProjectObject {
     getProjectHeader() { return this.projectHeader; }
     getSearchButton() { return this.searchButton; }
     getSearchInput() { return this.searchInput; }
+    getSearchResult() { return this.searchResult; }
     getSearchInputSelector() { return `[data-testid="${this.searchInput}"]`; }
     getViewOptionsToggle() { return this.viewOptionsToggle; }
     getExportButton() { return this.exportButton; }

@@ -59,6 +59,11 @@ class ProjectPage {
         return this;
     }
 
+    verifySearchResult(searchText) {
+        cy.getByDataTestId(projectObject.getSearchResult()).should('contain.text', searchText);
+        return this;
+    }
+
     verifyProjectVisible(projectName) {
         cy.getByDataTestId(projectObject.getProjectLinkId(projectName)).should('be.visible');
         return this;
@@ -71,6 +76,7 @@ class ProjectPage {
 
     clickFirstProjectLink() {
         cy.getByDataTestId(projectObject.getFirstRowProjectCell()).find('a').click();
+        cy.wait(1000);
         return issuePage;
     }
 

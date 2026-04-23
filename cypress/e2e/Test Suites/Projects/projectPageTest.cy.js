@@ -56,7 +56,8 @@ describe("Projects Page Test Suite", { testIsolation: false }, () => {
         projectPage
             .clickSearchButton()
             .enterSearchInput('Defector')
-            .verifyProjectVisible('Defector')
+            .verifySearchResult('Defector')
+            // .verifyProjectVisible('Defector')
             .clearSearch();
     });
 

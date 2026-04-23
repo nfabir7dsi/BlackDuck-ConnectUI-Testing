@@ -187,14 +187,14 @@ describe('Issue Filter — Searchable Large-list & Standard Filters', { testIsol
         });
 
         it('Typing a prefix shows matching identifiers', () => {
-            issueFilterPage.searchInDialog('A0');
+            issueFilterPage.searchInDialog('A10');
             issueFilterPage.verifyOptionCountGreaterThan(0);
         });
 
         it('Selecting an identifier updates the chip', () => {
-            issueFilterPage.selectOption('A01');
+            issueFilterPage.selectOption('A10');
             issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Standard: OWASP Web Top Ten 2021', 'A01');
+            issueFilterPage.verifyChipLabelContains('Standard: OWASP Web Top Ten 2021', 'A10');
         });
 
         it('Cleanup: remove OWASP filter', () => {
@@ -242,7 +242,7 @@ describe('Issue Filter — Searchable Large-list & Standard Filters', { testIsol
         });
 
         it('Typing shows matching CWE identifiers', () => {
-            issueFilterPage.searchInDialog('CWE');
+            issueFilterPage.searchInDialog('Rank');
             issueFilterPage.verifyOptionCountGreaterThan(0);
         });
 
@@ -250,11 +250,12 @@ describe('Issue Filter — Searchable Large-list & Standard Filters', { testIsol
             cy.getByDataTestId(issueFilterObject.getFilterContent())
                 .find(issueFilterObject.getFilterOption())
                 .first().click();
-            cy.wait(300);
+            cy.wait(500);
+            issueFilterPage.searchInDialog('Rank');
             cy.getByDataTestId(issueFilterObject.getFilterContent())
                 .find(issueFilterObject.getFilterOption())
                 .eq(1).click();
-            cy.wait(300);
+            cy.wait(500);
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('Standard: 2023 CWE Top 25');
         });

@@ -33,20 +33,22 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
 
     describe('Classification filter', () => {
 
-        it('Adding Classification filter opens the dialog', () => {
+        it('Adding Classification filter opens the dialog, dialog shows all expected options', () => {
             issueFilterPage.addFilter('Classification');
             issueFilterPage.verifyFilterDialogVisible();
+            issueFilterPage.verifyAllOptions(issueFilterObject.getClassificationOptions());
+            issueFilterPage.verifyOptionCount(issueFilterObject.getClassificationOptions().length);  
         });
 
-        it('Dialog shows all expected Classification options', () => {
-            issueFilterPage.verifyAllOptions(issueFilterObject.getClassificationOptions());
-            issueFilterPage.verifyOptionCount(issueFilterObject.getClassificationOptions().length);
-        });
+        // it('Dialog shows all expected Classification options', () => {
+            
+        // });
 
         it('Selecting one option updates the chip label', () => {
+            // issueFilterPage.clickFilterChip('Classification');
             issueFilterPage.selectOption('Bug');
             issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Classification', 'Bug');
+            issueFilterPage.verifyChipLabelContains('Classification', 'Bug');            
         });
 
         it('Table shows results after selecting a single option', () => {
@@ -71,24 +73,28 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getClassificationOptions().length);
         });
 
-        it('Deselecting all options removes the filter effect', () => {
+        it('Deselecting all options removes the filter from the filter bar', () => {
             // Deselect Bug and Pending (currently selected)
             issueFilterPage.selectOption('Bug');
             issueFilterPage.selectOption('Pending');
-            issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Classification', '=');
+            issueFilterPage.verifyFilterChipNotExists('Classification');
+            // issueFilterPage.closeDialog();
+            // issueFilterPage.verifyChipLabelContains('Classification', '=');
         });
 
         it('Pressing Escape closes the dialog', () => {
-            issueFilterPage.clickFilterChip('Classification');
+            // issueFilterPage.clickFilterChip('Classification');
+            issueFilterPage.addFilter('Classification');
             issueFilterPage.verifyFilterDialogVisible();
             issueFilterPage.closeDialog();
+            issueFilterPage.verifyChipLabelContains('Classification', '=');
         });
 
         it('Clicking outside the dialog closes it', () => {
             issueFilterPage.clickFilterChip('Classification');
             issueFilterPage.verifyFilterDialogVisible();
             issueFilterPage.clickOutsideDialog();
+            issueFilterPage.verifyChipLabelContains('Classification', '=');
         });
 
         it('Cleanup: remove Classification filter', () => {

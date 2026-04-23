@@ -29,37 +29,11 @@ describe('Issue Filter — Toolbar & Chip Management', { testIsolation: false },
         cy.logout();
     });
 
-    // ── Default state ─────────────────────────────────────────────────────
-
-    // it('Filter chips are visible on page load', () => {
-    //     issueFilterPage.verifyFilterChipCount(3);
-    // });
-
-    // it('Classification filter chip is visible', () => {
-    //     issueFilterPage.verifyFilterChipVisible('Classification');
-    // });
-
-    // it('Impact filter chip is visible', () => {
-    //     issueFilterPage.verifyFilterChipVisible('Impact');
-    // });
-
-    // it('Severity filter chip is visible', () => {
-    //     issueFilterPage.verifyFilterChipVisible('Severity');
-    // });
-
-    // it('"Add filters" button is visible', () => {
-    //     issueFilterPage.verifyAddFiltersButtonVisible();
-    // });
-
-    // it('"Clear filters" button is visible when filters are active', () => {
-    //     issueFilterPage.verifyClearFiltersVisible();
-    // });
-
     // ── Add filters dropdown ──────────────────────────────────────────────
 
     it('"Add filters" dropdown lists available filter options', () => {
         issueFilterPage.openAddFilters();
-        issueFilterPage.verifyOptionCountGreaterThan(10);
+        issueFilterPage.verifyFilterCountGreaterThan(10);
         issueFilterPage.closeDialog();
     });
 
@@ -126,6 +100,7 @@ describe('Issue Filter — Toolbar & Chip Management', { testIsolation: false },
     // ── Multiple chips coexist ────────────────────────────────────────────
 
     it('Multiple chips of different types coexist in the toolbar', () => {
+        // issueFilterPage.openAddFilters();
         issueFilterPage.verifyFilterChipVisible('Classification');
         issueFilterPage.verifyFilterChipVisible('Impact');
         issueFilterPage.verifyFilterChipVisible('Severity');

@@ -1,6 +1,8 @@
 class IssueFilterObject {
     // Filter dialog
+    filterSelectorGroup = 'filter-selector-group';
     filterContent = 'filter-content';
+    filterTrigger = 'filter-trigger';
     filterBox = '[role="listbox"]';
     filterOption = '[role="option"]';
     addFiltersText = 'Add filters';
@@ -16,7 +18,9 @@ class IssueFilterObject {
     legacyOptions = ['False', 'True', 'Various'];
     fixTargetOptions = ['Untargeted', 'Fresno', 'Gilroy', 'Harmony', 'Indio', 'Future', 'Various'];
 
+    getFilterSelectorGroup() { return this.filterSelectorGroup; }
     getFilterContent() { return this.filterContent; }
+    getFilterTrigger() { return this.filterTrigger; }
     getFilterBox() { return this.filterBox; }
     getFilterOption() { return this.filterOption; }
     getAddFiltersText() { return this.addFiltersText; }

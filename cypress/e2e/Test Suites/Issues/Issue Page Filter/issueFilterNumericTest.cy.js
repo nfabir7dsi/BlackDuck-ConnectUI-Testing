@@ -37,10 +37,10 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
 
     describe('CID filter (Type D)', () => {
 
-        it('Opening CID dialog shows input with numeric range placeholder', () => {
+        it('Opening CID dialog shows input with numeric range label', () => {
             issueFilterPage.addFilter('CID');
             issueFilterPage.verifyFilterDialogVisible();
-            issueFilterPage.verifyInputPlaceholder('Number or range: 1 or 2-5 or <4 or >6');
+            issueFilterPage.verifyInputLabel('Number or range: 1 or 2-5 or <4 or >6');
         });
 
         it('Entering an exact CID number filters the table', () => {
@@ -73,7 +73,7 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         it('Clearing input removes the filter effect', () => {
             issueFilterPage.clickFilterChip('CID');
             issueFilterPage.clearFilterInput();
-            issueFilterPage.verifyChipLabelContains('CID', '=');
+            issueFilterPage.verifyFilterChipNotExists('CID');
         });
 
         it('Cleanup: remove CID filter', () => {

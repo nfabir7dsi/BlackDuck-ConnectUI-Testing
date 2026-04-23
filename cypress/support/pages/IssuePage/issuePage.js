@@ -156,11 +156,9 @@ class IssuePage {
 
     scrollTableToTop() {
         cy.getByDataTestId(issueObject.getIssueTable())
-            .find('tbody tr').first()
-            .scrollIntoView();
-        cy.getByDataTestId(issueObject.getIssueTable())
             .parent()
             .scrollTo('top', { ensureScrollable: false });
+        cy.waitTillVisible(`[data-testid="${issueObject.getIssueTable()}"] tbody tr`);
         return this;
     }
 
@@ -231,8 +229,8 @@ class IssuePage {
             .find('tbody tr').eq(rowIndex)
             .scrollIntoView();
         cy.getByDataTestId(issueObject.getIssueTable())
-            .find('tbody tr').eq(rowIndex)
-            .find(issueObject.getCheckbox()).click({ force: true });
+            .find('tbody tr').eq(rowIndex).children().first()  //.find(issueObject.getCheckbox())
+            .click({ force: true });
         return this;
     }
 
@@ -246,8 +244,8 @@ class IssuePage {
             .find('tbody tr').eq(rowIndex)
             .scrollIntoView();
         cy.getByDataTestId(issueObject.getIssueTable())
-            .find('tbody tr').eq(rowIndex)
-            .find('[data-testid="select-row"]')
+            .find('tbody tr').eq(rowIndex).children().first()
+            // .find('[data-testid="select-row"]')
             .should('have.attr', 'aria-checked', 'true');
         return this;
     }
@@ -257,8 +255,8 @@ class IssuePage {
             .find('tbody tr').eq(rowIndex)
             .scrollIntoView();
         cy.getByDataTestId(issueObject.getIssueTable())
-            .find('tbody tr').eq(rowIndex)
-            .find('[data-testid="select-row"]')
+            .find('tbody tr').eq(rowIndex).children().first()
+            // .find('[data-testid="select-row"]')
             .should('have.attr', 'aria-checked', 'false');
         return this;
     }
