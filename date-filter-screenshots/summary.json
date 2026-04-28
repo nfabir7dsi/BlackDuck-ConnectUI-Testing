@@ -1,0 +1,108 @@
+{
+  "In the last": {
+    "inputs": [
+      {
+        "type": "number",
+        "name": "",
+        "id": ":rm4:",
+        "placeholder": "0",
+        "data-testid": null,
+        "aria-label": "Number of time units for \"in the last\" filter",
+        "value": "",
+        "readOnly": false,
+        "disabled": false,
+        "className": "flex h-9 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:",
+        "outerHTML": "<input type=\"number\" class=\"flex h-9 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-20\" id=\":rm4:\" min=\"1\" ste"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "days",
+        "ariaLabel": "Time unit for \"in the last\" filter",
+        "className": "flex h-9 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm",
+        "outerHTML": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-:rmj:\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-9 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-for"
+      }
+    ]
+  },
+  "Not in the last": {
+    "inputs": [
+      {
+        "type": "number",
+        "name": "",
+        "id": ":rm5:",
+        "placeholder": "0",
+        "data-testid": null,
+        "aria-label": "Number of time units for \"not in the last\" filter",
+        "value": "",
+        "readOnly": false,
+        "disabled": false,
+        "className": "flex h-9 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:",
+        "outerHTML": "<input type=\"number\" class=\"flex h-9 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-20\" id=\":rm5:\" min=\"1\" ste"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "days",
+        "ariaLabel": "Time unit for \"not in the last\" filter",
+        "className": "flex h-9 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm",
+        "outerHTML": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-:rn1:\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-9 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-for"
+      }
+    ]
+  },
+  "In the range": {
+    "inputs": [],
+    "buttons": [
+      {
+        "text": "Pick a date",
+        "ariaLabel": null,
+        "className": "inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:",
+        "outerHTML": "<button class=\"inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4"
+      },
+      {
+        "text": "Pick a date",
+        "ariaLabel": null,
+        "className": "inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:",
+        "outerHTML": "<button class=\"inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4"
+      }
+    ]
+  },
+  "Exclude": {
+    "inputs": [],
+    "buttons": [
+      {
+        "text": "Pick a date",
+        "ariaLabel": null,
+        "className": "inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:",
+        "outerHTML": "<button class=\"inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4"
+      },
+      {
+        "text": "Pick a date",
+        "ariaLabel": null,
+        "className": "inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:",
+        "outerHTML": "<button class=\"inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4"
+      }
+    ]
+  },
+  "After": {
+    "inputs": [],
+    "buttons": [
+      {
+        "text": "Pick a date",
+        "ariaLabel": null,
+        "className": "inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:",
+        "outerHTML": "<button class=\"inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4"
+      }
+    ]
+  },
+  "Before": {
+    "inputs": [],
+    "buttons": [
+      {
+        "text": "Pick a date",
+        "ariaLabel": null,
+        "className": "inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:",
+        "outerHTML": "<button class=\"inline-flex items-center gap-2 whitespace-nowrap rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4"
+      }
+    ]
+  }
+}

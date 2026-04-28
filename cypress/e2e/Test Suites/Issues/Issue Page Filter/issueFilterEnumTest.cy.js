@@ -1,7 +1,3 @@
-// Suite 2 — Type A: Multi-select Enum Filters
-// Full coverage on Classification; spot-check Status, Action, Severity, Impact, Issue Kind, Legacy, Fix Target
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
@@ -40,12 +36,7 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getClassificationOptions().length);  
         });
 
-        // it('Dialog shows all expected Classification options', () => {
-            
-        // });
-
         it('Selecting one option updates the chip label', () => {
-            // issueFilterPage.clickFilterChip('Classification');
             issueFilterPage.selectOption('Bug');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Classification', 'Bug');            
@@ -74,7 +65,6 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
         });
 
         it('Deselecting all options removes the filter from the filter bar', () => {
-            // Deselect Bug and Pending (currently selected)
             issueFilterPage.selectOption('Bug');
             issueFilterPage.selectOption('Pending');
             issueFilterPage.verifyFilterChipNotExists('Classification');
@@ -83,7 +73,6 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
         });
 
         it('Pressing Escape closes the dialog', () => {
-            // issueFilterPage.clickFilterChip('Classification');
             issueFilterPage.addFilter('Classification');
             issueFilterPage.verifyFilterDialogVisible();
             issueFilterPage.closeDialog();

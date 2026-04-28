@@ -1,7 +1,3 @@
-// Suite 5 — Type D: Numeric Range Filters (CID, Count, Score)
-// Suite 6 — Type E: CWE ID Filter
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
@@ -75,20 +71,16 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
             issueFilterPage.clearFilterInput();
             issueFilterPage.verifyFilterChipNotExists('CID');
         });
-
-        it('Cleanup: remove CID filter', () => {
-            issueFilterPage.removeFilter('CID');
-        });
     });
 
     // ── Count ─────────────────────────────────────────────────────────────
 
     describe('Count filter (Type D)', () => {
 
-        it('Opening Count dialog shows numeric range placeholder', () => {
+        it('Opening Count dialog shows numeric range label', () => {
             issueFilterPage.addFilter('Count');
             issueFilterPage.verifyFilterDialogVisible();
-            issueFilterPage.verifyInputPlaceholder('Number or range: 1 or 2-5 or <4 or >6');
+            issueFilterPage.verifyInputLabel('Number or range: 1 or 2-5 or <4 or >6');
         });
 
         it('Entering an exact number filters the table', () => {
@@ -111,8 +103,10 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
             issueFilterPage.verifyTableHasResults();
         });
 
-        it('Cleanup: remove Count filter', () => {
-            issueFilterPage.removeFilter('Count');
+        it('Clearing input removes the filter effect', () => {
+            issueFilterPage.clickFilterChip('Count');
+            issueFilterPage.clearFilterInput();
+            issueFilterPage.verifyFilterChipNotExists('Count');
         });
     });
 
@@ -120,10 +114,10 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
 
     describe('Score filter (Type D)', () => {
 
-        it('Opening Score dialog shows numeric range placeholder', () => {
+        it('Opening Score dialog shows numeric range label', () => {
             issueFilterPage.addFilter('Score');
             issueFilterPage.verifyFilterDialogVisible();
-            issueFilterPage.verifyInputPlaceholder('Number or range: 1 or 2-5 or <4 or >6');
+            issueFilterPage.verifyInputLabel('Number or range: 1 or 2-5 or <4 or >6');
         });
 
         it('Entering an exact number filters the table', () => {
@@ -140,11 +134,7 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         it('Clearing input removes the filter effect', () => {
             issueFilterPage.clickFilterChip('Score');
             issueFilterPage.clearFilterInput();
-            issueFilterPage.verifyChipLabelContains('Score', '=');
-        });
-
-        it('Cleanup: remove Score filter', () => {
-            issueFilterPage.removeFilter('Score');
+            issueFilterPage.verifyFilterChipNotExists('Score');
         });
     });
 
@@ -175,11 +165,7 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         it('Clearing input removes the filter effect', () => {
             issueFilterPage.clickFilterChip('CWE');
             issueFilterPage.clearFilterInput();
-            issueFilterPage.verifyChipLabelContains('CWE', '=');
-        });
-
-        it('Cleanup: remove CWE filter', () => {
-            issueFilterPage.removeFilter('CWE');
+            issueFilterPage.verifyFilterChipNotExists('CWE');
         });
     });
 

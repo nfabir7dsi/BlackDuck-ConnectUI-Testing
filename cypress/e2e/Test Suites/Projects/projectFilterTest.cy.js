@@ -28,7 +28,7 @@ describe('Project Filter Test Suite', { testIsolation: false }, () => {
         projectFilterPage
             .openFilters()
             .verifyAllFilterOptionsPresent()
-            .dismissFilterPanel();                                      // Dismiss the open dropdown without applying a filter
+            .dismissFilterPanel();                                      
     });
 
     // ─── Project (text) filter ─────────────────────────────────────────────────
@@ -41,7 +41,6 @@ describe('Project Filter Test Suite', { testIsolation: false }, () => {
     });
 
     it('Verify Project filter chip displays the applied filter value', () => {
-        // Filter from the previous test is still active (testIsolation: false)
         projectFilterPage.verifyFilterChipText('Project = AUTOSAR');
     });
 
@@ -76,9 +75,8 @@ describe('Project Filter Test Suite', { testIsolation: false }, () => {
         projectFilterPage
             .openLastCommitFilter()
             .verifyLastCommitDateOptionsVisible()
-            .dismissFilterPanel()                                                   // Dismiss without applying a filter
+            .dismissFilterPanel()                                                  
             .clearAllFilters();
-            // .verifyNoActiveFilters();
     });
 
     it('Verify Last Commit "In the last N days" filter can be applied and shows a chip', () => {

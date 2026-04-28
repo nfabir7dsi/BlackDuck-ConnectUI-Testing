@@ -65,19 +65,10 @@ describe("Projects Page Test Suite", { testIsolation: false }, () => {
         projectPage.verifyNoActiveFilters();
     });
 
-    // it("Verify clear filters button is visible when a filter is applied and removes it when clicked", () => {
-    //     projectPage
-    //         .applyProjectFilter('AUTOSAR')
-    //         .verifyClearFiltersVisible()
-    //         .clickClearFilters()
-    //         .verifyNoActiveFilters()
-    //         .verifyRecordCount('69');
-    // });
-
     it("Verify clicking a project link navigates to the project detail page", () => {
         projectPage
             .clickFirstProjectLink()
-            .verifyUrlContains('/ui/projects/');
+            .verifyUrlContains(`/ui/projects/${data.project.title}`);
     });
 
     after(() => {

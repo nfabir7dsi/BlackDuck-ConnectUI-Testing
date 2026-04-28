@@ -1,7 +1,3 @@
-// Suite 8 — Type G: Date Filters (First Detected, Last Triaged)
-// Operators: In the last, Not in the last, In the range, Exclude, After, Before
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
@@ -50,9 +46,7 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
 
         it('"In the last" mode shows spinbutton and time unit dropdown', () => {
             issueFilterPage.selectDateMode('In the last');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find('input[type="number"], [role="spinbutton"]')
-                .should('be.visible');
+            issueFilterPage.verifyNumberInputIsVisible();
         });
 
         it('Entering 30 days in "In the last" updates chip', () => {
@@ -92,8 +86,7 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
         it('"In the range" mode shows From and To date inputs', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectDateMode('In the range');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find('input').should('have.length.greaterThan', 1);
+            issueFilterPage.verifyDateInputButtonIsVisible(2);
         });
 
         it('Entering a date range updates chip', () => {
@@ -108,8 +101,7 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
         it('"Exclude" mode shows date range inputs for exclusion', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectDateMode('Exclude');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find('input').should('have.length.greaterThan', 1);
+            issueFilterPage.verifyDateInputButtonIsVisible(2);
             issueFilterPage.closeDialog();
         });
 
@@ -118,8 +110,7 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
         it('"After" mode shows a single date input', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectDateMode('After');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find('input').should('exist');
+            issueFilterPage.verifyDateInputButtonIsVisible(1);
         });
 
         it('Selecting a date in "After" mode updates chip', () => {
@@ -133,8 +124,7 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
         it('"Before" mode shows a single date input', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectDateMode('Before');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find('input').should('exist');
+            issueFilterPage.verifyDateInputButtonIsVisible(1);
         });
 
         it('Selecting a date in "Before" mode updates chip', () => {

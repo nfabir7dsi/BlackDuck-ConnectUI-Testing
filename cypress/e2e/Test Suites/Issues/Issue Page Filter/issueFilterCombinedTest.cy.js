@@ -1,13 +1,9 @@
-// Suite 11 — Multi-filter Combinations
-// Suite 12 — Filter State & URL Persistence
-// Suite 13 — Filter Chip Editing
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
 import issueFilterObject from '../../../../support/objects/IssueObjects/issueFilterObject';
 import loginObjects from '../../../../support/objects/LoginObjects/loginObjects';
+import issueObject from '../../../../support/objects/IssueObjects/issueObject';
 
 describe('Issue Filter — Multi-filter Combinations, Persistence & Chip Editing', { testIsolation: false }, () => {
     let data;
@@ -78,7 +74,8 @@ describe('Issue Filter — Multi-filter Combinations, Persistence & Chip Editing
             issueFilterPage.selectOption('Dismissed');
             issueFilterPage.closeDialog();
             // Chip should show both values
-            issueFilterPage.verifyFilterChipVisible('Status');
+            issueFilterPage.verifyChipLabelContains('Status', 'New');
+            issueFilterPage.verifyChipLabelContains('Status', 'Dismissed');
         });
 
         it('"Clear filters" when multiple filters are active removes all', () => {
@@ -98,12 +95,12 @@ describe('Issue Filter — Multi-filter Combinations, Persistence & Chip Editing
             issueFilterPage.addFilter('Classification');
             issueFilterPage.selectOption('Bug');
             issueFilterPage.closeDialog();
-            cy.url().should('include', 'classification');
+            cy.url().should('include', 'Bug');
         });
 
         it('Reloading the page preserves the filter from URL', () => {
             cy.reload();
-            cy.waitTillVisible(`[data-testid="${issueFilterObject.getFilterContent()}"], [data-testid="filter-selector-trigger"]`, { timeout: 60000 });
+            cy.waitTillVisible(`[data-testid="${issueObject.getFilterTrigger()}"]`);
             issueFilterPage.verifyFilterChipVisible('Classification');
             issueFilterPage.verifyChipLabelContains('Classification', 'Bug');
         });
@@ -111,7 +108,7 @@ describe('Issue Filter — Multi-filter Combinations, Persistence & Chip Editing
         it('Sharing URL in a new tab loads the same filters', () => {
             cy.url().then((currentUrl) => {
                 cy.visit(currentUrl);
-                cy.waitTillVisible(`[data-testid="filter-selector-trigger"]`, { timeout: 60000 });
+                cy.waitTillVisible(`[data-testid="${issueObject.getFilterTrigger()}"]`);
                 issueFilterPage.verifyFilterChipVisible('Classification');
                 issueFilterPage.verifyChipLabelContains('Classification', 'Bug');
             });
@@ -138,16 +135,13 @@ describe('Issue Filter — Multi-filter Combinations, Persistence & Chip Editing
         it('Clicking an active chip re-opens dialog with current selection pre-populated', () => {
             issueFilterPage.clickFilterChip('Classification');
             issueFilterPage.verifyFilterDialogVisible();
-            // The dialog should show the current selection — Bug should be checked
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .contains(issueFilterObject.getFilterOption(), 'Bug')
-                .should('have.attr', 'aria-selected', 'true');
+            issueFilterPage.verifyOptionIsSelected('Bug');
         });
 
         it('Modifying selection in re-opened dialog updates the chip label', () => {
             // Deselect Bug, select Pending
-            issueFilterPage.selectOption('Bug');
             issueFilterPage.selectOption('Pending');
+            issueFilterPage.selectOption('Bug');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Classification', 'Pending');
         });
@@ -155,9 +149,7 @@ describe('Issue Filter — Multi-filter Combinations, Persistence & Chip Editing
         it('Pressing Escape on re-opened dialog preserves original selection', () => {
             issueFilterPage.clickFilterChip('Classification');
             issueFilterPage.verifyFilterDialogVisible();
-            // Close without changes
             issueFilterPage.closeDialog();
-            // Should still show Pending from previous edit
             issueFilterPage.verifyChipLabelContains('Classification', 'Pending');
         });
 

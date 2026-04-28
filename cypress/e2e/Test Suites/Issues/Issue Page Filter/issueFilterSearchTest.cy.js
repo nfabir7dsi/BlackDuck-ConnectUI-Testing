@@ -1,7 +1,3 @@
-// Suite 3 — Type B: Searchable Large-list Multi-select (Checker, Category, Type)
-// Suite 4 — Type C: Standard Filters / Search-to-Fetch (all Standard: filters)
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
@@ -218,10 +214,7 @@ describe('Issue Filter — Searchable Large-list & Standard Filters', { testIsol
         });
 
         it('Selecting a rule updates the chip', () => {
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find(issueFilterObject.getFilterOption())
-                .first().click();
-            cy.wait(500);
+            issueFilterPage.selectNthOption(1);
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('Standard: MISRA C 2012');
         });
@@ -247,15 +240,9 @@ describe('Issue Filter — Searchable Large-list & Standard Filters', { testIsol
         });
 
         it('Selecting multiple identifiers applies OR logic', () => {
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find(issueFilterObject.getFilterOption())
-                .first().click();
-            cy.wait(500);
+            issueFilterPage.selectNthOption(1);
             issueFilterPage.searchInDialog('Rank');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find(issueFilterObject.getFilterOption())
-                .eq(1).click();
-            cy.wait(500);
+            issueFilterPage.selectNthOption(2);
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('Standard: 2023 CWE Top 25');
         });

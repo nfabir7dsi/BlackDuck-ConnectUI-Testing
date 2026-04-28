@@ -1,7 +1,3 @@
-// Suite 7 — Type F: Wildcard Text Filters
-// Filters: File, Function, Owner Name, External Reference, Merge Key, Merge Extra, Function Merge Name
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
@@ -61,11 +57,7 @@ describe('Issue Filter — Wildcard Text Filters', { testIsolation: false }, () 
         it('Clearing input removes the filter effect', () => {
             issueFilterPage.clickFilterChip('File');
             issueFilterPage.clearFilterInput();
-            issueFilterPage.verifyChipLabelContains('File', '=');
-        });
-
-        it('Cleanup: remove File filter', () => {
-            issueFilterPage.removeFilter('File');
+            issueFilterPage.verifyFilterChipNotExists('File');
         });
     });
 
@@ -94,11 +86,7 @@ describe('Issue Filter — Wildcard Text Filters', { testIsolation: false }, () 
         it('Clearing input removes the filter effect', () => {
             issueFilterPage.clickFilterChip('Function');
             issueFilterPage.clearFilterInput();
-            issueFilterPage.verifyChipLabelContains('Function', '=');
-        });
-
-        it('Cleanup: remove Function filter', () => {
-            issueFilterPage.removeFilter('Function');
+            issueFilterPage.verifyFilterChipNotExists('Function');
         });
     });
 

@@ -27,7 +27,7 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     // ── Suite 1: Page Load & Navigation ──────────────────────────────────────
 
     it('Navigating to a project loads the issue list page', () => {
-        issuePage.verifyUrlContains('/ui/projects/');
+        issuePage.verifyUrlContains(`/ui/projects/${data.project.title}`);
     });
 
     it('Page title displays the project name', () => {
@@ -53,10 +53,10 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('"Projects" breadcrumb link navigates back to the projects list', () => {
-        issuePage.clickProjectsBreadcrumbLink();
-        issuePage.verifyNavigatedToProjectsListPage();
-        projectPage.clickFirstProjectLink();        // Navigate back to the issue list for subsequent tests
-        issuePage.verifyTableVisible();
+        issuePage.clickProjectsBreadcrumbLink()
+                    .verifyNavigatedToProjectsListPage()
+                    .clickFirstProjectLink()
+                    .verifyTableVisible();
     });
 
     it('Project switcher combobox is visible in the breadcrumb', () => {
@@ -70,8 +70,8 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('View selector is visible and non-empty', () => {
-        issuePage.verifyViewSelectorVisible();
-        issuePage.verifyViewSelectorNonEmpty();
+        issuePage.verifyViewSelectorVisible()
+                .verifyViewSelectorNonEmpty();
     });
 
     it('Save button is visible', () => {
@@ -93,9 +93,9 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('Clicking export button opens an export menu', () => {
-        issuePage.clickExportButton();
-        issuePage.verifyExportMenuVisible();
-        issuePage.closePanelWithEsc();
+        issuePage.clickExportButton()
+                .verifyExportMenuVisible()
+                .closePanelWithEsc();
     });
 
     it('Column visibility toggle button is visible', () => {
@@ -103,23 +103,25 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('Clicking column visibility toggle opens a column panel', () => {
-        issuePage.clickColumnToggle();
-        issuePage.verifyColumnPanelVisible();
-        issuePage.closePanelWithEsc();
+        issuePage.clickColumnToggle()
+                .verifyColumnPanelVisible()
+                .closePanelWithEsc();
     });
 
     it('Toggling a column off hides it from the table', () => {
-        issuePage.clickColumnToggle();
-        issuePage.verifyColumnPanelVisible();
-        issuePage.toggleColumnByName('Status');
-        issuePage.verifyColumnNotExists('status-column');
+        issuePage.clickColumnToggle()
+                .verifyColumnPanelVisible()
+                .toggleColumnByName('Status')
+                .closePanelWithEsc()
+                .verifyColumnNotExists('status-column');
     });
 
     it('Toggling the column back on restores it in the table', () => {
-        issuePage.clickColumnToggle();
-        issuePage.verifyColumnPanelVisible();
-        issuePage.toggleColumnByName('Status');
-        issuePage.verifyColumnVisible('status-column');
+        issuePage.clickColumnToggle()
+                .verifyColumnPanelVisible()
+                .toggleColumnByName('Status')
+                .closePanelWithEsc()
+                .verifyColumnVisible('status-column');
     });
 
     // ── Filter Clear ─────────────────────────────────────────
@@ -135,16 +137,16 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('Typing in sidebar search accepts input', () => {
-        issuePage.searchCIDInSidebar('11188');
-        issuePage.verifySidebarSearchValue('11188');
-        issuePage.clearSidebarSearch();
+        issuePage.searchCIDInSidebar('11188')
+            .verifySidebarSearchValue('11188')
+            .clearSidebarSearch();
     });
 
     it('Clearing sidebar search input restores normal table state', () => {
-        issuePage.searchCIDInSidebar('INVALID999999');
-        issuePage.clearSidebarSearch();
-        issuePage.verifySidebarSearchValue('');
-        issuePage.verifyTableVisible();
+        issuePage.searchCIDInSidebar('INVALID999999')
+            .clearSidebarSearch()
+            .verifySidebarSearchValue('')
+            .verifyTableVisible();
     });
 
     // ── Suite 11: Pagination ─────────────────────────────────────────────────
@@ -170,28 +172,28 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
     });
 
     it('Clicking Next navigates to page 2 and updates the record count', () => {
-        issuePage.clickNextPage();
-        issuePage.verifyRecordCount('26-50');
-        issuePage.verifyPageActive(2);
+        issuePage.clickNextPage()
+            .verifyRecordCount('26-50')
+            .verifyPageActive(2);
     });
 
     it('Clicking Previous from page 2 returns to page 1', () => {
-        issuePage.clickPreviousPage();
-        issuePage.verifyRecordCount('1-25');
-        issuePage.verifyPageActive(1);
+        issuePage.clickPreviousPage()
+            .verifyRecordCount('1-25')
+            .verifyPageActive(1);
     });
 
     it('Clicking a specific page number navigates to that page', () => {
-        issuePage.clickPage(3);
-        issuePage.verifyRecordCount('51-75');
-        issuePage.verifyPageActive(3);
-        issuePage.clickPage(1);        // Return to page 1 for subsequent tests
+        issuePage.clickPage(3)
+            .verifyRecordCount('51-75')
+            .verifyPageActive(3)
+            .clickPage(1);        
     });
 
     it('Changing page size updates the record count display', () => {
-        issuePage.changePageSize('50');
-        issuePage.verifyRecordCount('1-50');
-        issuePage.changePageSize('25');
+        issuePage.changePageSize('50')
+            .verifyRecordCount('1-50')
+            .changePageSize('25');
     });
 
     it('Changing page size resets to page 1', () => {

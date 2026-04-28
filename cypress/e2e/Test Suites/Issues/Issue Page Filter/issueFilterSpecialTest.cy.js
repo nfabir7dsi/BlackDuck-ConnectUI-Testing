@@ -1,7 +1,3 @@
-// Suite 9  — Type H: Comparison Filter (Present / Absent)
-// Suite 10 — Type I: Streams Filter (include / exclude dual-search)
-// See IssueFilterTestPlan.md for full test cases
-
 import sidebar from '../../../../support/pages/Sidebar/sidebar';
 import issuePage from '../../../../support/pages/IssuePage/issuePage';
 import issueFilterPage from '../../../../support/pages/IssuePage/issueFilterPage';
@@ -62,11 +58,10 @@ describe('Issue Filter — Comparison & Streams Filters', { testIsolation: false
 
         it('Only one option can be selected at a time (radio behavior)', () => {
             issueFilterPage.clickFilterChip('Comparison');
+            issueFilterPage.selectRadioOption('Absent');
             issueFilterPage.selectRadioOption('Present');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Comparison', 'Present');
-            // Chip should not contain Absent
-            cy.getByDataTestId(issueFilterObject.getFilterContent()).should('not.exist');
         });
 
         it('Cleanup: remove Comparison filter', () => {
@@ -87,22 +82,16 @@ describe('Issue Filter — Comparison & Streams Filters', { testIsolation: false
         });
 
         it('Dialog has two search input areas', () => {
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find('input').should('have.length.greaterThan', 1);
+            issueFilterPage.verifyDialogInputAreaCount(2);
         });
 
         it('Searching in the include section returns matching streams', () => {
-            issueFilterPage.searchIncludeStream('main');
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find(issueFilterObject.getFilterOption())
-                .should('have.length.greaterThan', 0);
+            issueFilterPage.searchIncludeStream('xml');
+            issueFilterPage.verifyOptionCountGreaterThan(0);
         });
 
         it('Selecting a stream to include updates the chip', () => {
-            cy.getByDataTestId(issueFilterObject.getFilterContent())
-                .find(issueFilterObject.getFilterOption())
-                .first().click();
-            cy.wait(500);
+            issueFilterPage.selectNthOption(1);
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('Streams');
         });
