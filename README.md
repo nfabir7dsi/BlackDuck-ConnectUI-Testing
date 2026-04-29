@@ -450,6 +450,8 @@ createUserPage.clickCreateUserButton(true); // returns commonPage on success
 
 ## Remaining Works
 
-- Any of the filter tests doesn't properly test the table results. Need to add table results verification properly.
-- Overall or some filters have corner cases that haven't been covered yet.
-- Issue page's view dropdown isn't tested properly. 
+- Filter tests don't properly test the table results yet. Need to add table results verification properly.
+- Some filters have corner cases that haven't been covered yet.
+- Issue page's view dropdown hasn't been tested properly. 
+- Bulk triage functionality hasn't been tested.
+- AI-assisted triage and AI triage results haven't also been tested.
