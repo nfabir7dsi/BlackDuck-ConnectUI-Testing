@@ -132,7 +132,7 @@ Test data is stored in [`cypress/fixtures/coverity.json`](cypress/fixtures/cover
   "validUser": { "username": "admin", "password": "..." },
   "invalidUser": { "username": "invalidUser", "password": "..." },
   "newUser": { "username": "test10", "firstName": "Test", ... },
-  "project": { "title": "xml-fortran", "count": "70" }
+  "project": { "title": "projectName", "count": "NoOfProjects" }
 }
 ```
 
@@ -170,6 +170,8 @@ npm run cypress:percy:file -- --spec "cypress/e2e/Test Suites/Login/loginTest.cy
 # Run a specific spec file with Percy in headed mode
 npm run cypress:percy:headed:file -- --spec "cypress/e2e/Test Suites/Login/loginTest.cy.js"
 ```
+
+Or run with the default commands.
 
 ---
 
@@ -445,3 +447,9 @@ createUserPage.clickCreateUserButton(true); // returns commonPage on success
 - Object files: `<feature>Object.js` / `<feature>Objects.js`
 - Page files: `<feature>Page.js`
 - Tests live in `cypress/e2e/Test Suites/<Feature>/`
+
+## Remaining Works
+
+- Any of the filter tests doesn't properly test the table results. Need to add table results verification properly.
+- Overall or some filters have corner cases that haven't been covered yet.
+- Issue page's view dropdown isn't tested properly. 
