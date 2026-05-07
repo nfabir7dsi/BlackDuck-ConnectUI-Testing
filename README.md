@@ -15,7 +15,6 @@ End-to-end test automation for the BlackDuck Connect UI, built with [Cypress](ht
   - [Custom Commands](#custom-commands)
   - [Test Data & Fixtures](#test-data--fixtures)
 - [Features Covered](#features-covered)
-- [Selector Strategy](#selector-strategy)
 - [Conventions & Patterns](#conventions--patterns)
 
 ---
@@ -318,7 +317,7 @@ createUserPage.clickCreateUserButton(true); // returns commonPage on success
 
 ## Remaining Works
 
-[ ] Some filters may have corner cases that haven't been covered yet.
-[ ] Issue page's view dropdown hasn't been tested properly. 
-[ ] Bulk triage functionality hasn't been tested.
-[ ] AI-assisted triage and AI triage results haven't also been tested.
+- [ ] Some filters may have corner cases that haven't been covered yet.
+- [ ] Issue page's view dropdown hasn't been tested properly. 
+- [ ] Bulk triage functionality hasn't been tested.
+- [ ] AI-assisted triage and AI triage results haven't also been tested.
