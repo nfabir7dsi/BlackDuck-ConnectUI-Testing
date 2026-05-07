@@ -1,5 +1,6 @@
 import issueObject from '../../objects/IssueObjects/issueObject';
 import issueFilterObject from '../../objects/IssueObjects/issueFilterObject';
+import issuePage from './issuePage';
 
 class IssueFilterPage {
 
@@ -71,7 +72,7 @@ class IssueFilterPage {
 
     clickFilterChip(filterType) {
         cy.getByDataTestId(issueFilterObject.getFilterTrigger())
-            .contains(filterType).click();
+            .contains(filterType).click({ force: true });
         return this;
     }
 
@@ -139,7 +140,7 @@ class IssueFilterPage {
     selectOption(optionText) {
         cy.getByDataTestId(issueFilterObject.getFilterContent())
             .contains(issueFilterObject.getFilterOption(), optionText).click();
-        cy.wait(500);
+        cy.wait(1000);
         return this;
     }
 
@@ -147,7 +148,7 @@ class IssueFilterPage {
         cy.getByDataTestId(issueFilterObject.getFilterContent())
             .find(issueFilterObject.getFilterOption())
             .eq(index-1).click();
-        cy.wait(500);
+        cy.wait(1000);
         return this;
     }
 
@@ -350,6 +351,20 @@ class IssueFilterPage {
         return this;
     }
 
+    disselectIncludeStreamOption(optionText) {
+        cy.get(issueFilterObject.getStreamSection()).first()
+            .find(`button[aria-label="Remove ${optionText}"]`).click();
+        cy.wait(500);
+        return this;
+    }
+
+    disselectExcludeStreamOption(optionText) {
+        cy.get(issueFilterObject.getStreamSection()).last()
+            .find(`button[aria-label="Remove ${optionText}"]`).click();
+        cy.wait(500);
+        return this;
+    }
+
     selectStreamOption(streamName) {
         cy.getByDataTestId(issueFilterObject.getFilterContent())
             .contains(issueFilterObject.getFilterOption(), streamName).click();
@@ -357,20 +372,105 @@ class IssueFilterPage {
         return this;
     }
 
-    // ─── Table Result Verification ──────────────────────────────────────────
-
-    verifyTableHasResults() {
-        this.getTableRowCount().should('be.greaterThan', 0);
+    clickStreamOptionSelector(number) {
+        cy.get(issueFilterObject.getStreamOptionsSelector()).eq(number-1).click();
+        cy.wait(500);
         return this;
     }
 
-    getTableRowCount() {
-        return cy.getByDataTestId(issueObject.getIssueTable())
-            .find('tbody tr').its('length');
+    selectStreamOption(optionText) {
+        cy.get(issueFilterObject.getStreamOptions())
+            .contains(optionText).click();
+        cy.wait(500);
+        return this;
     }
 
-    verifyTableHasRowCount(count) {
-        this.getTableRowCount().should('eq', count);
+    // ─── Table Result Verification ──────────────────────────────────────────
+
+    // getTableRowCount() {
+    //     return cy.getByDataTestId(issueObject.getIssueTable())
+    //         .find('tbody tr').its('length');
+    // }
+
+    getTableRowCount() {
+        return cy.get('tbody tr').then(($rows) => {
+            if ($rows.length === 1 && $rows.find('[data-testid="no-result"]').length > 0) {
+                return cy.wrap(0);
+            }
+            return cy.wrap($rows.length);
+        });
+    }
+
+    verifyTableDoesntHaveResults() {
+        cy.wait(1000);
+        this.getTableRowCount().then((count) => {
+            expect(count).to.equal(0);
+        });
+    }
+
+    verifyTableHasResults() {
+        cy.wait(1000);
+        this.getTableRowCount().then((count) => {
+            expect(count).to.be.greaterThan(0);
+        });
+        return this;
+    }
+
+    verifyTableHasRowCount(expectedCount) {
+        cy.wait(1000);
+        this.getTableRowCount().then((count) => {
+            expect(count).to.equal(expectedCount);
+        });
+        return this;
+    }
+
+    verifyColumnCellsContain(colDataTestIdSuffix, values) {
+        cy.wait(1000);
+        const valuesArray = Array.isArray(values) ? values : [values];
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find(`[data-testid$="-${colDataTestIdSuffix}"]`)
+            .each(($cell) => {
+                cy.wrap($cell).invoke('text').should('satisfy', (text) =>
+                    valuesArray.some(v => text.includes(v))
+                );
+            });
+        return this;
+    }
+
+    verifyNumericValueIsGreaterThan(colDataTestIdSuffix, threshold) {
+        cy.wait(1000);
+        issuePage.resetSortToDefault()
+            .sortByColumn(colDataTestIdSuffix)
+            .sortByColumn(colDataTestIdSuffix);
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find(`[data-testid$="-${colDataTestIdSuffix}"]`).first()
+            .invoke('text').then((text) => {
+                expect(parseFloat(text.trim())).to.be.greaterThan(threshold);
+            });
+        return this;
+    }
+
+    verifyNumericValueIsLessThan(colDataTestIdSuffix, threshold) {
+        cy.wait(1000);
+        issuePage.resetSortToDefault()
+            .sortByColumn(colDataTestIdSuffix);
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find(`[data-testid$="-${colDataTestIdSuffix}"]`).first()
+            .invoke('text').then((text) => {
+                expect(parseFloat(text.trim())).to.be.lessThan(threshold);
+            });
+        return this;
+    }
+
+    verifyNumericValueIsInBetween(colDataTestIdSuffix, min, max) {
+        cy.wait(1000);
+        cy.getByDataTestId(issueObject.getIssueTable())
+            .find(`[data-testid$="-${colDataTestIdSuffix}"]`)
+            .each(($cell) => {
+                cy.wrap($cell).invoke('text').then((text) => {
+                    expect(parseFloat(text.trim())).to.be.within(min, max);
+                });
+            });
         return this;
     }
 }

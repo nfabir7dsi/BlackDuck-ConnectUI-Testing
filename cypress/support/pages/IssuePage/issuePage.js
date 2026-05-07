@@ -142,6 +142,16 @@ class IssuePage {
         return this;
     }
 
+    showColumnIfNotVisible(columnTestId, columnName) {
+        cy.get('body').then(($body) => {
+            if ($body.find(`[data-testid="${columnTestId}"]`).length > 0) return;
+            this.clickColumnToggle();
+            this.toggleColumnByName(columnName);
+            this.closePanelWithEsc();
+        });
+        return this;
+    }
+
     // ─── Table ────────────────────────────────────────────────────────────────
 
     verifyTableVisible() {
@@ -190,21 +200,15 @@ class IssuePage {
 
     // ─── Sorting ──────────────────────────────────────────────────────────────
 
-    // resetSorting() {
-    //     if(cy.url().should('include', 'sortOrder=asc')) {
-    //         cy.log('Currently sorted ascending, clicking CID column header two times to reset');
-    //         this.sortByColumn(issueObject.getCidColumn());
-    //         this.sortByColumn(issueObject.getCidColumn());
-    //         // cy.getByDataTestId(issueObject.getCidColumn()).click();
-    //     } else if(cy.url().should('include', 'sortOrder=desc')) {
-    //         cy.log('Currently sorted descending, clicking CID column header one time to reset');
-    //         this.sortByColumn(issueObject.getCidColumn());
-    //         // cy.getByDataTestId(issueObject.getCidColumn()).click().click();
-    //     } else {
-    //         cy.log('Currently not sorted, no need to reset sorting');
-    //     }
-    //     return this;
-    // }
+    resetSortToDefault(maxAttempts = 5) {
+        if (maxAttempts === 0) throw new Error('Could not reset sort to default after max attempts');
+        cy.url().then((url) => {
+            if (url.includes('sortColumn=&sortOrder=')) return;
+            this.sortByColumn(issueObject.getCidColumn());
+            this.resetSortToDefault(maxAttempts - 1);
+        });
+        return this;
+    }
     
     sortByColumn(columnTestId) {
         cy.getByDataTestId(columnTestId).scrollIntoView();
@@ -368,12 +372,6 @@ class IssuePage {
 
     verifySidebarSearchValue(value) {
         cy.getByDataTestId(issueObject.getSidebarSearchInput()).should('have.value', value);
-        return this;
-    }
-
-    verifyNavigatedToProjectsListPage() {
-        cy.url().should('include', '/ui/projects');
-        cy.url().should('not.match', /\/ui\/projects\/.+/);
         return this;
     }
 }

@@ -28,6 +28,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Classification — Full Coverage ────────────────────────────────────
 
     describe('Classification filter', () => {
+        it('Show Classification column if not visible', () => {
+            issuePage.showColumnIfNotVisible('classification-column', 'Classification');
+        });
 
         it('Adding Classification filter opens the dialog, dialog shows all expected options', () => {
             issueFilterPage.addFilter('Classification');
@@ -44,6 +47,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
 
         it('Table shows results after selecting a single option', () => {
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(4);
+            issuePage.verifyRecordCount('4');
+            issueFilterPage.verifyColumnCellsContain('classification-column', 'Bug');
         });
 
         it('Selecting multiple options shows OR logic results', () => {
@@ -51,6 +57,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.selectOption('Pending');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(8);
+            issuePage.verifyRecordCount('8');
+            issueFilterPage.verifyColumnCellsContain('classification-column', ['Bug', 'Pending']);
         });
 
         it('Typing in search box narrows the options list', () => {
@@ -95,6 +104,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Status — Spot Check ───────────────────────────────────────────────
 
     describe('Status filter', () => {
+        it('Show Status column if not visible', () => {
+            issuePage.showColumnIfNotVisible('status-column', 'Status');
+        });
 
         it('Adding Status filter shows correct options', () => {
             issueFilterPage.addFilter('Status');
@@ -104,10 +116,13 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
         });
 
         it('Selecting "New" updates chip and filters table', () => {
-            issueFilterPage.selectOption('New');
+            issueFilterPage.selectOption('Triaged');
             issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Status', 'New');
+            issueFilterPage.verifyChipLabelContains('Status', 'Triaged');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(8);
+            issuePage.verifyRecordCount('8');
+            issueFilterPage.verifyColumnCellsContain('status-column', 'Triaged');
         });
 
         it('Cleanup: remove Status filter', () => {
@@ -118,6 +133,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Action — Spot Check ───────────────────────────────────────────────
 
     describe('Action filter', () => {
+        it('Show Action column if not visible', () => {
+            issuePage.showColumnIfNotVisible('action-column', 'Action');
+        });
 
         it('Adding Action filter shows correct options', () => {
             issueFilterPage.addFilter('Action');
@@ -126,11 +144,14 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getActionOptions().length);
         });
 
-        it('Selecting "Undecided" updates chip and filters table', () => {
-            issueFilterPage.selectOption('Undecided');
+        it('Selecting "Fix Required" updates chip and filters table', () => {
+            issueFilterPage.selectOption('Fix Required');
             issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Action', 'Undecided');
+            issueFilterPage.verifyChipLabelContains('Action', 'Fix Required');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(2);
+            issuePage.verifyRecordCount('2');
+            issueFilterPage.verifyColumnCellsContain('action-column', 'Fix Required');
         });
 
         it('Cleanup: remove Action filter', () => {
@@ -141,6 +162,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Severity — Spot Check ─────────────────────────────────────────────
 
     describe('Severity filter', () => {
+        it('Show Severity column if not visible', () => {
+            issuePage.showColumnIfNotVisible('severity-column', 'Severity');
+        });
 
         it('Adding Severity filter shows correct options', () => {
             issueFilterPage.addFilter('Severity');
@@ -149,10 +173,14 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getSeverityOptions().length);
         });
 
-        it('Selecting "Unspecified" updates chip', () => {
-            issueFilterPage.selectOption('Unspecified');
+        it('Selecting "Major" updates chip and filters table', () => {
+            issueFilterPage.selectOption('Major');
             issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Severity', 'Unspecified');
+            issueFilterPage.verifyChipLabelContains('Severity', 'Major');
+            issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(3);
+            issuePage.verifyRecordCount('3');
+            issueFilterPage.verifyColumnCellsContain('severity-column', 'Major');
         });
 
         it('Cleanup: remove Severity filter', () => {
@@ -163,6 +191,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Impact — Spot Check ───────────────────────────────────────────────
 
     describe('Impact filter', () => {
+        it('Show Impact column if not visible', () => {
+            issuePage.showColumnIfNotVisible('displayImpact-column', 'Impact');
+        });
 
         it('Adding Impact filter shows correct options', () => {
             issueFilterPage.addFilter('Impact');
@@ -171,11 +202,14 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getImpactOptions().length);
         });
 
-        it('Selecting "High" updates chip and filters table', () => {
-            issueFilterPage.selectOption('High');
+        it('Selecting "Medium" updates chip and filters table', () => {
+            issueFilterPage.selectOption('Medium');
             issueFilterPage.closeDialog();
-            issueFilterPage.verifyChipLabelContains('Impact', 'High');
+            issueFilterPage.verifyChipLabelContains('Impact', 'Medium');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(2);
+            issuePage.verifyRecordCount('2');
+            issueFilterPage.verifyColumnCellsContain('displayImpact-column', 'Medium');
         });
 
         it('Cleanup: remove Impact filter', () => {
@@ -186,6 +220,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Issue Kind — Spot Check ───────────────────────────────────────────
 
     describe('Issue Kind filter', () => {
+        // it('Show Issue Kind column if not visible', () => {
+        //     issuePage.showColumnIfNotVisible('issueKind-column', 'Issue Kind');
+        // });
 
         it('Adding Issue Kind filter shows correct options', () => {
             issueFilterPage.addFilter('Issue Kind');
@@ -194,10 +231,11 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getIssueKindOptions().length);
         });
 
-        it('Selecting "Quality" updates chip', () => {
+        it('Selecting "Quality" updates chip and filters table', () => {
             issueFilterPage.selectOption('Quality');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Issue Kind', 'Quality');
+            issueFilterPage.verifyTableHasResults();
         });
 
         it('Cleanup: remove Issue Kind filter', () => {
@@ -208,6 +246,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Legacy — Spot Check ───────────────────────────────────────────────
 
     describe('Legacy filter', () => {
+        // it('Show Legacy column if not visible', () => {
+        //     issuePage.showColumnIfNotVisible('legacy-column', 'Legacy');
+        // });
 
         it('Adding Legacy filter shows correct options', () => {
             issueFilterPage.addFilter('Legacy');
@@ -216,10 +257,11 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getLegacyOptions().length);
         });
 
-        it('Selecting "False" updates chip', () => {
+        it('Selecting "False" updates chip and filters table', () => {
             issueFilterPage.selectOption('False');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Legacy', 'False');
+            issueFilterPage.verifyTableHasResults();
         });
 
         it('Cleanup: remove Legacy filter', () => {
@@ -230,6 +272,9 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
     // ── Fix Target — Spot Check ───────────────────────────────────────────
 
     describe('Fix Target filter', () => {
+        // it('Show Fix Target column if not visible', () => {
+        //     issuePage.showColumnIfNotVisible('fixTarget-column', 'Fix Target');
+        // });
 
         it('Adding Fix Target filter shows correct options', () => {
             issueFilterPage.addFilter('Fix Target');
@@ -238,10 +283,11 @@ describe('Issue Filter — Multi-select Enum Filters', { testIsolation: false },
             issueFilterPage.verifyOptionCount(issueFilterObject.getFixTargetOptions().length);
         });
 
-        it('Selecting "Untargeted" updates chip', () => {
+        it('Selecting "Untargeted" updates chip and filters table', () => {
             issueFilterPage.selectOption('Untargeted');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Fix Target', 'Untargeted');
+            issueFilterPage.verifyTableHasResults();
         });
 
         it('Cleanup: remove Fix Target filter', () => {

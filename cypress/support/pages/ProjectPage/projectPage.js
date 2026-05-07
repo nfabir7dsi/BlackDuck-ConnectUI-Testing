@@ -130,6 +130,13 @@ class ProjectPage {
         return this;
     }
 
+    
+    verifyNavigatedToProjectsListPage() {
+        cy.url().should('include', '/ui/projects');
+        cy.url().should('not.match', /\/ui\/projects\/.+/);
+        return this;
+    }
+
     // applyProjectFilter(projectName) {
     //     cy.getByDataTestId(projectObject.getFiltersSection())
     //         .contains('button', 'Add filters').click();

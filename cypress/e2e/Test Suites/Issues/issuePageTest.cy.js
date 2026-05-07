@@ -54,9 +54,9 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('"Projects" breadcrumb link navigates back to the projects list', () => {
         issuePage.clickProjectsBreadcrumbLink()
-                    .verifyNavigatedToProjectsListPage()
-                    .clickFirstProjectLink()
-                    .verifyTableVisible();
+            .verifyNavigatedToProjectsListPage()
+            .clickFirstProjectLink()
+            .verifyTableVisible();
     });
 
     it('Project switcher combobox is visible in the breadcrumb', () => {
@@ -71,7 +71,7 @@ describe('Issue Page Test Suite', { testIsolation: false }, () => {
 
     it('View selector is visible and non-empty', () => {
         issuePage.verifyViewSelectorVisible()
-                .verifyViewSelectorNonEmpty();
+            .verifyViewSelectorNonEmpty();
     });
 
     it('Save button is visible', () => {

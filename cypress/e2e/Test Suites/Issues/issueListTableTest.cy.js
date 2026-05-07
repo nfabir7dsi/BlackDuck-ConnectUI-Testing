@@ -54,30 +54,37 @@ describe('Issue List Table Test Suite', { testIsolation: false }, () => {
     // ── Suite 7: Column Sorting ───────────────────────────────────────────────
 
 
-    // it('Default sort is by CID in ascending order', () => {
-    //     // issuePage.resetSorting();
-    //     issuePage.verifyUrlSortParam('cid', 'asc');
-    // });
+    it('Reset table sort to default if not already in default sort', () => {
+        issuePage.resetSortToDefault();
+    });
 
-    it('Clicking CID column header two times toggles sort direction to descending', () => {
+    it('Clicking CID column header sorts by CID', () => {
         issuePage.sortByColumn(issueObject.getCidColumn())
-            .sortByColumn(issueObject.getCidColumn())
-            .verifyUrlSortParam('cid', 'desc');
+            .verifyUrlSortParam('cid', 'asc');
     });
 
     it('Clicking Status column header sorts by status', () => {
         issuePage.sortByColumn(issueObject.getStatusColumn())
-                .verifyUrlSortParam('status', 'asc');
+            .verifyUrlSortParam('status', 'asc');
     });
 
-    // it('Clicking Severity column header sorts by severity', () => {
-    //     issuePage.sortByColumn(issueObject.getSeverityColumn())
-    //             .verifyUrlSortParam('severity', 'asc');
-    // });
+    it('Clicking Severity column header sorts by severity', () => {
+        issuePage.sortByColumn(issueObject.getSeverityColumn())
+                .verifyUrlSortParam('severity', 'asc');
+    });
 
     it('Clicking Classification column header sorts by classification', () => {
         issuePage.sortByColumn(issueObject.getClassificationColumn())
-                .verifyUrlSortParam('classification', 'asc');
+            .verifyUrlSortParam('classification', 'asc');
+    });
+
+    it('Clicking a sorted column header again reverses the sort order', () => {
+        issuePage.sortByColumn(issueObject.getClassificationColumn())
+            .verifyUrlSortParam('classification', 'desc');
+    });
+
+    it('Reset sort to default at end of sorting tests', () => {
+        issuePage.resetSortToDefault();
     });
 
     // ── Suite 8: Row Selection ────────────────────────────────────────────────

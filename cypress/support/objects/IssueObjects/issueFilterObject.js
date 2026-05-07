@@ -7,6 +7,9 @@ class IssueFilterObject {
     filterOption = '[role="option"]';
     addFiltersText = 'Add filters';
     clearFilterButton = 'filters-new-clear-button';
+    streamOptionsSelector = '[data-testid="filter-content"] button[role="combobox"]'; 
+    streamOptions = 'body > div:last-of-type [role="option"]'; 
+    streamSection = `[data-testid="${this.filterContent}"] div[cmdk-root]`;
 
     // Type A enum filter expected options
     classificationOptions = ['Unclassified', 'Pending', 'False Positive', 'Intentional', 'Bug', 'Various'];
@@ -36,6 +39,10 @@ class IssueFilterObject {
     getIssueKindOptions() { return this.issueKindOptions; }
     getLegacyOptions() { return this.legacyOptions; }
     getFixTargetOptions() { return this.fixTargetOptions; }
+
+    getStreamOptionsSelector() { return this.streamOptionsSelector; }
+    getStreamOptions() { return this.streamOptions; }
+    getStreamSection() { return this.streamSection; }
 }
 
 export default new IssueFilterObject();

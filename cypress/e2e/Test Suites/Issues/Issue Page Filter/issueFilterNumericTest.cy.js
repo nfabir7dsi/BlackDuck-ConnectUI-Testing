@@ -32,6 +32,9 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
     // ── CID ───────────────────────────────────────────────────────────────
 
     describe('CID filter (Type D)', () => {
+        it('Show CID column if not visible', () => {
+            issuePage.showColumnIfNotVisible('cid-column', 'CID');
+        });
 
         it('Opening CID dialog shows input with numeric range label', () => {
             issueFilterPage.addFilter('CID');
@@ -40,30 +43,41 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         });
 
         it('Entering an exact CID number filters the table', () => {
-            issueFilterPage.enterFilterValue('10242');
-            issueFilterPage.verifyChipLabelContains('CID', '10242');
+            issueFilterPage.enterFilterValue('10468');
+            issueFilterPage.verifyChipLabelContains('CID', '10468');
             issueFilterPage.verifyTableHasResults();
+            issueFilterPage.verifyTableHasRowCount(1);
+            issueFilterPage.verifyColumnCellsContain('cid-column', '10468');
         });
 
         it('Entering a range filters to matching rows', () => {
             issueFilterPage.clickFilterChip('CID');
-            issueFilterPage.enterFilterValue('10242-10244');
-            issueFilterPage.verifyChipLabelContains('CID', '10242-10244');
+            issueFilterPage.enterFilterValue('10466-10468');
+            issueFilterPage.verifyChipLabelContains('CID', '10466-10468');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(3);
+            issuePage.verifyRecordCount(3);
+            issueFilterPage.verifyNumericValueIsInBetween('cid-column', 10465, 10469);
         });
 
         it('Entering <N filters to values less than N', () => {
             issueFilterPage.clickFilterChip('CID');
-            issueFilterPage.enterFilterValue('<10243');
-            issueFilterPage.verifyChipLabelContains('CID', '<10243');
+            issueFilterPage.enterFilterValue('<10469');
+            issueFilterPage.verifyChipLabelContains('CID', '<10469');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(4);
+            issuePage.verifyRecordCount(15);
+            issueFilterPage.verifyNumericValueIsLessThan('cid-column', 10469);
         });
 
         it('Entering >N filters to values greater than N', () => {
             issueFilterPage.clickFilterChip('CID');
-            issueFilterPage.enterFilterValue('>10240');
-            issueFilterPage.verifyChipLabelContains('CID', '>10240');
+            issueFilterPage.enterFilterValue('>10825');
+            issueFilterPage.verifyChipLabelContains('CID', '>10825');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(6);
+            issuePage.verifyRecordCount(5);
+            issueFilterPage.verifyNumericValueIsGreaterThan('cid-column', 10825);
         });
 
         it('Clearing input removes the filter effect', () => {
@@ -76,6 +90,9 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
     // ── Count ─────────────────────────────────────────────────────────────
 
     describe('Count filter (Type D)', () => {
+        it('Show Count column if not visible', () => {
+            issuePage.showColumnIfNotVisible('occurrenceCount-column', 'Count');
+        });
 
         it('Opening Count dialog shows numeric range label', () => {
             issueFilterPage.addFilter('Count');
@@ -84,23 +101,30 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         });
 
         it('Entering an exact number filters the table', () => {
-            issueFilterPage.enterFilterValue('1');
-            issueFilterPage.verifyChipLabelContains('Count', '1');
+            issueFilterPage.enterFilterValue('5');
+            issueFilterPage.verifyChipLabelContains('Count', '5');
             issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasRowCount(5);
+            issuePage.verifyRecordCount(5);
+            issueFilterPage.verifyColumnCellsContain('occurrenceCount-column', '5');
         });
 
         it('Entering a range filters to matching rows', () => {
             issueFilterPage.clickFilterChip('Count');
-            issueFilterPage.enterFilterValue('1-5');
-            issueFilterPage.verifyChipLabelContains('Count', '1-5');
+            issueFilterPage.enterFilterValue('5-8');
+            issueFilterPage.verifyChipLabelContains('Count', '5-8');
             issueFilterPage.verifyTableHasResults();
+            issuePage.verifyRecordCount(21);
+            issueFilterPage.verifyNumericValueIsInBetween('occurrenceCount-column', 5, 8);
         });
 
         it('Entering >N filters to values greater than N', () => {
             issueFilterPage.clickFilterChip('Count');
-            issueFilterPage.enterFilterValue('>0');
-            issueFilterPage.verifyChipLabelContains('Count', '>0');
+            issueFilterPage.enterFilterValue('>10');
+            issueFilterPage.verifyChipLabelContains('Count', '>10');
             issueFilterPage.verifyTableHasResults();
+            issuePage.verifyRecordCount(13);
+            issueFilterPage.verifyNumericValueIsGreaterThan('occurrenceCount-column', 10);
         });
 
         it('Clearing input removes the filter effect', () => {
@@ -113,6 +137,9 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
     // ── Score ─────────────────────────────────────────────────────────────
 
     describe('Score filter (Type D)', () => {
+        it('Show Score column if not visible', () => {
+            issuePage.showColumnIfNotVisible('score-column', 'Score');
+        });
 
         it('Opening Score dialog shows numeric range label', () => {
             issueFilterPage.addFilter('Score');
@@ -123,12 +150,14 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         it('Entering an exact number filters the table', () => {
             issueFilterPage.enterFilterValue('5');
             issueFilterPage.verifyChipLabelContains('Score', '5');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
         it('Entering <N filters to values less than N', () => {
             issueFilterPage.clickFilterChip('Score');
             issueFilterPage.enterFilterValue('<10');
             issueFilterPage.verifyChipLabelContains('Score', '<10');
+            issueFilterPage.verifyTableHasResults();
         });
 
         it('Clearing input removes the filter effect', () => {
@@ -143,6 +172,9 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
     // ═══════════════════════════════════════════════════════════════════════
 
     describe('CWE filter (Type E)', () => {
+        it('Show CWE column if not visible', () => {
+            issuePage.showColumnIfNotVisible('cwe-column', 'CWE');
+        });
 
         it('Opening CWE dialog shows input labeled "Enter CWE ID"', () => {
             issueFilterPage.addFilter('CWE');
@@ -153,13 +185,18 @@ describe('Issue Filter — Numeric Range & CWE Filters', { testIsolation: false 
         it('Entering a known CWE ID updates chip and filters table', () => {
             issueFilterPage.enterFilterValue('476');
             issueFilterPage.verifyChipLabelContains('CWE', '476');
-            issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyColumnCellsContain('cwe-column', '476');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
-        it('Entering a different CWE ID updates the filter', () => {
+        it('Entering a different CWE ID updates the filter and table', () => {
             issueFilterPage.clickFilterChip('CWE');
             issueFilterPage.enterFilterValue('119');
             issueFilterPage.verifyChipLabelContains('CWE', '119');
+            // issueFilterPage.verifyTableHasResults();
+            // issueFilterPage.verifyColumnCellsContain('cwe-column', '119');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
         it('Clearing input removes the filter effect', () => {

@@ -43,17 +43,19 @@ describe('Issue Filter — Comparison & Streams Filters', { testIsolation: false
             issueFilterPage.verifyFilterDialogContains('snapshot');
         });
 
-        it('Selecting "Present" updates the chip', () => {
+        it('Selecting "Present" updates the chip and filters table', () => {
             issueFilterPage.selectRadioOption('Present');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Comparison', 'Present');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
-        it('Selecting "Absent" updates the chip to Absent', () => {
+        it('Selecting "Absent" updates the chip to Absent and filters table', () => {
             issueFilterPage.clickFilterChip('Comparison');
             issueFilterPage.selectRadioOption('Absent');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Comparison', 'Absent');
+            issueFilterPage.verifyTableHasResults();
         });
 
         it('Only one option can be selected at a time (radio behavior)', () => {
@@ -62,6 +64,7 @@ describe('Issue Filter — Comparison & Streams Filters', { testIsolation: false
             issueFilterPage.selectRadioOption('Present');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Comparison', 'Present');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
         it('Cleanup: remove Comparison filter', () => {
@@ -90,10 +93,45 @@ describe('Issue Filter — Comparison & Streams Filters', { testIsolation: false
             issueFilterPage.verifyOptionCountGreaterThan(0);
         });
 
-        it('Selecting a stream to include updates the chip', () => {
+        it('Selecting a stream to include updates the chip and filters table', () => {
             issueFilterPage.selectNthOption(1);
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('Streams');
+            issueFilterPage.verifyTableHasResults();
+        });
+
+        it('Excluding a stream updates the chip and filters table accordingly', () => {
+            issueFilterPage.clickFilterChip('Streams');
+            issueFilterPage.searchExcludeStream('xml');
+            issueFilterPage.selectNthOption(1);
+            issueFilterPage.closeDialog();
+            issueFilterPage.verifyFilterChipVisible('Streams');
+            issueFilterPage.verifyTableDoesntHaveResults();
+        });
+
+        it('Removing an excluded stream updates the chip and filters table accordingly', () => {
+            issueFilterPage.clickFilterChip('Streams');
+            issueFilterPage.disselectExcludeStreamOption('xml-fortran');
+            issueFilterPage.closeDialog();
+            issueFilterPage.verifyFilterChipVisible('Streams');
+            issueFilterPage.verifyTableHasResults();
+        });
+
+        it('Selecting another stream as any includes both streams and changes the table results accordingly', () => {
+            issueFilterPage.clickFilterChip('Streams');
+            issueFilterPage.searchIncludeStream('test');
+            issueFilterPage.verifyOptionCountGreaterThan(0);
+            issueFilterPage.selectNthOption(1);
+            issueFilterPage.closeDialog();
+            issueFilterPage.verifyTableHasResults();
+        });
+
+        it('Selecting all instead of any changes the chip label and table results', () => {
+            issueFilterPage.clickFilterChip('Streams');
+            issueFilterPage.clickStreamOptionSelector(1);
+            issueFilterPage.selectStreamOption('all');
+            issueFilterPage.closeDialog();
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
         it('Re-opening dialog shows the selected stream', () => {

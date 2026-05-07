@@ -30,6 +30,9 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
     // ═══════════════════════════════════════════════════════════════════════
 
     describe('First Detected filter', () => {
+        it('Show First Detected column if not visible', () => {
+            issuePage.showColumnIfNotVisible('firstDetected-column', 'First Detected');
+        });
 
         it('Opening First Detected dialog shows 6 operator modes', () => {
             issueFilterPage.addFilter('First Detected');
@@ -49,36 +52,40 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
             issueFilterPage.verifyNumberInputIsVisible();
         });
 
-        it('Entering 30 days in "In the last" updates chip', () => {
+        it('Entering 30 days in "In the last" updates chip and filters table', () => {
             issueFilterPage.enterSpinValue('30');
             issueFilterPage.selectTimeUnit('days');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('First Detected', '30');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
-        it('Changing time unit to weeks updates chip', () => {
+        it('Changing time unit to weeks updates chip and filters table', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectTimeUnit('weeks');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('First Detected', 'weeks');
+            issueFilterPage.verifyTableHasResults();
         });
 
-        it('Changing time unit to months updates chip', () => {
+        it('Changing time unit to months updates chip and filters table', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectTimeUnit('months');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('First Detected', 'months');
+            issueFilterPage.verifyTableHasResults();
         });
 
         // ── "Not in the last" mode ────────────────────────────────────────
 
-        it('"Not in the last" mode shows inverse filter', () => {
+        it('"Not in the last" mode shows inverse filter and filters table', () => {
             issueFilterPage.clickFilterChip('First Detected');
             issueFilterPage.selectDateMode('Not in the last');
             issueFilterPage.enterSpinValue('30');
             issueFilterPage.selectTimeUnit('days');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('First Detected');
+            issueFilterPage.verifyTableHasResults();
         });
 
         // ── "In the range" mode ───────────────────────────────────────────
@@ -89,11 +96,12 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
             issueFilterPage.verifyDateInputButtonIsVisible(2);
         });
 
-        it('Entering a date range updates chip', () => {
+        it('Entering a date range updates chip and filters table', () => {
             issueFilterPage.enterFromDate('2024-01-01');
             issueFilterPage.enterToDate('2025-12-31');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('First Detected');
+            issueFilterPage.verifyTableHasResults();
         });
 
         // ── "Exclude" mode ────────────────────────────────────────────────
@@ -113,10 +121,11 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
             issueFilterPage.verifyDateInputButtonIsVisible(1);
         });
 
-        it('Selecting a date in "After" mode updates chip', () => {
-            issueFilterPage.enterSingleDate('2024-01-01');
+        it('Selecting a date in "After" mode updates chip and filters table', () => {
+            issueFilterPage.enterSingleDate('2025-01-01');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('First Detected');
+            issueFilterPage.verifyTableHasResults();
         });
 
         // ── "Before" mode ─────────────────────────────────────────────────
@@ -127,10 +136,11 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
             issueFilterPage.verifyDateInputButtonIsVisible(1);
         });
 
-        it('Selecting a date in "Before" mode updates chip', () => {
-            issueFilterPage.enterSingleDate('2026-12-31');
+        it('Selecting a date in "Before" mode updates chip and filters table', () => {
+            issueFilterPage.enterSingleDate('2025-01-01');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('First Detected');
+            issueFilterPage.verifyTableDoesntHaveResults();
         });
 
         it('Cleanup: remove First Detected filter', () => {
@@ -143,6 +153,9 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
     // ═══════════════════════════════════════════════════════════════════════
 
     describe('Last Triaged filter', () => {
+        it('Show Last Triaged column if not visible', () => {
+            issuePage.showColumnIfNotVisible('lastTriaged-column', 'Last Triaged');
+        });
 
         it('Opening Last Triaged dialog shows operator modes', () => {
             issueFilterPage.addFilter('Last Triaged');
@@ -152,20 +165,24 @@ describe('Issue Filter — Date Filters', { testIsolation: false }, () => {
             issueFilterPage.verifyFilterDialogContains('Before');
         });
 
-        it('"In the last" 90 days updates chip', () => {
+        it('"In the last" 90 days updates chip and filters table', () => {
             issueFilterPage.selectDateMode('In the last');
             issueFilterPage.enterSpinValue('90');
             issueFilterPage.selectTimeUnit('days');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyChipLabelContains('Last Triaged', '90');
+            issueFilterPage.verifyTableHasResults();
+            issuePage.verifyRecordCount(32);
         });
 
-        it('"After" a date updates chip', () => {
+        it('"After" a date updates chip and filters table', () => {
             issueFilterPage.clickFilterChip('Last Triaged');
             issueFilterPage.selectDateMode('After');
-            issueFilterPage.enterSingleDate('2024-01-01');
+            issueFilterPage.enterSingleDate('2025-01-01');
             issueFilterPage.closeDialog();
             issueFilterPage.verifyFilterChipVisible('Last Triaged');
+            issueFilterPage.verifyTableHasResults();
+            issuePage.verifyRecordCount(32);
         });
 
         it('Cleanup: remove Last Triaged filter', () => {
