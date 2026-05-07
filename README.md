@@ -14,8 +14,7 @@ End-to-end test automation for the BlackDuck Connect UI, built with [Cypress](ht
   - [Two-Layer POM](#two-layer-pom)
   - [Custom Commands](#custom-commands)
   - [Test Data & Fixtures](#test-data--fixtures)
-- [Test Suites](#test-suites)
-- [Page Objects Reference](#page-objects-reference)
+- [Features Covered](#features-covered)
 - [Selector Strategy](#selector-strategy)
 - [Conventions & Patterns](#conventions--patterns)
 
@@ -175,6 +174,20 @@ Or run with the default commands.
 
 ---
 
+## Features Covered
+
+- **Login** — Valid/invalid credential validation and session handling
+- **User Management** — Full user lifecycle (create, read, update, delete)
+  - User creation with field validation
+  - Edit and delete existing users
+- **Projects** — Project page structure and list filtering
+- **Issues** — Issue page navigation, table interactions, and filtering
+  - Filter types: date, numeric, enum (multi-select), text (wildcard), searchable list, special, and combined scenarios
+  - Filter toolbar and chip management
+- **Visual Regression** — Percy snapshot testing across key pages
+
+---
+
 ## Architecture
 
 ### Two-Layer POM
@@ -256,151 +269,6 @@ beforeEach(() => {
 
 ---
 
-## Test Suites
-
-### Login (`loginTest.cy.js`) — 3 tests
-
-| Test | Description |
-|------|-------------|
-| Empty fields | Validates field-level required errors |
-| Invalid credentials | Validates error message display |
-| Valid credentials | Verifies successful login and dashboard navigation |
-
----
-
-### Issue Page (`issuePageTest.cy.js`) — 25+ tests
-
-Tests for the issue list page structure and general behavior.
-
-| Area | Tests |
-|------|-------|
-| Page load & navigation | URL format, title, tab state, header |
-| Breadcrumb navigation | Visibility, project link, project switcher |
-| Controls bar | View selector, Save, Reset, AI banner |
-| Actions bar | Export menu, column toggle panel, column visibility |
-| Sidebar search | Search input, value persistence, clear behavior |
-| Pagination | Record count, page navigation, ellipsis, page size |
-
----
-
-### Issue List Table (`issueListTableTest.cy.js`) — 15+ tests
-
-| Area | Tests |
-|------|-------|
-| Table structure | Visibility, rows, all column headers, data presence |
-| Column sorting | Sort direction toggle, URL sort params, multi-column |
-| Row selection | Individual checkboxes, select-all, deselect behavior |
-| Row navigation | Row click → detail view, browser back |
-
----
-
-### Issue Filters (8 test files)
-
-The most comprehensive test area, covering every filter type on the issue list page.
-
-| File | Filter Type | Key Coverage |
-|------|-------------|--------------|
-| `issueFilterEnumTest.cy.js` | Multi-select enum | Classification, Status, Action, Severity — option display, selection, chip updates, search within dialog |
-| `issueFilterTextTest.cy.js` | Wildcard text | File, Function — exact match, wildcard patterns, non-existent, clear |
-| `issueFilterDateTest.cy.js` | Date | First Detected — 6 modes: in last, not in last, range, exclude, after, before; calendar picker |
-| `issueFilterNumericTest.cy.js` | Numeric range | CID, Count — exact number, range (2–5), comparison (< >) |
-| `issueFilterSearchTest.cy.js` | Searchable list | Checker, Category — pre-loaded options, search narrowing, selection |
-| `issueFilterSpecialTest.cy.js` | Special/complex | Streams dual-search, radio/binary, legacy, fix target |
-| `issueFilterCombinedTest.cy.js` | Combined | Multiple active filters simultaneously |
-| `issueFilterToolbarTest.cy.js` | Toolbar & chips | 50+ available filters, add/remove chips, chip label updates |
-
-**Supported enum filter values:**
-
-| Filter | Options |
-|--------|---------|
-| Classification | Unclassified, Pending, False Positive, Intentional, Bug, Various |
-| Status | New, Triaged, Dismissed, Fixed, Absent Dismissed |
-| Action | Undecided, Fix Required, Fix Submitted, Modeling Required, Ignore, Various |
-| Severity | Unspecified, Major, Moderate, Minor, Various |
-| Impact | High, Medium, Low, Audit |
-| Issue Kind | Quality, Security |
-| Legacy | False, True, Various |
-| Fix Target | Untargeted, Fresno, Gilroy, Harmony, Indio, Future, Various |
-
----
-
-### Projects (`projectPageTest.cy.js`) — 12 tests
-
-| Area | Tests |
-|------|-------|
-| Sidebar navigation | Navigates via Projects menu |
-| Table structure | Table, columns (Project / Description / Last Commit), rows |
-| Data verification | Record count, project name/description content |
-| Actions | Export button, search functionality |
-| Navigation | Click project link, filter state persistence |
-
----
-
-### Project Filters (`projectFilterTest.cy.js`) — 15 tests
-
-| Filter Type | Tests |
-|-------------|-------|
-| Project (text) | Text match, chip display, chip removal |
-| Description (text) | Text match, clear filters |
-| Last Commit (date) | Mode options, "in the last" with days/weeks |
-| Multiple filters | Simultaneous filters, clear all |
-
----
-
-### User CRUD
-
-#### `userCreateTest.cy.js` — 6 tests (validation-focused)
-
-| Test | Description |
-|------|-------------|
-| Mandatory fields | Validation without any input |
-| Duplicate username | Duplicate detection error |
-| Short password | Minimum 6-character enforcement |
-| Password mismatch | Confirm password validation |
-| User deletion | Delete and verify removal |
-
-#### `userCRUDTest.cy.js` — 4 tests (full lifecycle)
-
-| Test | Description |
-|------|-------------|
-| Create | Create new user with all fields |
-| Read | Search and verify all user details |
-| Update | Edit first name and verify change |
-| Delete | Delete user and verify removal |
-
-Includes Percy visual regression snapshots at key steps.
-
----
-
-## Page Objects Reference
-
-| Feature | Object File | Page File |
-|---------|-------------|-----------|
-| Login | `LoginObjects/loginObjects.js` | `LoginPage/loginPage.js` |
-| Dashboard | `DashboardObjects/dashboardObject.js` | `DashboardPage/dashboardPage.js` |
-| Sidebar | `SidebarObjects/sidebarObject.js` | `Sidebar/sidebar.js` |
-| Navbar | `NavbarObjects/navbarObject.js` | `Navbar/navbar.js` |
-| Projects | `ProjectObjects/projectObject.js` | `ProjectPage/projectPage.js` |
-| Project Filters | `ProjectObjects/projectFilterObject.js` | `ProjectPage/projectFilterPage.js` |
-| Issues | `IssueObjects/issueObject.js` | `IssuePage/issuePage.js` |
-| Issue Filters | `IssueObjects/issueFilterObject.js` | `IssuePage/issueFilterPage.js` |
-| Users | `UsersObjects/usersObject.js` | `UsersPage/usersPage.js` |
-| Create User | `UsersObjects/createUserObject.js` | `UsersPage/createUserPage.js` |
-| Edit User | `UsersObjects/editUserObject.js` | `UsersPage/editUserPage.js` |
-| Common | `CommonObjects/commonObject.js` | `CommonPage/commonPage.js` |
-
----
-
-## Selector Strategy
-
-| Priority | Strategy | Example |
-|----------|----------|---------|
-| 1 (Primary) | `data-testid` attribute | `cy.getByDataTestId('filter-trigger')` |
-| 2 (Secondary) | CSS attribute selectors | `cy.get('input[name="username"]')` |
-| 3 (Fallback) | Aria labels / roles | `cy.get('[aria-label="..."]')` |
-
----
-
 ## Conventions & Patterns
 
 ### Test Setup
@@ -450,8 +318,7 @@ createUserPage.clickCreateUserButton(true); // returns commonPage on success
 
 ## Remaining Works
 
-- Filter tests don't properly test the table results yet. Need to add table results verification properly.
-- Some filters have corner cases that haven't been covered yet.
-- Issue page's view dropdown hasn't been tested properly. 
-- Bulk triage functionality hasn't been tested.
-- AI-assisted triage and AI triage results haven't also been tested.
+[ ] Some filters may have corner cases that haven't been covered yet.
+[ ] Issue page's view dropdown hasn't been tested properly. 
+[ ] Bulk triage functionality hasn't been tested.
+[ ] AI-assisted triage and AI triage results haven't also been tested.
