@@ -2,4 +2,4 @@
 
 node_modules/
 cypress/fixtures/
-.playwright-mcp
+.playwright-mcp/
